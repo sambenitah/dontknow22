@@ -8,6 +8,8 @@ use DontKnow\Core\QueryConstructor;
 
 class Users{
 
+    //CECI EST UN TEST
+
     public $id = null;
     /*Public $firstname;
     Public $lastname;
