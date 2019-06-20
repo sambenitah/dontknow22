@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="16c2570d-00ce-4581-a46c-743d0df50c72" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Base Code/db_data/dontknow/Users.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/dontknow/Users.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base Code/db_data/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/ib_buffer_pool" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base Code/db_data/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/ib_logfile0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base Code/db_data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/ibdata1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base Code/db_data/ibtmp1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base Code/www/routes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/www/routes.yml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1236734982">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="php" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PHP" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="php" value="24" />
+          <entry key="txt" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PHP" value="24" />
+          <entry key="PLAIN_TEXT" value="3" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="151493932">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.0" value="4" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.opened" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="66" />
+          <entry key="js" value="1599" />
+          <entry key="php" value="21175" />
+          <entry key="scss" value="1786" />
+          <entry key="txt" value="88" />
+          <entry key="yml" value="259" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="1" />
+          <entry key="JavaScript" value="1597" />
+          <entry key="PHP" value="21175" />
+          <entry key="PLAIN_TEXT" value="154" />
+          <entry key="SCSS" value="1786" />
+          <entry key="YAML" value="259" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="4" />
+          <entry key="htaccess" value="2" />
+          <entry key="jpeg" value="6" />
+          <entry key="jpg" value="14" />
+          <entry key="js" value="12" />
+          <entry key="php" value="508" />
+          <entry key="png" value="4" />
+          <entry key="scss" value="46" />
+          <entry key="sql" value="2" />
+          <entry key="vue" value="1" />
+          <entry key="yml" value="23" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="4" />
+          <entry key="Image" value="24" />
+          <entry key="JavaScript" value="12" />
+          <entry key="PHP" value="508" />
+          <entry key="SCSS" value="46" />
+          <entry key="Scratch" value="3" />
+          <entry key="YAML" value="23" />
+          <entry key="htaccess" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Base Code/www/models/Statistics.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/ErrorPageController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/StatisticsController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Base Code/www/views/statistics.view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Base Code/www/routes.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="502">
+              <caret line="72" column="3" selection-start-line="72" selection-start-column="3" selection-end-line="72" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Base Code/www/models/Users.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>.titleDivAddPages</find>
+      <find>selc</find>
+      <find>_select_option</find>
+      <find>test</find>
+      <find>console</find>
+      <find>content</find>
+      <find>mainPicture</find>
+      <find>post</find>
+      <find>cross</find>
+      <find>var_d</find>
+      <find>backgroundHeader</find>
+      <find>logo</find>
+      <find>#add-PagesTitle</find>
+      <find>trans</find>
+      <find>#idBouttonConfirmForm</find>
+      <find>idBouttonConfirmForm</find>
+      <find>.label-file</find>
+      <find>inputHiddenPicture</find>
+      <find>.card-title</find>
+      <find>confirm</find>
+      <find>errors</find>
+      <find>getAll</find>
+      <find>var</find>
+      <find>header</find>
+      <find>inputad</find>
+      <find>cal</find>
+      <find>die(&quot;Tentative : faille XSS Validator&quot;);</find>
+      <find>die</find>
+      <find>Le fichier controller n'existe pas</find>
+      <find>header('Location: '.Routing::getSlug(&quot;ErrorPage&quot;,&quot;updateErrorPage&quot;).'');</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>&quot;form&quot;</replace>
+      <replace>$form</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Base Code/www/public/js/addPages.js" />
+        <option value="$PROJECT_DIR$/Base Code/www/views/addArticle.view.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/public/css/Front-css/_header.scss" />
+        <option value="$PROJECT_DIR$/Base Code/www/views/templates/basic.tpl.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/views/listFrontPages.view.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/controllers/Customizer.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/views/templates/front.tpl.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/views/showPictures.view.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/views/templates/admin.tpl.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/controllers/CategorieController.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/models/Categorie.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/controllers/CategoriesController.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/public/js/admin.tpl.js" />
+        <option value="$PROJECT_DIR$/Base Code/www/views/addCategory.view.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/views/singleArticle.view.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/public/css/Front-css/_card.scss" />
+        <option value="$PROJECT_DIR$/Base Code/www/controllers/CommentsController.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/controllers/CustomizerController.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/controllers/UsersController.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/core/SPDO.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/core/ValidatorFiles.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/models/Comments.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/models/Users.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/controllers/PicturesController.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/views/showArticle.view.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/models/Pictures.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/views/detailArticle.view.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/models/Articles.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/controllers/ErrorPage.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/models/ErrorPage.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/views/addPicture.view.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/core/BaseSql.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/models/Categories.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/views/updatePageError.view.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/views/modals/form.mod.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/views/customizer.view.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/controllers/CategoriesController.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/views/templates/errorPage.tpl.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/views/errorPage.view.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/public/css/Back-css/_general.scss" />
+        <option value="$PROJECT_DIR$/Base Code/www/controllers/ErrorPageController.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/core/Validator.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/core/View.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/controllers/ArticlesController.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/index.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/core/Routing.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/models/ErrorPage.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/models/Statistics.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/controllers/StatisticsController.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/views/statistics.view.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/routes.yml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="27" />
+    <option name="width" value="1440" />
+    <option name="height" value="790" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dontknow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dontknow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dontknow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dontknow" type="462c0819:PsiDirectoryNode" />
+              <item name="Base Code" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dontknow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dontknow" type="462c0819:PsiDirectoryNode" />
+              <item name="Base Code" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dontknow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dontknow" type="462c0819:PsiDirectoryNode" />
+              <item name="Base Code" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dontknow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dontknow" type="462c0819:PsiDirectoryNode" />
+              <item name="Base Code" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dontknow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dontknow" type="462c0819:PsiDirectoryNode" />
+              <item name="Base Code" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dontknow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dontknow" type="462c0819:PsiDirectoryNode" />
+              <item name="Base Code" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql&#10;mysql" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Vue" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="16c2570d-00ce-4581-a46c-743d0df50c72" name="Default Changelist" comment="" />
+      <created>1548753055670</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1548753055670</updated>
+      <workItem from="1548753056753" duration="1152000" />
+      <workItem from="1548755035182" duration="7550000" />
+      <workItem from="1548853646089" duration="28406000" />
+      <workItem from="1549012976468" duration="8341000" />
+      <workItem from="1549026884121" duration="8696000" />
+      <workItem from="1549740233090" duration="155354000" />
+      <workItem from="1553870639782" duration="30931000" />
+      <workItem from="1554295732282" duration="2427000" />
+      <workItem from="1554475601029" duration="13810000" />
+      <workItem from="1555234883473" duration="28970000" />
+      <workItem from="1556111132439" duration="212000" />
+    </task>
+    <task id="LOCAL-00001" summary="ttt">
+      <created>1548753671022</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1548753671022</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ttt">
+      <created>1548753724924</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1548753724924</updated>
+    </task>
+    <task id="LOCAL-00003" summary="test2">
+      <created>1548755085768</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1548755085768</updated>
+    </task>
+    <task id="LOCAL-00004" summary="commit 29/01/18 20:40">
+      <created>1548790825149</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1548790825149</updated>
+    </task>
+    <task id="LOCAL-00005" summary="commit 30/01/18 18:04">
+      <created>1548867918711</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1548867918711</updated>
+    </task>
+    <task id="LOCAL-00006" summary="commit 30/01/18 22:04">
+      <created>1548884864599</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1548884864599</updated>
+    </task>
+    <task id="LOCAL-00007" summary="commit 31/01/18 12:47">
+      <created>1548935252960</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1548935252960</updated>
+    </task>
+    <task id="LOCAL-00008" summary="commit 31/01/18 12:47">
+      <created>1548935459901</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1548935459901</updated>
+    </task>
+    <task id="LOCAL-00009" summary="commit 31/01/18 19:47">
+      <created>1548959740166</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1548959740166</updated>
+    </task>
+    <task id="LOCAL-00010" summary="commit 31/01/18 22:00">
+      <created>1548968948081</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1548968948081</updated>
+    </task>
+    <task id="LOCAL-00011" summary="commit 16/02/2019">
+      <created>1550322062910</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1550322062910</updated>
+    </task>
+    <task id="LOCAL-00012" summary="commit 19/02/2019">
+      <created>1550565565364</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1550565565364</updated>
+    </task>
+    <task id="LOCAL-00013" summary="commit 19/02/2019">
+      <created>1550566669308</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1550566669308</updated>
+    </task>
+    <task id="LOCAL-00014" summary="commit 19/02/2019">
+      <created>1550578757693</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1550578757693</updated>
+    </task>
+    <task id="LOCAL-00015" summary="commit 19/02/2019">
+      <created>1550578935186</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1550578935186</updated>
+    </task>
+    <task id="LOCAL-00016" summary="commit 19/02/2019">
+      <created>1550579138759</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1550579138759</updated>
+    </task>
+    <task id="LOCAL-00017" summary="commit 19/02/2019">
+      <created>1551623348437</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1551623348437</updated>
+    </task>
+    <task id="LOCAL-00018" summary="commit 11/03/2019">
+      <created>1552338545507</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1552338545507</updated>
+    </task>
+    <task id="LOCAL-00019" summary="commit 11/03/2019">
+      <created>1552854346313</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1552854346313</updated>
+    </task>
+    <task id="LOCAL-00020" summary="commit 28/03/2019">
+      <created>1553809001113</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1553809001113</updated>
+    </task>
+    <task id="LOCAL-00021" summary="commit 28/03/2019">
+      <created>1553809992403</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1553809992403</updated>
+    </task>
+    <task id="LOCAL-00022" summary="commit 29/03/201">
+      <created>1553884177668</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1553884177668</updated>
+    </task>
+    <task id="LOCAL-00023" summary="commit 31/03/2019">
+      <created>1554030274185</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1554030274185</updated>
+    </task>
+    <task id="LOCAL-00024" summary="commit 31/03/2019">
+      <created>1554056092576</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1554056092576</updated>
+    </task>
+    <task id="LOCAL-00025" summary="commit 6/04/2019">
+      <created>1554579904734</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1554579904734</updated>
+    </task>
+    <task id="LOCAL-00026" summary="commit 22/04/2019">
+      <created>1555957179633</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1555957179633</updated>
+    </task>
+    <task id="LOCAL-00027" summary="commit 23/04/2019">
+      <created>1556008032170</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1556008032170</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="285849000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="27" width="1440" height="790" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23247497" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32808024" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49928468" weight="0.32808024" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007153" side_tool="true" weight="0.328125" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22961374" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32808024" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49928468" weight="0.32808024" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007153" side_tool="true" weight="0.328125" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ttt" />
+    <MESSAGE value="test2" />
+    <MESSAGE value="commit 29/01/18 20:40" />
+    <MESSAGE value="commit 30/01/18 18:04" />
+    <MESSAGE value="commit 30/01/18 22:04" />
+    <MESSAGE value="commit 31/01/18 12:47" />
+    <MESSAGE value="commit 31/01/18 19:47" />
+    <MESSAGE value="commit 31/01/18 22:00" />
+    <MESSAGE value="commit 16/02/2019" />
+    <MESSAGE value="commit 19/02/2019" />
+    <MESSAGE value="commit 11/03/2019" />
+    <MESSAGE value="commit 28/03/2019" />
+    <MESSAGE value="commit 29/03/201" />
+    <MESSAGE value="commit 31/03/2019" />
+    <MESSAGE value="commit 6/04/2019" />
+    <MESSAGE value="commit 22/04/2019" />
+    <MESSAGE value="commit 23/04/2019" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit 23/04/2019" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Base Code/www/public/imagesUpload/capture+d-27ecran2019-03-21+21-3A51-3A00.jpeg" />
+    <entry file="file://$PROJECT_DIR$/Base Code/www/public/imagesUpload/capture+d-27ecran2019-03-21+21-3A52-3A30.jpeg" />
+    <entry file="file://$PROJECT_DIR$/Base Code/www/public/imagesUpload/capture+d-27ecran2019-03-21+21-3A54-3A50.jpeg" />
+    <entry file="file://$PROJECT_DIR$/Base Code/www/public/imagesUpload/capture+d-27ecran2019-03-21+21-3A53-3A04.jpeg" />
+    <entry file="file://$PROJECT_DIR$/Base Code/www/public/css/Front-css/_general.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-28" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/public/css/Front-css/_card.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/CommentsController.class.php" />
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/singleArticle.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/core/SPDO.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/core/ValidatorFiles.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/PicturesController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/UsersController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/CustomizerController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/templates/errorPage.view.php" />
+    <entry file="file://$PROJECT_DIR$/Base Code/www/models/Comments.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/addUser.view.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/detailArticle.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="77" selection-start-line="77" selection-end-line="77" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/models/Categories.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/addArticle.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/homepage.view.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/addPicture.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/modals/form.mod.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="54" column="81" selection-start-line="54" selection-start-column="81" selection-end-line="54" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/templates/commercial.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/addCategory.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/customizer.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="85" selection-start-line="9" selection-start-column="85" selection-end-line="9" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/CategoriesController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/updatePageError.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/showArticle.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/public/css/Back-css/style.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/templates/admin.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="74" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/errorPage.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/public/css/Back-css/_general.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="584" column="16" selection-start-line="584" selection-start-column="16" selection-end-line="584" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/templates/errorPage.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="81" selection-start-line="8" selection-start-column="81" selection-end-line="8" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/public/css/Back-css/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/showPictures.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="67" lean-forward="true" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/core/BaseSql.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/models/Articles.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/core/Validator.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/models/ErrorPage.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/core/Routing.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="38" column="35" lean-forward="true" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/core/View.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="43" column="82" selection-start-line="43" selection-start-column="82" selection-end-line="43" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/ArticlesController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="94" column="82" selection-start-line="94" selection-start-column="82" selection-end-line="94" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/models/Pictures.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/models/Statistics.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/ErrorPageController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/StatisticsController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/statistics.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/models/Users.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/routes.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="72" column="3" selection-start-line="72" selection-start-column="3" selection-end-line="72" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,88 @@
+.front{
+  padding: 50px 0 0;
+  margin: 0;
+  font-family: 'Lato', serif;
+  font-size: 14px;
+  background: #ffffff;
+  color: #333333;
+  overflow-x: hidden;
+  word-spacing: 1px;
+}
+.container {
+  max-width: 1000px;
+}
+.mobile {
+  display: none;
+  margin-bottom: 60px;
+}
+.mobile .menu-mobile {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  position: fixed;
+  z-index: 999;
+}
+.mobile .menu-mobile .item {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #000000;
+  position: relative;
+}
+.mobile .menu-mobile .item-1 {
+  top: 23px;
+}
+.mobile .menu-mobile .item-2 {
+  top: 29px;
+}
+.mobile .menu-mobile .item-3 {
+  top: 35px;
+}
+.mobile .logo {
+  padding-bottom: 0;
+  padding-top: 10px;
+  text-align: center;
+}
+.hide-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 998;
+  background-color: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0.3s ease, opacity 0.3s ease;
+  -moz-transition: visibility 0.3s ease, opacity 0.3s ease;
+  -ms-transition: visibility 0.3s ease, opacity 0.3s ease;
+  -o-transition: visibility 0.3s ease, opacity 0.3s ease;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+}
+
+
+/*-------------- Comment --------------*/
+
+#submitAddComment{
+  display: inline-block;
+  min-width: 100px;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  height: 36px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border-radius: 0px !important;
+}
+
+
+#textaeraAddComment{
+  padding-top: 5px;
+  height: 100px;
+  resize: vertical;
+}
+

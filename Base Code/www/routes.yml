@@ -1,0 +1,110 @@
+"/":
+  controller: Users
+  action: installer
+  connexion : false
+  role : 0
+
+"/register":
+  controller: Users
+  action: register
+  connexion : false
+  role : 0
+
+"/connection":
+  controller: Users
+  action: login
+  connexion: false
+  role: 0
+
+"/connexionFront":
+  controller: Users
+  action: loginFront
+  connexion: false
+  role: 0
+
+"/addArticle":
+  controller: Articles
+  action: addArticle
+  connexion: true
+  role: 3
+
+"/showArticles":
+  controller: Articles
+  action: showArticles
+  connexion: true
+  role: 3
+
+"/back_office":
+  controller: Articles
+  action: yourWebSite
+  connexion: true
+  role: 3
+
+"/front":
+  controller: Articles
+  action: default
+  connexion: false
+  role: 0
+
+"/singlePages":
+  controller: Articles
+  action: singleArticle
+  connexion: true
+  role: 3
+
+"/listPages":
+  controller: Articles
+  action: listFrontPages
+  connexion: true
+  role: 3
+
+"/showPictures":
+  controller: Pictures
+  action: showPictures
+  connexion: true
+  role: 3
+
+"/addPictures":
+  controller: Pictures
+  action: addPicture
+  connexion: true
+  role: 3
+
+"/customizer":
+  controller: Customizer
+  action: default
+  connexion: true
+  role: 3
+
+"/addCategory":
+  controller: Categories
+  action: addCategory
+  connexion: true
+  role: 3
+
+"/customizeErrorPage":
+  controller: ErrorPage
+  action: updateErrorPage
+  connexion: true
+  role: 3
+
+"/error":
+  controller: ErrorPage
+  action: showErrorPage
+  connexion: false
+  role: 0
+
+"/statistics":
+  controller: Statistics
+  action: default
+  connexion: true
+  role: 3
+
+
+
+
+"/test":
+  controller: Articles
+  action: test
+  connexion: true
+  role: 3

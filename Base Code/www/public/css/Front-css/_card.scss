@@ -1,0 +1,77 @@
+$duration :0.3s;
+$color: #EF5A31;
+
+.card{
+  overflow: hidden;
+  height: 500px;
+}
+
+.card:hover{
+  //box-shadow: 0px 0px 50px rgba(0,0,0,0.3);
+}
+
+.card-thumb{
+  height: 370px;
+  overflow: hidden;
+  background-color: #000;
+  transition: height $duration;
+  transform: scale(1);
+
+  img{
+    display: block;
+    opacity: 1;
+    transition : opacity $duration;
+  }
+
+  .card:hover & img {
+    opacity: 0.6;
+  }
+
+  .card:hover &{
+    height: 200px;
+  }
+}
+
+.card-body{
+  position: relative;
+  padding:20px;
+  height: 150px;
+  transition: height $duration;
+
+  .card:hover &{height: 250px;}
+
+}
+
+.card-title{
+  margin-top: -20px;
+  padding: 0 0 10px 0;
+  font-size: 22px;
+  color: #000;
+}
+
+.card-subtitle{
+  color:$color;
+  font-size: 19px;
+  padding: 0 0 10px 0;
+}
+
+.card-description{
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  color:#666C74;
+  line-height: 27px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: opacity $duration - 0.1s, transform $duration - 0.1s;
+  transition-delay: 0s;
+  transform: translateY(25px);
+
+  .card:hover &{
+    opacity: 1;
+    transition-delay: 0.1s;
+    transform: translateY(0);
+  }
+
+}

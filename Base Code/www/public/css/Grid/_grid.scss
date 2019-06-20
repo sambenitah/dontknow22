@@ -1,0 +1,74 @@
+*{box-sizing: border-box }
+
+body{
+  margin: 0;
+}
+
+%col{
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding: 0  $gutter * 0.5;
+}
+
+%clearfix{
+
+  &:before,&:after{
+    content:"";
+    display: table;
+  }
+  &:after{
+    clear: both;
+  }
+  &{
+    zoom:1;
+  }
+}
+
+.row{
+  margin: 0 $gutter * -0.5;
+  @extend %clearfix;
+}
+
+
+//if permet de supprimer le decalage de la grille
+
+@for $i from 0 through $columns{
+
+  @if($i == $columns) {
+
+    .row{
+      margin: 0;
+      @extend %clearfix;
+    }
+
+    .col-#{$i}, .col-m-#{$i}, .col-l-#{$i} {@extend %col; padding: 0;}
+
+  }
+
+  @else {
+
+  .col-#{$i}, .col-m-#{$i}, .col-l-#{$i} {@extend %col;}
+
+  }
+
+}
+@media only screen and (max-width: $medium) {
+  @include responsive-columns();
+  @include properties-columns();
+}
+
+
+@media only screen and (min-width: $medium) and (max-width: $large) {
+  @include responsive-columns('-m');
+  @include properties-columns('m-');
+}
+
+
+@media only screen and (min-width: $large) {
+
+  @include responsive-columns('-l');
+  @include properties-columns('l-');
+}
+
+

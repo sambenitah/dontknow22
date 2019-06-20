@@ -1,0 +1,15 @@
+@mixin responsive-columns($suffix: '' ){
+  @for $i from  0 through $columns{
+    .col#{$suffix}-#{$i} {
+      width: $i / $columns * 100%;
+    }
+    .col#{$suffix}-push-#{$i}{
+      left: $i / $columns * 100%;
+    }
+  }
+}
+
+@mixin properties-columns($suffix:''){
+  .#{$suffix}center{margin: 0 auto; float: none}
+  .#{$suffix}hidden{display: none;}
+}

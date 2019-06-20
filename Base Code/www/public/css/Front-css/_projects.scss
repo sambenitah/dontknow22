@@ -1,0 +1,133 @@
+.projects {
+  padding-left: 80px;
+  padding-right: 50px;
+}
+.project-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+.project-item:last-child {
+  margin-bottom: 0;
+}
+.project-item .title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  opacity: 0;
+  visibility: hidden;
+}
+.project-item .title a {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 14px;
+  display: inline-block;
+  line-height: 24px;
+  padding-left: 10px;
+  padding-right: 10px;
+  opacity: 1;
+  letter-spacing: 1px;
+}
+.project-item .title a:hover {
+  color: #ffffff !important;
+  opacity: 0.7;
+}
+.project-item:hover .title {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.pagination-wrap {
+  margin-top: 60px;
+  font-family: 'Roboto', serif;
+}
+.pagination-wrap ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.pagination-wrap ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.pagination-wrap ul span {
+  display: block;
+}
+.pagination-wrap ul li {
+  display: inline-block;
+  overflow: hidden;
+  font-size: 18px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.pagination-wrap ul li .current {
+  color: #000000;
+}
+.navigation-wrap {
+  margin-top: 50px;
+  text-align: center;
+}
+.navigation-wrap:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.navigation-wrap a {
+  display: inline-block;
+  width: 50px;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 10px;
+  background-color: #cccccc;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.navigation-wrap a:last-child {
+  margin-right: 0;
+}
+.navigation-wrap a:hover {
+  opacity: 0.8;
+}
+.project .detail-content {
+  padding: 50px;
+  background-color: #eeeeee;
+}
+.project .title {
+  color: #000000;
+  margin-bottom: 30px;
+}
+.project a {
+  color: #000000 !important;
+  font-weight: 700;
+}
+.project .project-attributes {
+  margin-top: 20px;
+  font-size: 12px;
+}
+.project .project-attributes .socials {
+  padding-top: 0;
+}
+.project table {
+  width: 100%;
+}
+.project .name {
+  font-weight: 700;
+  width: 30%;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.project .value {
+  font-style: italic;
+  width: 70%;
+  padding-bottom: 10px;
+}
+.project .images-project {
+  margin-top: 50px;
+}
+.project .popup img {
+  margin-bottom: 30px;
+}
+.project .popup:last-child img {
+  margin-bottom: 0;
+}

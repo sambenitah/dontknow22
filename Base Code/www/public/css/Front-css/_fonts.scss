@@ -1,0 +1,122 @@
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: 'Roboto', serif;
+  color: #ababab;
+  font-weight: 400;
+  line-height: 1.2em;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+h1 > a,
+.h1 > a,
+h2 > a,
+.h2 > a,
+h3 > a,
+.h3 > a,
+h4 > a,
+.h4 > a,
+h5 > a,
+.h5 > a,
+h6 > a,
+.h6 > a {
+  color: inherit;
+}
+h1,
+.h1 {
+  font-size: 36px;
+}
+h2,
+.h2 {
+  font-size: 30px;
+}
+h3,
+.h3 {
+  font-size: 26px;
+}
+h4,
+.h4 {
+  font-size: 22px;
+}
+h5,
+.h5 {
+  font-size: 18px;
+}
+h6,
+.h6 {
+  font-size: 14px;
+}
+a {
+  color: #ababab;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+a:hover {
+  color: #000000 !important;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+blockquote {
+  position: relative;
+  border: 0;
+  padding: 0 0 0 40px;
+  margin: 20px 0;
+  font-style: italic;
+  overflow: hidden;
+  font-size: 13px;
+}
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+blockquote:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '\f10d';
+  font-family: 'FontAwesome';
+  display: inline-block;
+  color: #ababab;
+  font-size: 24px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+}
+input[type="search"],
+input[type="text"],
+input[type="url"],
+input[type="number"],
+input[type="password"],
+input[type="email"],
+input[type="file"],
+select,
+textarea {
+  height: 36px;
+  width: 100%;
+  border: 1px solid #ababab;
+  padding: 0 10px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+::-moz-selection {
+  color: #f7f7f7;
+  background-color: #222222;
+}
+::selection {
+  color: #f7f7f7;
+  background-color: #222222;
+}
