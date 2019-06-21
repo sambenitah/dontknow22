@@ -8,7 +8,6 @@ use DontKnow\Core\QueryConstructor;
 
 class Users{
 
-    //baise ton pere
 
     public $id = null;
     /*Public $firstname;
