@@ -18,7 +18,7 @@ class QueryConstructor{
             throw new \Exception('Aucune connection');
     }
 
-    
+
     public function select(array ...$select):self //principe fluente  retourne une instance de la class
     {
         $this->requestType = self::SELECT;
@@ -73,22 +73,27 @@ class QueryConstructor{
         return $this;
     }
 
+    public function count(string $count, string $alias):self{
+        $this->count = $count;
+        $this->alias = $alias;
+        return $this;
+    }
+
     public function selectArgs(array $param)
     {
+
         $arguments = [];
+
 
         foreach ($param as $key =>  $value){
             $arguments[] = $key." = :".$key;
         }
+
         if (isset($arguments)){
             $arguments = "*";
-        }else {
+        }else{
             $argumentsString = implode(', ', $arguments);
-            if (array_key_exists("Count",$arguments)) {
-                $arguments = "COUNT(" . $argumentsString . ")";
-            }else{
-                $arguments = $argumentsString;
-            }
+            $arguments = $argumentsString;
         }
         return $arguments;
     }
@@ -100,16 +105,16 @@ class QueryConstructor{
                 $arguments[]=$key."=:".$key;
             }
         }
-        $toto = "SET ".implode(",", $arguments)." WHERE id=:id";
-        return $toto;
+        $arguments = "SET ".implode(",", $arguments)." WHERE id=:id";
+        return $arguments;
     }
 
     public function insertArgs(array $param){
 
 
         $argumentsString = "(".
-        implode(", ", array_keys($param) ) ." ) VALUES ( :".
-        implode(", :", array_keys($param) ) ." )";
+            implode(", ", array_keys($param) ) ." ) VALUES ( :".
+            implode(", :", array_keys($param) ) ." )";
 
 
 
@@ -138,13 +143,20 @@ class QueryConstructor{
         if ($this->requestType === QueryConstructor::SELECT){
 
             $parts[] = "SELECT ";
-            $parts[] = $this->selectArgs($this->select);
+
+            if(isset($this->count)){
+                $parts[]= "Count(".$this->count.") As ".$this->alias;
+            }else{
+                $parts[] = $this->selectArgs($this->select);
+            }
+
             $parts[] = $this->from;
 
             if (isset($this->where))
                 $parts[] = $this->whereArgs($this->where);
 
             $query = implode(' ', $parts);
+
 
         }
 

@@ -6,12 +6,14 @@ use DontKnow\Models\Comments;
 use DontKnow\Models\Pictures;
 use DontKnow\Models\Customizer;
 use DontKnow\Models\Categories;
+use DontKnow\Models\Statistics;
 use DontKnow\Controllers\UsersController;
 use DontKnow\Controllers\ArticlesController;
 use DontKnow\Controllers\PicturesController;
 use DontKnow\Controllers\CommentsController;
 use DontKnow\Controllers\CustomizerController;
 use DontKnow\Controllers\CategoriesController;
+use DontKnow\Controllers\StatisticsController;
 use DontKnow\VO\DbDriver;
 use DontKnow\VO\DbHost;
 use DontKnow\VO\DbName;
@@ -52,6 +54,9 @@ return [
     Categories::class => function($container) {
         return new Categories();
     },
+    Statistics::class => function($container) {
+        return new Statistics();
+    },
     UsersController::class => function($container) {
         $usersModel = $container[Users::class]($container);
         return new UsersController($usersModel);
@@ -75,5 +80,9 @@ return [
     CategoriesController::class => function($container) {
         $usersModel = $container[Categories::class]($container);
         return new CategoriesController($usersModel);
+    },
+    StatisticsController::class => function($container) {
+        $usersModel = $container[Statistics::class]($container);
+        return new StatisticsController($usersModel);
     },
 ];
