@@ -33,7 +33,6 @@ class UsersController{
 
         $user = new Users();
         $form = $user->getRegisterForm();
-        //Est ce qu'il y a des données dans POST ou GET($form["config"]["method"])
         $method = strtoupper($form["config"]["method"]);
         $data = $GLOBALS["_".$method];
 
