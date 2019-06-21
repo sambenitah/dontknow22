@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cee0f292-5b2f-48df-8183-4c75a2ebcbc2" name="Default Changelist" comment="" />
+    <list default="true" id="cee0f292-5b2f-48df-8183-4c75a2ebcbc2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dontknow/Users.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dontknow/Users.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ib_buffer_pool" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ib_logfile0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ibdata1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/ibtmp1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/controllers/UsersController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/controllers/UsersController.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/models/Users.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/models/Users.class.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,11 +200,12 @@
     <session id="-883219297">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.3" value="3" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -215,13 +225,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
-          <entry key="php" value="1606" />
+          <entry key="php" value="1626" />
           <entry key="yml" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="1606" />
+          <entry key="PHP" value="1626" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="YAML" value="48" />
         </counts>
@@ -251,11 +261,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/controllers/UsersController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1155">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="225">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#65#88#0#PHP" expanded="true" />
               </folding>
@@ -263,11 +273,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/models/Users.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="593">
-              <caret line="183" column="31" selection-start-line="183" selection-start-column="31" selection-end-line="183" selection-end-column="31" />
+            <state relative-caret-position="134">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#60#86#0#PHP" expanded="true" />
               </folding>
@@ -369,7 +379,6 @@
         <option value="$PROJECT_DIR$/www/models/Installer.class.php" />
         <option value="$PROJECT_DIR$/www/views/Users/installer.view.php" />
         <option value="$PROJECT_DIR$/www/dontknow.sql" />
-        <option value="$PROJECT_DIR$/www/controllers/UsersController.class.php" />
         <option value="$PROJECT_DIR$/www/core/Routing.class.php" />
         <option value="$PROJECT_DIR$/www/controllers/CommentsController.class.php" />
         <option value="$PROJECT_DIR$/www/controllers/ArticlesController.class.php" />
@@ -382,6 +391,7 @@
         <option value="$PROJECT_DIR$/www/index.php" />
         <option value="$PROJECT_DIR$/www/core/QueryConstructor.class.php" />
         <option value="$PROJECT_DIR$/www/models/Users.class.php" />
+        <option value="$PROJECT_DIR$/www/controllers/UsersController.class.php" />
       </list>
     </option>
   </component>
@@ -425,6 +435,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -457,7 +468,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -485,6 +495,117 @@
       <recent name="$PROJECT_DIR$/www/views/Customizer" />
       <recent name="$PROJECT_DIR$/www/views/Categories" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/www/controllers/UsersController.class.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/www/models/Users.class.php</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -556,7 +677,8 @@
       <workItem from="1560893345309" duration="1735000" />
       <workItem from="1560939237219" duration="1000" />
       <workItem from="1561061407865" duration="918000" />
-      <workItem from="1561062337275" duration="39000" />
+      <workItem from="1561062337275" duration="585000" />
+      <workItem from="1561104804741" duration="67000" />
     </task>
     <task id="LOCAL-00001" summary="reset project">
       <created>1548753304095</created>
@@ -719,16 +841,24 @@
       <option name="project" value="LOCAL" />
       <updated>1558218945162</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="commit 19/05/19">
+      <created>1561062794171</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1561062794171</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208348000" />
+    <option name="totallyTimeSpent" value="208961000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1390" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24406528" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24777448" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -740,10 +870,10 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.12866242" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.12866242" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32905984" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32956153" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32956153" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.13503185" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1097,22 +1227,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/controllers/UsersController.class.php">
+    <entry file="file://$PROJECT_DIR$/www/models/Users.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="134">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
-            <element signature="e#65#88#0#PHP" expanded="true" />
+            <element signature="e#60#86#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/models/Users.class.php">
+    <entry file="file://$PROJECT_DIR$/www/controllers/UsersController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="183" column="31" selection-start-line="183" selection-start-column="31" selection-end-line="183" selection-end-column="31" />
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
-            <element signature="e#60#86#0#PHP" expanded="true" />
+            <element signature="e#65#88#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

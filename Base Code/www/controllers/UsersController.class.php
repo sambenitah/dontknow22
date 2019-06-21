@@ -14,7 +14,6 @@ use DontKnow\VO\DbName;
 use DontKnow\VO\DbPwd;
 use DontKnow\VO\DbUser;
 
-//hgdfhjklmjhvcbghj
 
 class UsersController{
 
