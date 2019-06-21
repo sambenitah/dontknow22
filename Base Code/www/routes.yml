@@ -101,10 +101,3 @@
   role: 3
 
 
-
-
-"/test":
-  controller: Articles
-  action: test
-  connexion: true
-  role: 3

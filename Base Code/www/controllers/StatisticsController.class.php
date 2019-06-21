@@ -18,13 +18,25 @@ class StatisticsController{
     public function defaultAction(){
         $queryBuilder = new Statistics();
         $countUsers = $queryBuilder->querySelectCountUser();
-        //$countArticles = $queryBuilder->querySelectCountArticle();
-        var_dump($countUsers);
+        $countArticles = $queryBuilder->querySelectCountArticle();
+        $counter = array_merge($countUsers, $countArticles);
+        $v = new View("statistics",self::nameClass, "admin");
+        $v->assign("CountUser", $counter);
+        exit;
+    }
 
-        /*
-        $v = new View("statistics", "admin");
-        $v->assign("CountUser", $countUsers);
-        exit;*/
+    public function evolutionUserAction(){
+        $queryBuilder = new Statistics();
+        $query = $queryBuilder->querySelectGroupByUser();
+        echo json_encode($query);
+
+    }
+
+    public function evolutionArticleAction(){
+        $queryBuilder = new Statistics();
+        $query = $queryBuilder->querySelectGroupByArticle();
+        echo json_encode($query);
+
     }
 
 }
