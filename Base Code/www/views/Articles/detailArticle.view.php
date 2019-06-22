@@ -23,7 +23,7 @@
                 <input id="inputHiddenCategory" value="<?php echo $detail->category?>">
                 <input id="inputHiddenPicture" value="<?php echo $detail->main_picture?>">
                 <input id="inputHiddenContent" value="<?php echo $detail->content ?>">
-
+                <input id="inputHiddenStatus" value="<?php echo $detail->status ?>">
             </article>
         </div>
     </div>
@@ -76,6 +76,11 @@
         $("#inputHiddenCategory").val(category)
     });
 
+    $("#selectStatus").change(function () {
+        var category = $('#selectStatus option:selected').text();
+        $("#inputHiddenStatus").val(category)
+    });
+
 
 
     $("#bouttonDetailArticle").click(function (e) {
@@ -92,11 +97,15 @@
         if (category == '-')
             var category = $('#inputHiddenCategory').val();
 
+        var status = $("#inputHiddenStatus").val();
+        if (status == '-')
+            var status = $('#inputHiddenStatus').val();
+
 
 
         $.ajax({
             url : '/Articles/updateArticle',
-            data: {id : id, content : content, main_picture : picture, category : category },
+            data: {id : id, content : content, main_picture : picture, category : category, status : status },
             type : 'POST',
             dataType: "json",
             success : function(data){

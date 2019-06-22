@@ -44,6 +44,11 @@ class Articles{
         $this->description = ucfirst(trim($description));
     }
 
+    public function setStatus($status)
+    {
+        $this->status = ucfirst(trim($status));
+    }
+
     public function setRoute($route)
     {
         $this->route = urlencode(trim($route));
@@ -73,6 +78,16 @@ class Articles{
     }
 
     public function selectAllArticle(){
+        $selectArticle = new QueryConstructor();
+        $arguments = get_object_vars($this);
+        $query = $selectArticle->select($arguments)->from('Articles')->where(["status"=>1]);
+        $query = $selectArticle->instance->prepare((string)$query);
+        $query->setFetchMode(\PDO::FETCH_CLASS, get_called_class());
+        $query->execute(["status"=>1]);
+        return $query->fetchAll();
+    }
+
+    public function selectAllArticleBis(){
         $selectArticle = new QueryConstructor();
         $arguments = get_object_vars($this);
         $query = $selectArticle->select($arguments)->from('Articles');
@@ -210,6 +225,29 @@ class Articles{
                         [
                             "id" => "-",
                             "value" => "-"
+                        ]
+                    ]
+                ],
+
+                "status"=>[
+                    "id"=>"selectStatus",
+                    "class"=>"select-css",
+                    "label"=>"Is Activate",
+                    "option"=>[
+
+                        [
+                            "id" => "-",
+                            "value" => "-"
+                        ],
+
+                        [
+                            "id" => "0",
+                            "value" => "0"
+                        ],
+
+                        [
+                            "id" => "1",
+                            "value" => "1"
                         ]
                     ]
                 ]

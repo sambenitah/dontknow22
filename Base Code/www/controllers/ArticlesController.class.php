@@ -55,7 +55,7 @@ class ArticlesController{
 
     public function showArticlesAction(){ //ok
         $showArticle = new Articles();
-        $selectArticle = $showArticle->selectAllArticle();
+        $selectArticle = $showArticle->selectAllArticleBIS();
         $v = new View("showArticle", self::nameClass, "admin");
         $v->assign("ListPage", $selectArticle);
         exit;
@@ -96,6 +96,7 @@ class ArticlesController{
                 $updateArticle->setContent($data["content"]);
                 $updateArticle->setMainPicture($data["main_picture"]);
                 $updateArticle->setCategory($data["category"]);
+                $updateArticle->setStatus($data["status"]);
                 $updateArticle->updateArticle();
                 echo json_encode("Update");
                 exit;
