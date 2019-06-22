@@ -78,4 +78,11 @@ class Statistics{
         return $query->fetch();
     }
 
+    public function updateDetailUser($arguments){
+        $selectAllUserDetail = new QueryConstructor();
+        $query = $selectAllUserDetail->table('Users')->update($arguments);
+        $query = $selectAllUserDetail->instance->prepare((string)$query);
+        return $query->execute($arguments);
+    }
+
 }

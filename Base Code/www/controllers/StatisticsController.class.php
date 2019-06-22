@@ -61,6 +61,14 @@ class StatisticsController{
         $v->assign("DetailUsers", $query);
     }
 
+    public function updateUserDetailAction(){
+        $queryBuilder = new Statistics();
+        $data = $GLOBALS["_POST"];
+        $queryBuilder->updateDetailUser($data);
+        $this->detailManagementUsersAction($data["id"]);
+
+    }
+
 
 
 }

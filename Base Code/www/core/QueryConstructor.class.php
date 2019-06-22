@@ -79,6 +79,12 @@ class QueryConstructor{
         return $this;
     }
 
+    public function anotheParam(string $param):self {
+        $this->anotherParam = $param;
+        return $this;
+    }
+
+
     public function selectArgs(array $param)
     {
 
@@ -164,6 +170,8 @@ class QueryConstructor{
             $parts[] = "UPDATE ";
             $parts[] = $this->table;
             $parts[] = $this->updateArgs($this->update);
+            if (isset($this->anotheParam))
+                $parts[] = $this->anotheParam;
             $query = implode(' ', $parts);
         }
 
