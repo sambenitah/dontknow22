@@ -624,12 +624,17 @@ span.choose {
 .firstSectionStatistics{
   margin-top: 50px !important;
 }
-.backgroundCount{
-  padding: 50px 100px;
+.number{
   font-size: 30px;
   font-weight: bold;
-  background-color: #85858e33;
   font-family: Roboto;
+  text-align: center;
+}
+
+#userPlus{
+  font-family: Roboto;
+  margin-top: 10px;
+  color: black;
 }
 
 .textAboveSectionCount{
@@ -643,3 +648,26 @@ span.choose {
   height: 400px;
 }
 
+.backgroundCount{
+  padding: 50px 100px;
+  background-color: #85858e33;
+  height: 140px;
+}
+
+.td{
+  border : 1px solid #dadada;
+  text-align: center;
+  padding: 10px 30px;
+  font-family: Roboto;
+}
+
+
+#tableAllUser{
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+#headerTable{
+  background-color: #1c364a;
+  color: white;
+}

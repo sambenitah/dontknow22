@@ -100,4 +100,14 @@
   connexion: true
   role: 3
 
+"/managementUsers":
+  controller: Statistics
+  action: managementUsers
+  connexion: true
+  role: 3
 
+"/detailUser":
+  controller: Statistics
+  action: detailManagementUsers
+  connexion: true
+  role: 3

@@ -4,10 +4,8 @@
     <list default="true" id="16c2570d-00ce-4581-a46c-743d0df50c72" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base Code/db_data/dontknow/Articles.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/dontknow/Articles.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base Code/db_data/dontknow/Categories.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/dontknow/Categories.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base Code/db_data/dontknow/Users.frm" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/dontknow/Users.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base Code/db_data/dontknow/Comments.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/dontknow/Comments.ibd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base Code/db_data/dontknow/Users.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/dontknow/Users.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base Code/db_data/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/ib_buffer_pool" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base Code/db_data/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/ib_logfile0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base Code/db_data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/ibdata1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base Code/db_data/mysql/innodb_index_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/mysql/innodb_index_stats.ibd" afterDir="false" />
@@ -17,6 +15,7 @@
       <change beforePath="$PROJECT_DIR$/Base Code/www/public/css/Back-css/_general.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/www/public/css/Back-css/_general.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base Code/www/public/css/Back-css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/www/public/css/Back-css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base Code/www/routes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/www/routes.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base Code/www/views/Articles/singleArticle.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/www/views/Articles/singleArticle.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base Code/www/views/Statistics/statistics.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/www/views/Statistics/statistics.view.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -135,55 +134,48 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="2" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="php" value="24" />
+          <entry key="php" value="35" />
           <entry key="scss" value="1" />
-          <entry key="yml" value="2" />
+          <entry key="yml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="24" />
+          <entry key="PHP" value="35" />
           <entry key="SCSS" value="1" />
-          <entry key="YAML" value="2" />
+          <entry key="YAML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="1379" />
-          <entry key="scss" value="157" />
+          <entry key="php" value="3246" />
+          <entry key="scss" value="229" />
+          <entry key="yml" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="1379" />
-          <entry key="SCSS" value="157" />
+          <entry key="PHP" value="3246" />
+          <entry key="SCSS" value="229" />
+          <entry key="YAML" value="27" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Base Code/www/models/Statistics.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="39" column="165" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="165" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Base Code/www/views/Statistics/statistics.view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1800">
-              <caret line="120" column="89" selection-start-line="120" selection-start-column="89" selection-end-line="120" selection-end-column="89" />
+            <state relative-caret-position="553">
+              <caret line="76" column="38" selection-start-line="76" selection-start-column="38" selection-end-line="76" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -191,8 +183,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/StatisticsController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="36" />
+            <state relative-caret-position="598">
+              <caret line="60" column="26" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
               <folding>
                 <element signature="e#65#96#0#PHP" expanded="true" />
               </folding>
@@ -200,11 +192,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Base Code/www/models/Categories.class.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Base Code/www/views/Statistics/detailUserBack.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" selection-start-line="27" selection-end-line="27" selection-end-column="68" />
+            <state relative-caret-position="15">
+              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Base Code/www/views/Statistics/statistics.view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="2" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Base Code/www/views/Statistics/userBack.view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -212,8 +222,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Base Code/www/public/css/Back-css/_general.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9630">
-              <caret line="642" column="15" selection-start-line="642" selection-start-column="15" selection-end-line="642" selection-end-column="15" />
+            <state relative-caret-position="628">
+              <caret line="672" column="1" selection-start-line="672" selection-start-column="1" selection-end-line="672" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -222,10 +232,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>_select_option</find>
-      <find>test</find>
-      <find>console</find>
-      <find>content</find>
       <find>mainPicture</find>
       <find>post</find>
       <find>cross</find>
@@ -252,6 +258,10 @@
       <find>header('Location: '.Routing::getSlug(&quot;ErrorPage&quot;,&quot;updateErrorPage&quot;).'');</find>
       <find>json</find>
       <find>font</find>
+      <find>Messa</find>
+      <find>where</find>
+      <find>singleArticleAction</find>
+      <find>singleArticle</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;form&quot;</replace>
@@ -264,9 +274,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Base Code/www/views/templates/basic.tpl.php" />
-        <option value="$PROJECT_DIR$/Base Code/www/views/listFrontPages.view.php" />
-        <option value="$PROJECT_DIR$/Base Code/www/controllers/Customizer.class.php" />
         <option value="$PROJECT_DIR$/Base Code/www/views/templates/front.tpl.php" />
         <option value="$PROJECT_DIR$/Base Code/www/views/showPictures.view.php" />
         <option value="$PROJECT_DIR$/Base Code/www/views/templates/admin.tpl.php" />
@@ -300,7 +307,6 @@
         <option value="$PROJECT_DIR$/Base Code/www/controllers/ErrorPageController.class.php" />
         <option value="$PROJECT_DIR$/Base Code/www/core/Validator.class.php" />
         <option value="$PROJECT_DIR$/Base Code/www/core/View.class.php" />
-        <option value="$PROJECT_DIR$/Base Code/www/controllers/ArticlesController.class.php" />
         <option value="$PROJECT_DIR$/Base Code/www/index.php" />
         <option value="$PROJECT_DIR$/Base Code/www/core/Routing.class.php" />
         <option value="$PROJECT_DIR$/Base Code/www/models/ErrorPage.class.php" />
@@ -309,12 +315,16 @@
         <option value="$PROJECT_DIR$/Base Code/www/models/Users.class.php" />
         <option value="$PROJECT_DIR$/Base Code/www/Config/di.global.php" />
         <option value="$PROJECT_DIR$/Base Code/www/core/QueryConstructor.class.php" />
-        <option value="$PROJECT_DIR$/Base Code/www/public/css/Back-css/_general.scss" />
-        <option value="$PROJECT_DIR$/Base Code/www/routes.yml" />
         <option value="$PROJECT_DIR$/Base Code/www/models/Categories.class.php" />
-        <option value="$PROJECT_DIR$/Base Code/www/controllers/StatisticsController.class.php" />
-        <option value="$PROJECT_DIR$/Base Code/www/models/Statistics.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/views/Articles/singleArticle.view.php" />
         <option value="$PROJECT_DIR$/Base Code/www/views/Statistics/statistics.view.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/public/css/Back-css/_general.scss" />
+        <option value="$PROJECT_DIR$/Base Code/www/controllers/ArticlesController.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/views/Statistics/userBack.view.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/routes.yml" />
+        <option value="$PROJECT_DIR$/Base Code/www/models/Statistics.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/controllers/StatisticsController.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/views/Statistics/detailUserBack.view.php" />
       </list>
     </option>
   </component>
@@ -338,7 +348,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -422,28 +431,21 @@
               <item name="Base Code" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Articles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dontknow22" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dontknow22" type="462c0819:PsiDirectoryNode" />
-              <item name="Base Code" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Categories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dontknow22" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dontknow22" type="462c0819:PsiDirectoryNode" />
-              <item name="Base Code" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="Statistics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dontknow22" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dontknow22" type="462c0819:PsiDirectoryNode" />
+              <item name="Base Code" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -490,6 +492,7 @@
       <workItem from="1556111132439" duration="212000" />
       <workItem from="1561104761888" duration="9189000" />
       <workItem from="1561129689625" duration="4000" />
+      <workItem from="1561135404565" duration="10480000" />
     </task>
     <task id="LOCAL-00001" summary="ttt">
       <created>1548753671022</created>
@@ -694,21 +697,29 @@
       <option name="project" value="LOCAL" />
       <updated>1561106214835</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="commit 23/04/2019">
+      <created>1561135419900</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1561135419900</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="295042000" />
+    <option name="totallyTimeSpent" value="305522000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="803" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="797" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23819743" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24177396" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32763532" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32624114" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -800,21 +811,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="commit 23/04/2019" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Base Code/www/views/singleArticle.view.php" />
-    <entry file="file://$PROJECT_DIR$/Base Code/www/core/SPDO.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/core/ValidatorFiles.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/PicturesController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -862,13 +858,6 @@
     <entry file="file://$PROJECT_DIR$/Base Code/www/views/showArticle.view.php" />
     <entry file="file://$PROJECT_DIR$/Base Code/www/public/css/Back-css/style.scss">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/views/templates/admin.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="74" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="74" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Base Code/www/views/errorPage.view.php" />
     <entry file="file://$PROJECT_DIR$/Base Code/www/views/templates/errorPage.tpl.php">
@@ -935,13 +924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/CategoriesController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/CommentsController.class.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -990,27 +972,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/models/Articles.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="110" selection-start-line="110" selection-end-line="114" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/ArticlesController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1775">
-          <caret line="5" selection-start-line="5" selection-end-line="9" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/routes.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1545">
-          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Base Code/www/views/Categories/addCategory.view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -1018,27 +979,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/models/Statistics.class.php">
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/templates/admin.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="39" column="165" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="165" />
+        <state>
+          <caret selection-end-line="2" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/views/Statistics/statistics.view.php">
+    <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/CategoriesController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="120" column="89" selection-start-line="120" selection-start-column="89" selection-end-line="120" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/StatisticsController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="36" />
-          <folding>
-            <element signature="e#65#96#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="330">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
@@ -1049,10 +1000,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/Articles/singleArticle.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Base Code/www/public/css/Back-css/_general.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9630">
-          <caret line="642" column="15" selection-start-line="642" selection-start-column="15" selection-end-line="642" selection-end-column="15" />
+        <state relative-caret-position="628">
+          <caret line="672" column="1" selection-start-line="672" selection-start-column="1" selection-end-line="672" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/routes.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="110" column="31" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/models/Articles.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1279">
+          <caret line="112" selection-start-line="112" selection-end-line="114" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/ArticlesController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="115" column="20" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/Statistics/statistics.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/models/Statistics.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="76" column="38" selection-start-line="76" selection-start-column="38" selection-end-line="76" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/StatisticsController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="60" column="26" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
+          <folding>
+            <element signature="e#65#96#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/Statistics/userBack.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/Statistics/detailUserBack.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
         </state>
       </provider>
     </entry>

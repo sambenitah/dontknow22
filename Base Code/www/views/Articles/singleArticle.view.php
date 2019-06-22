@@ -48,6 +48,7 @@
                 </div>
         <?php endforeach;?>
                 <div id="comments">
+
         <?php foreach ($Messages as $key => $detail):?>
                     <div class="comments-inner">
                         <ul class="comment-list">
