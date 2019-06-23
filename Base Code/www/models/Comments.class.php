@@ -43,6 +43,14 @@ class Comments {
         $query->execute($arguments);
     }
 
+    public function deleteComment(array $param){
+        $deletePicture = new QueryConstructor();
+        $query = $deletePicture->delete('Comments')->where($param);
+        $query = $deletePicture->instance->prepare((string)$query);
+        $query->execute($param);
+        return $query->fetch();
+    }
+
 
     public function getAddCommentForm($idArticle, $idUser){
 

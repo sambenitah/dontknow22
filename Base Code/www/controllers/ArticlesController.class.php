@@ -105,12 +105,12 @@ class ArticlesController{
     }
 
     public function deleteArticleAction(){ //ok
+
         $data = $GLOBALS["_POST"];
         $id = $data["id"];
         $deletePicture = new Articles();
         $deletePicture->deleteArticle(['id'=>$id]);
-        echo json_encode("Delete");
-        exit;
+
     }
 
 
@@ -148,9 +148,9 @@ class ArticlesController{
             $v->assign("CommentForm", $formComment);
             $v->assign("Messages", $messages);
             exit;
-
         }
     }
+
 
     public function yourWebsiteAction(){ //ok
         $showArticle = new Articles();

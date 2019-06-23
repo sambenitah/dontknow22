@@ -124,7 +124,7 @@ class Articles{
 
     public function selectCommentArticle(array $where){
         $selectComment = new QueryConstructor();
-        $query = $selectComment->instance->prepare("SELECT * FROM Comments, Users WHERE Comments.userId = Users.email AND Comments.articleId = :idArticle ORDER BY Comments.date_inserted DESC");
+        $query = $selectComment->instance->prepare("SELECT Comments.id, Users.lastname, Users.firstname, Comments.content,Comments.date_inserted FROM Comments, Users WHERE Comments.userId = Users.email AND Comments.articleId = :idArticle ORDER BY Comments.date_inserted DESC");
         $query->setFetchMode(\PDO::FETCH_CLASS, get_called_class());
         $query->execute($where);
         return $query->fetchAll();

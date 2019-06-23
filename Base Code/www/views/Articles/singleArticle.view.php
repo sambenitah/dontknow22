@@ -11,8 +11,6 @@
                 <h2 class="title"><?php echo $detail->title?></h2>
                 <div class="post-details">
                     <a href="#" class="post-date"><?php echo $detail->date_inserted?></a>
-                    <a href="#" class="post-views">15 views</a>
-                    <a href="#" class="post-comments">03 Comments</a>
                 </div>
                 <div class="the-content">
 
@@ -47,6 +45,7 @@
                     </div>
                 </div>
         <?php endforeach;?>
+        <?php if (isset($_SESSION["auth"])):?>
                 <div id="comments">
 
         <?php foreach ($Messages as $key => $detail):?>
@@ -58,6 +57,9 @@
                                         <div class="comment-head">
                                             <h2 class="title"><?php echo $detail->firstname; echo " "; echo $detail->lastname;?> </h2>
                                             <span class="comment-date"><?php echo $detail->date_inserted?></span>
+                                            <?php if ($_SESSION["role"] == 3):?>
+                                            <i id="<?php echo $detail->id?>" style="float: right; cursor: pointer" class="deleteComment fas fa-times"></i>
+                                            <?php endif;?>
                                         </div>
                                         <div class="comment-content">
                                             <p>
@@ -66,7 +68,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </li>
                         </ul>
                     </div>
@@ -78,6 +79,49 @@
                     </div>
                 </div>
             </div>
+            <?php endif; ?>
         </article>
     </div>
 </div>
+
+
+
+
+<script>
+    $(document).ready(function () {
+        $(".deleteComment").click(function () {
+            var id = $(this).attr("id");
+            $.confirm({
+                title: false,
+                boxWidth: '500px',
+                useBootstrap: false,
+                content: '<p class="titleAlert">Are you sur ?</p><br><p class="textAlert">Do you want to delete this Comment ?</p>',
+                type: 'dark',
+                typeAnimated: true,
+                buttons: {
+                    Delete: {
+                        text: 'Delete',
+                        btnClass: 'btn-dark',
+                        action: function () {
+                            $.ajax({
+                                url: '/Comments/deleteComment',
+                                data: {id: id},
+                                type: 'POST',
+                                dataType: "json",
+                                success: function (data) {
+                                    if (data = 'delete'){
+                                        window.location = "/front";
+                                    }
+
+                                }
+                            });
+                        }
+                    },
+                    close: function () {
+                    }
+                }
+            });
+
+        })
+    })
+</script>
