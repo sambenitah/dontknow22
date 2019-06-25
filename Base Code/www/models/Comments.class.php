@@ -7,7 +7,7 @@ use DontKnow\Core\QueryConstructor;
 
 
 
-class Comments {
+class Comments{
 
 
     public function setIDBIS($id)
@@ -36,17 +36,15 @@ class Comments {
     }
 
     public function addComment(){
-        $addArticle = new QueryConstructor();
         $arguments = get_object_vars($this);
-        $query = $addArticle->table("Comments")->insert($arguments);
-        $query = $addArticle->instance->prepare((string)$query);
+        $query = $this->table("Comments")->insert($arguments);
+        $query = $this->instance->prepare((string)$query);
         $query->execute($arguments);
     }
 
     public function deleteComment(array $param){
-        $deletePicture = new QueryConstructor();
-        $query = $deletePicture->delete('Comments')->where($param);
-        $query = $deletePicture->instance->prepare((string)$query);
+        $query = $this->delete('Comments')->where($param);
+        $query = $this->instance->prepare((string)$query);
         $query->execute($param);
         return $query->fetch();
     }

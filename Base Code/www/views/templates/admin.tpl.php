@@ -27,7 +27,8 @@ use DontKnow\Core\Routing;
                     Dont Kn?w
 
                 </a>
-                <a href="#"><i class="far fa-user-circle"></i></a>
+                <?php echo $_SESSION['auth']; ?>
+                <a href="<?php echo Routing::getSlug("Users","logout");?>" style="float: right;margin: 0.5em; margin-right: 1em; font-size: 1.5em; color: #FFF;"><i class="far fa-user-circle"></i></a>
             </div>
         </div>
     </header>
@@ -37,8 +38,8 @@ use DontKnow\Core\Routing;
                 <nav class="center" id="navAdmin">
                     <p class="titleMenu">Administration</p>
                     <div class="div-nav-admin-menu">
-                        <a class="a-adminMenu" href="<?php echo Routing::getSlug("Articles","yourWebSite");?>">Your website</a>
-                        <a class="a-adminMenu" href="<?php echo Routing::getSlug("Statistics","default");?>">Statistics</a>
+                        <a class="a-adminMenu" href="<?php echo Routing::getSlug("Statistics","default");?>">Home</a>
+                        <a class="a-adminMenu" href="<?php echo Routing::getSlug("Articles","default");?>">Your website</a>
                     </div>
                     <p class="titleMenu">Customizer</p>
                    <div class="div-nav-admin-menu">

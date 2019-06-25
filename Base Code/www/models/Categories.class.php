@@ -14,26 +14,23 @@ class Categories{
     }
 
     public function insertCategory(){
-        $insertCategorie = new QueryConstructor();
         $arguments = get_object_vars($this);
-        $query = $insertCategorie->table('Categories')->insert($arguments);
-        $query = $insertCategorie->instance->prepare((string)$query);
+        $query = $this->table('Categories')->insert($arguments);
+        $query = $this->instance->prepare((string)$query);
         $query->execute($arguments);
     }
 
     public function selectCategory(){
-        $selectCategorie = new QueryConstructor();
-        $query = $selectCategorie->select()->from('Categories');
-        $query = $selectCategorie->instance->prepare((string)$query);
+        $query = $this->select()->from('Categories');
+        $query = $this->instance->prepare((string)$query);
         $query->setFetchMode(\PDO::FETCH_CLASS, get_called_class());
         $query->execute();
         return $query->fetchAll();
     }
 
     public function deleteCategory(array $delete){
-        $deleteCategorie = new QueryConstructor();
-        $query = $deleteCategorie->delete('Categories')->where($delete);
-        $query = $deleteCategorie->instance->prepare((string)$query);
+        $query = $this->delete('Categories')->where($delete);
+        $query = $this->instance->prepare((string)$query);
         $query->execute($delete);
         return $query->fetch();
     }

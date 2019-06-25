@@ -1,12 +1,14 @@
 <?php
 
-use DontKnow\Models\Users;
-use DontKnow\Models\Articles;
+use DontKnow\Dao\Users;
+use DontKnow\Dao\Articles;
 use DontKnow\Models\Comments;
-use DontKnow\Models\Pictures;
+use DontKnow\Dao\Pictures;
 use DontKnow\Models\Customizer;
 use DontKnow\Models\Categories;
-use DontKnow\Models\Statistics;
+use DontKnow\Dao\Statistics;
+use DontKnow\Dao\ErrorPage;
+use DontKnow\Core\QueryConstructor;
 use DontKnow\Controllers\UsersController;
 use DontKnow\Controllers\ArticlesController;
 use DontKnow\Controllers\PicturesController;
@@ -14,75 +16,95 @@ use DontKnow\Controllers\CommentsController;
 use DontKnow\Controllers\CustomizerController;
 use DontKnow\Controllers\CategoriesController;
 use DontKnow\Controllers\StatisticsController;
+use DontKnow\Controllers\ErrorPageController;
+use DontKnow\Core\Container;
 use DontKnow\VO\DbDriver;
 use DontKnow\VO\DbHost;
 use DontKnow\VO\DbName;
 use DontKnow\VO\DbUser;
 use DontKnow\VO\DbPwd;
+use DontKnow\Core\SPDO;
 
 return [
-    DbDriver::class => function($container) {
-        return new DbDriver($container['config']['db']['driver']);
+    DbDriver::class => function(Container $container) {
+        return new DbDriver($container->getinstance('config.db.driver'));
     },
-    DbHost::class => function($container) {
-        return new DbHost($container['config']['db']['host']);
+    DbHost::class => function(Container $container) {
+        return new DbHost($container->getinstance('config.db.host'));
     },
-    DbName::class => function($container) {
-        return new DbName($container['config']['db']['name']);
+    DbName::class => function(Container $container) {
+        return new DbName($container->getinstance('config.db.name'));
     },
-    DbUser::class => function($container) {
-        return new DbUser($container['config']['db']['user']);
+    DbUser::class => function(Container $container) {
+        return new DbUser($container->getinstance('config.db.user'));
     },
-    DbPwd::class => function($container) {
-        return new DbPwd($container['config']['db']['pwd']);
+    DbPwd::class => function(Container $container) {
+        return new DbPwd($container->getinstance('config.db.pwd'));
     },
-    Users::class => function($container) {
-        return new Users();
+    Users::class => function(Container $container) {
+        return new Users($container->getInstance(QueryConstructor::class));
     },
-    Pictures::class => function($container) {
-        return new Pictures();
+    QueryConstructor::class => function(Container $container) {
+        return new QueryConstructor($container->getInstance(SPDO::class));
     },
-    Articles::class => function($container) {
-        return new Articles();
+    SPDO::class => function(Container $container) {
+        return new SPDO($container->getInstance(DbDriver::class)
+            ,$container->getInstance(DbHost::class),
+            $container->getInstance(DbName::class),
+            $container->getInstance(DbUser::class),
+            $container->getInstance(DbPwd::class));
     },
-    Comments::class => function($container) {
+    Pictures::class => function(Container $container) {
+        return new Pictures($container->getInstance(QueryConstructor::class));
+    },
+    Articles::class => function(Container $container) {
+        return new Articles($container->getInstance(QueryConstructor::class));
+    },
+    Comments::class => function() {
         return new Comments();
     },
-    Customizer::class => function($container) {
+    Customizer::class => function() {
         return new Customizer();
     },
-    Categories::class => function($container) {
+    Categories::class => function() {
         return new Categories();
     },
-    Statistics::class => function($container) {
-        return new Statistics();
+    Statistics::class => function(Container $container) {
+        return new Statistics($container->getInstance(QueryConstructor::class));
     },
-    UsersController::class => function($container) {
-        $usersModel = $container[Users::class]($container);
+    ErrorPage::class => function(Container $container) {
+        return new ErrorPage($container->getInstance(QueryConstructor::class));
+    },
+    UsersController::class => function(Container $container) {
+        $usersModel = $container->getInstance(Users::class);
         return new UsersController($usersModel);
     },
-    ArticlesController::class => function($container) {
-        $usersModel = $container[Articles::class]($container);
-        return new ArticlesController($usersModel);
+    ArticlesController::class => function(Container $container) {
+        $articlesModel = $container->getInstance(Articles::class);
+        return new ArticlesController($articlesModel);
     },
-    PicturesController::class => function($container) {
-        $usersModel = $container[Pictures::class]($container);
+    PicturesController::class => function(Container $container) {
+        $usersModel = $container->getInstance(Pictures::class);
         return new PicturesController($usersModel);
     },
-    CommentsController::class => function($container) {
-        $usersModel = $container[Comments::class]($container);
+    CommentsController::class => function(Container $container) {
+        $usersModel = $container->getInstance(Comments::class);
         return new CommentsController($usersModel);
     },
-    CustomizerController::class => function($container) {
-        $usersModel = $container[Customizer::class]($container);
+    CustomizerController::class => function(Container $container) {
+        $usersModel = $container->getInstance(Customizer::class);
         return new CustomizerController($usersModel);
     },
-    CategoriesController::class => function($container) {
-        $usersModel = $container[Categories::class]($container);
+    CategoriesController::class => function(Container $container) {
+        $usersModel = $container->getInstance(Categories::class);
         return new CategoriesController($usersModel);
     },
-    StatisticsController::class => function($container) {
-        $usersModel = $container[Statistics::class]($container);
+    StatisticsController::class => function(Container $container) {
+        $usersModel = $container->getInstance(Statistics::class);
         return new StatisticsController($usersModel);
+    },
+    ErrorPageController::class => function(Container $container) {
+        $usersModel = $container->getInstance(ErrorPage::class);
+        return new ErrorPageController($usersModel);
     },
 ];
