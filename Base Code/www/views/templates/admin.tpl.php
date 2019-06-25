@@ -19,16 +19,15 @@ use DontKnow\Core\Routing;
         <script src="/public/js/admin.tpl.js"></script>
     </head>
     <body>
+
     <header>
         <div class="row">
             <div id="backgroundHeader" class="col-12 col-m-12 col-l-12">
-                <a href="<?php echo Routing::getSlug("Users","default");?>" id="headerPartMainSection">
-
+                <a href="<?php echo Routing::getSlug("Statistics","default");?>" id="headerPartMainSection">
                     Dont Kn?w
-
                 </a>
                 <a href="<?php echo Routing::getSlug("Users","logout");?>" style="float: right;margin: 0.5em; margin-right: 1em; font-size: 1.5em; color: #FFF;"><i class="far fa-user-circle"></i></a>
-                <a id="headerPartMainSection">Welcome <?php echo $_SESSION['auth']; ?> on your admin panel </a>
+                <a id="welcomePartMainSection">Welcome <?php echo $_SESSION['auth']; ?> on your admin panel </a>
             </div>
         </div>
     </header>

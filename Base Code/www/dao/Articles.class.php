@@ -9,8 +9,8 @@ use DontKnow\Models\Articles as ArticleModel;
 
 class Articles extends BaseDAO {
 
-    public function addArticle(){
-        $arguments = get_object_vars($this);
+    public function addArticle(ArticleModel $articles){
+        $arguments = get_object_vars($articles);
         $query = $this->queryConstructor->table("Articles")->insert($arguments);
         $query = $this->queryConstructor->prepare((string)$query);
         $query->execute($arguments);
@@ -49,7 +49,7 @@ class Articles extends BaseDAO {
         return $query->fetch();
     }
 
-    public function updateArticle(\DontKnow\Models\Articles $articles){
+    public function updateArticle(ArticleModel $articles){
         $arguments = get_object_vars($articles);
         $query =  $this->queryConstructor->table('Articles')->update($arguments);
         $query = $this->queryConstructor->prepare((string)$query);

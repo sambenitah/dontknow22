@@ -58,7 +58,7 @@ if( method_exists($cObject, $action) ){
                 }
                 else {
                     $message['message']="Wrong Token";
-                    $errorPage->showErrorPageAction();
+                    $errorPage->showErrorPageAction($message);
                 }
             }
             else
@@ -74,7 +74,7 @@ if( method_exists($cObject, $action) ){
 
 }else{
     $message['message']="Method doesn't exist";
-    $errorPage->showErrorPageAction();
+    $errorPage->showErrorPageAction($message);
 }
 
 

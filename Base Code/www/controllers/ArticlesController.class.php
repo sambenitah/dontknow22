@@ -32,7 +32,7 @@ class ArticlesController{
 
     }
 
-    public function addArticleAction(){ //ok
+    public function addArticleAction(){
         $addArticle = new ArticleModel();
         $form = $this->articleDao->getAddArticleForm();
         $method = strtoupper($form["config"]["method"]);
@@ -49,7 +49,7 @@ class ArticlesController{
                 $addArticle->setDescription($data["description"]);
                 $addArticle->setTitle($data["title"]);
                 $addArticle->setRoute($data["route"]);
-                $this->articleDao->addArticle();
+                $this->articleDao->addArticle($addArticle);
                header('Location: '.Routing::getSlug("Articles","showArticles").'');
                exit;
             }
@@ -70,7 +70,10 @@ class ArticlesController{
         $formArticle = $this->articleDao->getDetailArticleForm();
         $detail = $this->articleDao->selectSingleArticle(["route"=>$param]);
         if (empty($detail)) {
-            header('Location: '.Routing::getSlug("ErrorPage","showErrorPage").'');
+            $container = new Container();
+            $errorPage = $container->getInstance(\DontKnow\Controllers\ErrorPageController::class);
+            $message['message']="Articles doesn't exist";
+            $errorPage->showErrorPageAction($message);
         }else {
            $v = new View("detailArticle", self::nameClass, "admin");
            $v->assign("DetailArticle", $detail);
@@ -142,7 +145,10 @@ class ArticlesController{
         }
 
         if (empty($selectDetailArticle)) {
-            header('Location: '.Routing::getSlug("ErrorPage","showErrorPage").'');
+            $container = new Container();
+            $errorPage = $container->getInstance(\DontKnow\Controllers\ErrorPageController::class);
+            $message['message']="Article empty";
+            $errorPage->showErrorPageAction($message);
         }else{
 
             $messages = $this->articleDao->selectCommentArticle(["idArticle"=>$idArticle]);

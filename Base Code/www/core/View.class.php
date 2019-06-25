@@ -22,7 +22,10 @@ class View{
         if( file_exists($viewPath)){
             $this->v=$viewPath;
         }else{
-            header('Location: '.Routing::getSlug("ErrorPage","showErrorPage").'');
+            $container = new Container();
+            $errorPage = $container->getInstance(\DontKnow\Controllers\ErrorPageController::class);
+            $message['message']="View doesn't exist";
+            $errorPage->showErrorPageAction($message);
         }
     }
 
@@ -31,26 +34,27 @@ class View{
         if( file_exists($templatePath)){
             $this->t=$templatePath;
         }else{
-            header('Location: '.Routing::getSlug("ErrorPage","showErrorPage").'');
+            $container = new Container();
+            $errorPage = $container->getInstance(\DontKnow\Controllers\ErrorPageController::class);
+            $message['message']="Templates doesn't exist";
+            $errorPage->showErrorPageAction($message);
         }
 
     }
 
 
-    //$modal = form //"Views/Modals/form.mod.php"
-    //$config = [ ..... ]
     public function addModal($modal, $config){
-        //form.mod.php
         $modalPath = "Views/Modals/".$modal.".mod.php";
         if( file_exists($modalPath)){
             include $modalPath;
         }else{
-            echo"fhgsqjodjhknsnc";
-            header('Location: '.Routing::getSlug("ErrorPage","showErrorPage").'');
+            $container = new Container();
+            $errorPage = $container->getInstance(\DontKnow\Controllers\ErrorPageController::class);
+            $message['message']="Modal doesn't exist";
+            $errorPage->showErrorPageAction($message);
         }
     }
 
-    //$this->data =["pseudo"=>"prof", "age"=>30, "city"=>"Paris"]
     public function assign($key, $value){
         $this->data[$key]=$value;
     }

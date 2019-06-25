@@ -21,8 +21,29 @@ use DontKnow\Core\Routing;
 </head>
 <body>
 <header>
+    <?php if(isset($_SESSION['auth'])): ?>
     <div class="row">
+        <div id="backgroundHeader" class="col-12 col-m-12 col-l-12">
+            <div id="menu">
+                <ul>
+                    <li><a href="<?php echo Routing::getSlug("Statistics","default");?>" id="headerPartMainSection">Dont Kn?w</a>
+                        <ul>
+                            <li><a href="<?php echo Routing::getSlug("Articles","addArticle");?>">Add Article</a></li>
+                            <li><a href="<?php echo Routing::getSlug("Articles","showArticles");?>">Your Articles</a></li>
+                            <li><a href="<?php echo Routing::getSlug("Pictures","showPictures");?>">Your pictures</a></li>
+                            <li><a href="<?php echo Routing::getSlug("Pictures","addPicture");?>">Add picture</a></li>
+                            <li><a href="<?php echo Routing::getSlug("Categories","addCategory");?>">Add Category</a></li>
+                            <li><a href="<?php echo Routing::getSlug("Categories","showCategory");?>">Your Categories</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <a href="<?php echo Routing::getSlug("Users","logout");?>" style="float: right;margin: 0.5em; margin-right: 1em; font-size: 1.5em; color: #FFF;"><i class="far fa-user-circle"></i></a>
+            <a id="welcomePartMainSection">Welcome <?php echo $_SESSION['auth']; ?> on your website</a>
+        </div>
     </div>
+
+    <?php endif; ?>
 </header>
 
 <div class="front">
