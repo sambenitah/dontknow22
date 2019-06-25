@@ -3,12 +3,15 @@
 declare(strict_types=1);
 
 namespace DontKnow\Controllers;
+use DontKnow\Core\Container;
+use DontKnow\Core\QueryConstructor;
 use DontKnow\Core\View;
 use DontKnow\Dao\Articles;
 use DontKnow\Models\Articles as ArticleModel;
 use DontKnow\Core\Validator;
 use DontKnow\Core\Routing;
-use DontKnow\Models\Comments;
+use DontKnow\Models\Comments as CommentsModel;
+use DontKnow\Dao\Comments as CommentsDao;
 
 class ArticlesController{
 
@@ -21,7 +24,7 @@ class ArticlesController{
         $this->articleDao = $articles;
     }
 
-    public function defaultAction(){ //ok
+    public function defaultAction(){
 
         $selectArticle = $this->articleDao->selectAllArticle();
         $v = new View("listFrontPages",self::nameClass, "basic");
@@ -114,11 +117,13 @@ class ArticlesController{
 
 
     public function singleArticleAction($param){ // ok
-        $comment = new Comments();
+        $container = new Container();
+        $commentModel = new CommentsModel();
+        $commentDao = new CommentsDao($container->getInstance(QueryConstructor::class));
         $selectDetailArticle = $this->articleDao->selectSingleArticle(["route"=>$param]);
         $idArticle =  $selectDetailArticle[0]->id;
         $idUser = $_SESSION["auth"];
-        $formComment = $comment->getAddCommentForm($idArticle, $idUser);
+        $formComment = $commentDao->getAddCommentForm($idArticle, $idUser);
         $method = strtoupper($formComment["config"]["method"]);
         $data = $GLOBALS["_".$method];
 
@@ -129,10 +134,10 @@ class ArticlesController{
 
             if(empty($form["errors"])){
 
-                $comment->setArticleId($data["articleId"]);
-                $comment->setUserId($data["userId"]);
-                $comment->setContent($data["content"]);
-                $comment->addComment();
+                $commentModel->setArticleId($data["articleId"]);
+                $commentModel->setUserId($data["userId"]);
+                $commentModel->setContent($data["content"]);
+                $commentDao->addComment($commentModel);
             }
         }
 

@@ -14,7 +14,7 @@ class UsersController{
 
     const nameClass = "Users";
 
-    private $userDao;
+
 
     public function __construct(Users $users)
     {

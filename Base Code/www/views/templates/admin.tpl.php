@@ -27,8 +27,8 @@ use DontKnow\Core\Routing;
                     Dont Kn?w
 
                 </a>
-                <?php echo $_SESSION['auth']; ?>
                 <a href="<?php echo Routing::getSlug("Users","logout");?>" style="float: right;margin: 0.5em; margin-right: 1em; font-size: 1.5em; color: #FFF;"><i class="far fa-user-circle"></i></a>
+                <a id="headerPartMainSection">Welcome <?php echo $_SESSION['auth']; ?> on your admin panel </a>
             </div>
         </div>
     </header>
@@ -49,8 +49,10 @@ use DontKnow\Core\Routing;
                    <div class="div-nav-admin-menu">
                        <a class="a-adminMenu" href="<?php echo Routing::getSlug("Articles","addArticle");?>">Add Article</a>
                        <a class="a-adminMenu" href="<?php echo Routing::getSlug("Articles","showArticles");?>">Your Articles</a>
-                       <a class="a-adminMenu" href="<?php echo Routing::getSlug("Pictures","addPicture");?>">Add picture</a>
                        <a class="a-adminMenu" href="<?php echo Routing::getSlug("Pictures","showPictures");?>">Your pictures</a>
+                       <a class="a-adminMenu" href="<?php echo Routing::getSlug("Pictures","addPicture");?>">Add picture</a>
+                       <a class="a-adminMenu" href="<?php echo Routing::getSlug("Categories","addCategory");?>">Add Category</a>
+                       <a class="a-adminMenu" href="<?php echo Routing::getSlug("Categories","showCategory");?>">Your Categories</a>
                    </div>
                 </nav>
             </div>

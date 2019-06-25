@@ -2,10 +2,10 @@
 
 use DontKnow\Dao\Users;
 use DontKnow\Dao\Articles;
-use DontKnow\Models\Comments;
+use DontKnow\Dao\Comments;
 use DontKnow\Dao\Pictures;
 use DontKnow\Models\Customizer;
-use DontKnow\Models\Categories;
+use DontKnow\Dao\Categories;
 use DontKnow\Dao\Statistics;
 use DontKnow\Dao\ErrorPage;
 use DontKnow\Core\QueryConstructor;
@@ -60,14 +60,14 @@ return [
     Articles::class => function(Container $container) {
         return new Articles($container->getInstance(QueryConstructor::class));
     },
-    Comments::class => function() {
-        return new Comments();
+    Comments::class => function(Container $container) {
+        return new Comments($container->getInstance(QueryConstructor::class));
     },
     Customizer::class => function() {
         return new Customizer();
     },
-    Categories::class => function() {
-        return new Categories();
+    Categories::class => function(Container $container) {
+        return new Categories($container->getInstance(QueryConstructor::class));
     },
     Statistics::class => function(Container $container) {
         return new Statistics($container->getInstance(QueryConstructor::class));
