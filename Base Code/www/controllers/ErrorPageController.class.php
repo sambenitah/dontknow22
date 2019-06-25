@@ -3,11 +3,13 @@
 declare(strict_types=1);
 
 namespace DontKnow\Controllers;
+use DontKnow\Core\Container;
 use DontKnow\Core\View;
 use DontKnow\Models\ErrorPage as ErrorPageModel;
 use DontKnow\Dao\ErrorPage;
 use DontKnow\Core\Validator;
 use DontKnow\Core\Routing;
+use DontKnow\VO\Env;
 
 Class ErrorPageController{
 
@@ -48,10 +50,18 @@ Class ErrorPageController{
         exit;
     }
 
-    public function showErrorPageAction(){
+    public function showErrorPageAction(?array $message){
+        $container = new Container();
+        $env = $container->getInstance(Env::class);
+
+        if(!isset($message) || $env->getEnv() =="production")
+            $message['message'] = '';
+
         $errorPage = $this->errorPageDao->showErrorPage(["id"=>1]);
-        $v = new View("errorPage", self::nameClass,  "login");
-        $v->assign("ErrorPage", $errorPage);
+        $error = array_merge($errorPage,$message);
+
+        $v = new View("errorPage", self::nameClass,  "basic");
+        $v->assign("ErrorPage", $error);
         exit;
     }
 }

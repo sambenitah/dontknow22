@@ -116,10 +116,10 @@ class ArticlesController{
     }
 
 
-    public function singleArticleAction($param){ // ok
+    public function singleArticleAction($param){
         $container = new Container();
         $commentModel = new CommentsModel();
-        $commentDao = new CommentsDao($container->getInstance(QueryConstructor::class));
+        $commentDao = $container->getInstance(CommentsDao::class);
         $selectDetailArticle = $this->articleDao->selectSingleArticle(["route"=>$param]);
         $idArticle =  $selectDetailArticle[0]->id;
         $idUser = $_SESSION["auth"];

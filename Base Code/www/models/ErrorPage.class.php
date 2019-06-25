@@ -26,4 +26,9 @@ class ErrorPage{
     {
         $this->text_color = $textColor;
     }
+
+    public function setMessage($message)
+    {
+        $this->message = $message;
+    }
 }

@@ -1,6 +1,5 @@
 <?php
 session_start();
-require "conf.inc.php";
 use DontKnow\Core\Routing;
 use DontKnow\Dao\Users;
 
@@ -34,14 +33,16 @@ $slug = $slugExploded[0];
 $routes = Routing::getRoute($slug);
 extract($routes);
 
-if($controller == null){
-    header('Location: ' . Routing::getSlug("ErrorPage", "showErrorPage") . '');
+$container = new \DontKnow\Core\Container();
+
+$errorPage = $container->getInstance(\DontKnow\Controllers\ErrorPageController::class);
+
+if(!isset($controller)){
+    $message['message']="Controller doesn't exist";
+    $errorPage->showErrorPageAction($message);
 }
 
-$container = new \DontKnow\Core\Container();
 $cObject = $container->getInstance('DontKnow\\Controllers\\' . $controller);
-
-
 
 if( method_exists($cObject, $action) ){
     if($connexion){
@@ -55,8 +56,10 @@ if( method_exists($cObject, $action) ){
                     $user->updateToken();
                     $cObject->$action($param);
                 }
-                else
-                    header('Location: ' . Routing::getSlug("ErrorPage", "showErrorPage") . '');
+                else {
+                    $message['message']="Wrong Token";
+                    $errorPage->showErrorPageAction();
+                }
             }
             else
                 header('Location: '.Routing::getSlug("Users","login").'');
@@ -70,7 +73,8 @@ if( method_exists($cObject, $action) ){
     }
 
 }else{
-    header('Location: '.Routing::getSlug("ErrorPage","showErrorPage").'');
+    $message['message']="Method doesn't exist";
+    $errorPage->showErrorPageAction();
 }
 
 

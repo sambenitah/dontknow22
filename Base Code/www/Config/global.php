@@ -9,6 +9,6 @@ return [
         'pwd' => 'password',
     ],
     'env' =>[
-        'environment'=>'production'
+        'environment'=>'dev'
     ]
 ];

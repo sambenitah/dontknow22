@@ -24,10 +24,14 @@ use DontKnow\VO\DbName;
 use DontKnow\VO\DbUser;
 use DontKnow\VO\DbPwd;
 use DontKnow\Core\SPDO;
+use DontKnow\VO\Env;
 
 return [
     DbDriver::class => function(Container $container) {
         return new DbDriver($container->getinstance('config.db.driver'));
+    },
+    Env::class => function(Container $container) {
+        return new Env($container->getinstance('config.env.environment'));
     },
     DbHost::class => function(Container $container) {
         return new DbHost($container->getinstance('config.db.host'));
