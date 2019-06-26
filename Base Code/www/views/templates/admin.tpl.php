@@ -19,15 +19,15 @@ use DontKnow\Core\Routing;
         <script src="/public/js/admin.tpl.js"></script>
     </head>
     <body>
+
     <header>
         <div class="row">
             <div id="backgroundHeader" class="col-12 col-m-12 col-l-12">
-                <a href="<?php echo Routing::getSlug("Users","default");?>" id="headerPartMainSection">
-
+                <a href="<?php echo Routing::getSlug("Statistics","default");?>" id="headerPartMainSection">
                     Dont Kn?w
-
                 </a>
-                <a href="#"><i class="far fa-user-circle"></i></a>
+                <a href="<?php echo Routing::getSlug("Users","logout");?>" style="float: right;margin: 0.5em; margin-right: 1em; font-size: 1.5em; color: #FFF;"><i class="far fa-user-circle"></i></a>
+                <a id="welcomePartMainSection">Welcome <?php echo $_SESSION['auth']; ?> on your admin panel </a>
             </div>
         </div>
     </header>
@@ -37,8 +37,8 @@ use DontKnow\Core\Routing;
                 <nav class="center" id="navAdmin">
                     <p class="titleMenu">Administration</p>
                     <div class="div-nav-admin-menu">
-                        <a class="a-adminMenu" href="<?php echo Routing::getSlug("Articles","yourWebSite");?>">Your website</a>
-                        <a class="a-adminMenu" href="<?php echo Routing::getSlug("Statistics","default");?>">Statistics</a>
+                        <a class="a-adminMenu" href="<?php echo Routing::getSlug("Statistics","default");?>">Home</a>
+                        <a class="a-adminMenu" href="<?php echo Routing::getSlug("Articles","default");?>">Your website</a>
                     </div>
                     <p class="titleMenu">Customizer</p>
                    <div class="div-nav-admin-menu">
@@ -48,8 +48,10 @@ use DontKnow\Core\Routing;
                    <div class="div-nav-admin-menu">
                        <a class="a-adminMenu" href="<?php echo Routing::getSlug("Articles","addArticle");?>">Add Article</a>
                        <a class="a-adminMenu" href="<?php echo Routing::getSlug("Articles","showArticles");?>">Your Articles</a>
-                       <a class="a-adminMenu" href="<?php echo Routing::getSlug("Pictures","addPicture");?>">Add picture</a>
                        <a class="a-adminMenu" href="<?php echo Routing::getSlug("Pictures","showPictures");?>">Your pictures</a>
+                       <a class="a-adminMenu" href="<?php echo Routing::getSlug("Pictures","addPicture");?>">Add picture</a>
+                       <a class="a-adminMenu" href="<?php echo Routing::getSlug("Categories","addCategory");?>">Add Category</a>
+                       <a class="a-adminMenu" href="<?php echo Routing::getSlug("Categories","showCategory");?>">Your Categories</a>
                    </div>
                 </nav>
             </div>

@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace DontKnow\Controllers;
 use DontKnow\Core\View;
-use DontKnow\Models\Pictures;
+use DontKnow\Dao\Pictures;
+use DontKnow\Models\Pictures as PictureModel;
 use DontKnow\Core\ValidatorFiles;
 use DontKnow\Core\Routing;
 
@@ -12,14 +13,15 @@ Class PicturesController{
 
     const nameClass = "Pictures";
 
+    private $picturesDao;
+
     public function __construct(Pictures $pictures)
     {
-        $this->pictures = $pictures;
+        $this->picturesDao = $pictures;
     }
 
     public function addPictureAction(){
-        $addPicture = new Pictures();
-        $form = $addPicture->getAddPictureForm();
+        $form = $this->picturesDao->getAddPictureForm();
         $method = strtoupper($form["config"]["method"]);
         $data = $GLOBALS["_".$method];
         $file = $GLOBALS["_FILES"];
@@ -34,11 +36,11 @@ Class PicturesController{
 
             if(empty($form["errors"])){
 
-                $file = new Pictures();
+                $file = new PictureModel;
                 $file->setNameId($array["title"]);
                 $file->setName($array["title"]);
-                $file->insertPicture($array);
-                header('Location: '.Routing::getSlug("Pictures","addPicture").'');
+                $this->picturesDao->insertPicture($array,$file);
+                header('Location: '.Routing::getSlug("Pictures","showPictures").'');
                 exit;
             }
         }
@@ -48,17 +50,14 @@ Class PicturesController{
 
 
     public function showPicturesAction(){
-
-        $showPicture = new Pictures();
-        $pictures = $showPicture->selectAllPictureObject();
+        $pictures = $this->picturesDao->selectAllPictureObject();
         $v = new View("showPictures",self::nameClass, "admin");
         $v->assign("ListPicture", $pictures);
         exit;
     }
 
     public function showPictureInSelecteAction(){
-        $showPicture = new Pictures();
-        $pictures = $showPicture->selectAllPictureArray();
+        $pictures = $this->picturesDao->selectAllPictureArray();
         echo json_encode($pictures);
         exit;
     }
@@ -67,8 +66,7 @@ Class PicturesController{
 
         $data = $GLOBALS["_POST"];
         $id = $data["id"];
-        $deletePicture = new Pictures();
-        $deletePicture->deletePicture(["id"=>$id]);
+        $this->picturesDao->deletePicture(["id"=>$id]);
         unlink(substr($data["url"],1));
         echo json_encode("Delete");
         exit;

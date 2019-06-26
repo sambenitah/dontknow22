@@ -3,33 +3,38 @@
 declare(strict_types=1);
 
 namespace DontKnow\Controllers;
+use DontKnow\Core\Container;
+use DontKnow\Core\QueryConstructor;
 use DontKnow\Core\View;
-use DontKnow\Models\Articles;
+use DontKnow\Dao\Articles;
+use DontKnow\Models\Articles as ArticleModel;
 use DontKnow\Core\Validator;
 use DontKnow\Core\Routing;
-use DontKnow\Models\Comments;
+use DontKnow\Models\Comments as CommentsModel;
+use DontKnow\Dao\Comments as CommentsDao;
 
 class ArticlesController{
 
     const nameClass = "Articles";
 
+    private $articleDao;
+
     public function __construct(Articles $articles)
     {
-        $this->articles = $articles;
+        $this->articleDao = $articles;
     }
 
-    public function defaultAction(){ //ok
+    public function defaultAction(){
 
-        $showArticle = new Articles();
-        $selectArticle = $showArticle->selectAllArticle();
+        $selectArticle = $this->articleDao->selectAllArticle();
         $v = new View("listFrontPages",self::nameClass, "basic");
         $v->assign("ListPage", $selectArticle);
 
     }
 
-    public function addArticleAction(){ //ok
-        $addArticle = new Articles();
-        $form = $addArticle->getAddArticleForm();
+    public function addArticleAction(){
+        $addArticle = new ArticleModel();
+        $form = $this->articleDao->getAddArticleForm();
         $method = strtoupper($form["config"]["method"]);
         $data = $GLOBALS["_".$method];
 
@@ -44,7 +49,7 @@ class ArticlesController{
                 $addArticle->setDescription($data["description"]);
                 $addArticle->setTitle($data["title"]);
                 $addArticle->setRoute($data["route"]);
-                $addArticle->addArticle();
+                $this->articleDao->addArticle($addArticle);
                header('Location: '.Routing::getSlug("Articles","showArticles").'');
                exit;
             }
@@ -54,8 +59,7 @@ class ArticlesController{
     }
 
     public function showArticlesAction(){ //ok
-        $showArticle = new Articles();
-        $selectArticle = $showArticle->selectAllArticleBIS();
+        $selectArticle = $this->articleDao->selectAllArticleBIS();
         $v = new View("showArticle", self::nameClass, "admin");
         $v->assign("ListPage", $selectArticle);
         exit;
@@ -63,11 +67,13 @@ class ArticlesController{
 
 
     public function detailArticlesAction($param){ //ok
-        $detailArticle = new Articles();
-        $formArticle = $detailArticle->getDetailArticleForm();
-        $detail = $detailArticle->selectSingleArticle(["route"=>$param]);
+        $formArticle = $this->articleDao->getDetailArticleForm();
+        $detail = $this->articleDao->selectSingleArticle(["route"=>$param]);
         if (empty($detail)) {
-            header('Location: '.Routing::getSlug("ErrorPage","showErrorPage").'');
+            $container = new Container();
+            $errorPage = $container->getInstance(\DontKnow\Controllers\ErrorPageController::class);
+            $message['message']="Articles doesn't exist";
+            $errorPage->showErrorPageAction($message);
         }else {
            $v = new View("detailArticle", self::nameClass, "admin");
            $v->assign("DetailArticle", $detail);
@@ -78,8 +84,8 @@ class ArticlesController{
 
     public function updateArticleAction(){ //pasok
 
-        $updateArticle = new Articles();
-        $formArticle = $updateArticle->getDetailArticleForm();
+        $updateArticle = new ArticleModel();
+        $formArticle = $this->articleDao->getDetailArticleForm();
         $method = strtoupper($formArticle["config"]["method"]);
         $data = $GLOBALS["_".$method];
         $id = array_shift($data);
@@ -97,7 +103,7 @@ class ArticlesController{
                 $updateArticle->setMainPicture($data["main_picture"]);
                 $updateArticle->setCategory($data["category"]);
                 $updateArticle->setStatus($data["status"]);
-                $updateArticle->updateArticle();
+                $this->articleDao->updateArticle($updateArticle);
                 echo json_encode("Update");
                 exit;
             }
@@ -108,19 +114,19 @@ class ArticlesController{
 
         $data = $GLOBALS["_POST"];
         $id = $data["id"];
-        $deletePicture = new Articles();
-        $deletePicture->deleteArticle(['id'=>$id]);
+        $this->articleDao->deleteArticle(['id'=>$id]);
 
     }
 
 
-    public function singleArticleAction($param){ // ok
-        $showDetailArticle = new Articles();
-        $comment = new Comments();
-        $selectDetailArticle = $showDetailArticle->selectSingleArticle(["route"=>$param]);
+    public function singleArticleAction($param){
+        $container = new Container();
+        $commentModel = new CommentsModel();
+        $commentDao = $container->getInstance(CommentsDao::class);
+        $selectDetailArticle = $this->articleDao->selectSingleArticle(["route"=>$param]);
         $idArticle =  $selectDetailArticle[0]->id;
         $idUser = $_SESSION["auth"];
-        $formComment = $comment->getAddCommentForm($idArticle, $idUser);
+        $formComment = $commentDao->getAddCommentForm($idArticle, $idUser);
         $method = strtoupper($formComment["config"]["method"]);
         $data = $GLOBALS["_".$method];
 
@@ -131,33 +137,29 @@ class ArticlesController{
 
             if(empty($form["errors"])){
 
-                $comment->setArticleId($data["articleId"]);
-                $comment->setUserId($data["userId"]);
-                $comment->setContent($data["content"]);
-                $comment->addComment();
+                $commentModel->setArticleId($data["articleId"]);
+                $commentModel->setUserId($data["userId"]);
+                $commentModel->setContent($data["content"]);
+                $commentDao->addComment($commentModel);
             }
         }
 
         if (empty($selectDetailArticle)) {
-            header('Location: '.Routing::getSlug("ErrorPage","showErrorPage").'');
+            $container = new Container();
+            $errorPage = $container->getInstance(\DontKnow\Controllers\ErrorPageController::class);
+            $message['message']="Article empty";
+            $errorPage->showErrorPageAction($message);
         }else{
 
-            $messages = $showDetailArticle->selectCommentArticle(["idArticle"=>$idArticle]);
+            $messages = $this->articleDao->selectCommentArticle(["idArticle"=>$idArticle]);
             $v = new View("singleArticle", self::nameClass , "basic");
             $v->assign("ListPage", $selectDetailArticle);
             $v->assign("CommentForm", $formComment);
             $v->assign("Messages", $messages);
             exit;
+
         }
     }
 
-
-    public function yourWebsiteAction(){ //ok
-        $showArticle = new Articles();
-        $selectArticle = $showArticle ->selectAllArticle();
-        $v = new View("listFrontPages", self::nameClass, "front");
-        $v->assign("ListPage", $selectArticle);
-        exit;
-    }
 
 }

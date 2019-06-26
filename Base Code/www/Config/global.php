@@ -8,4 +8,7 @@ return [
         'user' => 'root',
         'pwd' => 'password',
     ],
+    'env' =>[
+        'environment'=>'dev'
+    ]
 ];

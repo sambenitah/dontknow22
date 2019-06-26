@@ -1,6 +1,6 @@
 "/":
   controller: Users
-  action: installer
+  action: default
   connexion : false
   role : 0
 
@@ -35,8 +35,8 @@
   role: 3
 
 "/back_office":
-  controller: Articles
-  action: yourWebSite
+  controller: Statistics
+  action: default
   connexion: true
   role: 3
 
@@ -111,3 +111,10 @@
   action: detailManagementUsers
   connexion: true
   role: 3
+
+"/logout":
+  controller: Users
+  action: logout
+  connexion: false
+  role: 0
+

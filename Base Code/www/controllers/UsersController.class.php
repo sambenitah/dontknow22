@@ -3,25 +3,22 @@
 declare(strict_types=1);
 
 namespace DontKnow\Controllers;
-use DontKnow\Core\SPDO;
 use DontKnow\Core\View;
-use DontKnow\Models\Users;
+use DontKnow\Dao\Users;
+use DontKnow\Models\Users as UserModel;
 use DontKnow\Core\Validator;
 use DontKnow\Core\Routing;
-use DontKnow\VO\DbDriver;
-use DontKnow\VO\DbHost;
-use DontKnow\VO\DbName;
-use DontKnow\VO\DbPwd;
-use DontKnow\VO\DbUser;
 
 
 class UsersController{
 
     const nameClass = "Users";
 
+
+
     public function __construct(Users $users)
     {
-        $this->users = $users;
+        $this->userDao = $users;
     }
 
     public function defaultAction(){
@@ -31,8 +28,8 @@ class UsersController{
 
     public function registerAction(){
 
-        $user = new Users();
-        $form = $user->getRegisterForm();
+        $user = new UserModel();
+        $form = $this->userDao->getRegisterForm();
         $method = strtoupper($form["config"]["method"]);
         $data = $GLOBALS["_".$method];
 
@@ -46,7 +43,7 @@ class UsersController{
                 $user->setLastname($data["lastname"]);
                 $user->setEmail($data["email"]);
                 $user->setPwd($data["pwd"]);
-                $user->addUser();
+                $this->userDao->addUser();
                 header('Location: '.Routing::getSlug("Articles","default").'');
                 exit;
             }
@@ -56,37 +53,9 @@ class UsersController{
 
     }
 
-    public function installerAction(){
-
-        //$file = file_get_contents("var/www/html/Config/global.php)");
-
-        $file = "t";
-
-        if($file == null) {
-
-            $user = new Users();
-            $form = $user->getInstallerForm();
-            //Est ce qu'il y a des données dans POST ou GET($form["config"]["method"])
-            $method = strtoupper($form["config"]["method"]);
-            $data = $GLOBALS["_" . $method];
-
-            if ($_SERVER['REQUEST_METHOD'] == $method && !empty($data)) {
-
-                $validator = new Validator($form, $data);
-                $form["errors"] = $validator->errors;
-                initializeApplication($data);
-            }
-            $v = new View("installer", self::nameClass, "login");
-            $v->assign("form", $form);
-        }
-        else{
-            $this->defaultAction();
-        }
-    }
-
 
     public function loginAction(){
-        $user = $this->users;
+        $user = $this->userDao;
         $form = $user->getLoginForm();
         $method = strtoupper($form["config"]["method"]);
         $data = $GLOBALS["_".$method];
@@ -97,7 +66,7 @@ class UsersController{
 
             if(empty($form["errors"] )){
                 if($user->loginVerify($user,$data)) {
-                    header('Location: '.Routing::getSlug("Articles","yourWebSite").'');
+                    header('Location: '.Routing::getSlug("Statistics","default").'');
                 }else{
                         echo"error";
                 }
@@ -109,9 +78,13 @@ class UsersController{
 
     }
 
+    public function logoutAction(){
+        session_unset();
+    }
+
     public function loginFrontAction(){
 
-        $user = new Users();
+        $user = $this->userDao;
         $form = $user->getLoginForm();
         $method = strtoupper($form["config"]["method"]);
         $data = $GLOBALS["_".$method];
@@ -134,27 +107,6 @@ class UsersController{
 
     }
 
-    public  function initializeApplication(array $data){
-
-        //$file = file_get_contents("var/www/html/dontknow.sql)");
-
-        new DbDriver($data["Driver"]);
-        new DbHost($data["Host"]);
-        new DbName($data["Name"]);
-        new DbUser($data["User"]);
-        new DbPwd($data["Pwd"]);
-
-        $PDO = new SPDO();
-
-        $PDO::getPDO();
-
-        if(!$PDO instanceof \PDO){
-            $this->installerAction();
-        }
-
-        //$PDO->exec($file);
-
-    }
 
 
 }

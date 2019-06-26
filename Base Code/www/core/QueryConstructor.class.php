@@ -11,13 +11,18 @@ class QueryConstructor{
     const DELETE = 3;
 
 
-    public function __construct(){
-        $this->instance = SPDO::getPDO();
+    public function __construct(SPDO $spdo){
+        $this->instance = $spdo->getPDO();
         $this->table = get_called_class();
         if(!$this->instance instanceof \PDO)
             throw new \Exception('Aucune connection');
     }
 
+
+    public function prepare(string $query)
+    {
+        return $this->instance->prepare($query);
+    }
 
     public function select(array ...$select):self //principe fluente  retourne une instance de la class
     {
