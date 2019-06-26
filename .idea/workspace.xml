@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="16c2570d-00ce-4581-a46c-743d0df50c72" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base Code/db_data/dontknow/Articles.frm" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/dontknow/Articles.frm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base Code/db_data/dontknow/Articles.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/dontknow/Articles.ibd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base Code/db_data/dontknow/Comments.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/dontknow/Comments.ibd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base Code/db_data/dontknow/Users.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/dontknow/Users.ibd" afterDir="false" />
@@ -10,11 +11,6 @@
       <change beforePath="$PROJECT_DIR$/Base Code/db_data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/ibdata1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base Code/db_data/mysql/innodb_index_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/mysql/innodb_index_stats.ibd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base Code/db_data/mysql/innodb_table_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/mysql/innodb_table_stats.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base Code/www/controllers/ArticlesController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/www/controllers/ArticlesController.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base Code/www/controllers/CommentsController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/www/controllers/CommentsController.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base Code/www/models/Articles.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/www/models/Articles.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base Code/www/models/Comments.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/www/models/Comments.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base Code/www/views/Articles/singleArticle.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/www/views/Articles/singleArticle.view.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -140,28 +136,28 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="php" value="56" />
-          <entry key="scss" value="2" />
+          <entry key="scss" value="7" />
           <entry key="yml" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PHP" value="56" />
-          <entry key="SCSS" value="2" />
+          <entry key="SCSS" value="7" />
           <entry key="YAML" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="php" value="5610" />
-          <entry key="scss" value="356" />
+          <entry key="scss" value="358" />
           <entry key="yml" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PHP" value="5610" />
-          <entry key="SCSS" value="356" />
+          <entry key="SCSS" value="358" />
           <entry key="YAML" value="27" />
         </counts>
       </usages-collector>
@@ -170,61 +166,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Base Code/www/views/Articles/singleArticle.view.php">
+        <entry file="file://$PROJECT_DIR$/Base Code/www/public/css/Front-css/_posts.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="110" column="58" selection-start-line="110" selection-start-column="58" selection-end-line="110" selection-end-column="58" />
-              <folding>
-                <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#div#1;n#article#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Base Code/www/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-383">
-              <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Base Code/www/models/Articles.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="116" column="36" lean-forward="true" selection-start-line="116" selection-start-column="36" selection-end-line="116" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/ArticlesController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Base Code/www/models/Comments.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="48" column="67" lean-forward="true" selection-start-line="48" selection-start-column="67" selection-end-line="48" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/CommentsController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-              <folding>
-                <element signature="e#66#95#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -233,8 +178,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>trans</find>
-      <find>#idBouttonConfirmForm</find>
       <find>idBouttonConfirmForm</find>
       <find>.label-file</find>
       <find>inputHiddenPicture</find>
@@ -263,6 +206,8 @@
       <find>header</find>
       <find>suc</find>
       <find>comment</find>
+      <find>conte</find>
+      <find>content</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;form&quot;</replace>
@@ -275,7 +220,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Base Code/www/views/templates/admin.tpl.php" />
         <option value="$PROJECT_DIR$/Base Code/www/controllers/CategorieController.php" />
         <option value="$PROJECT_DIR$/Base Code/www/models/Categorie.class.php" />
         <option value="$PROJECT_DIR$/Base Code/www/controllers/CategoriesController.php" />
@@ -326,6 +270,7 @@
         <option value="$PROJECT_DIR$/Base Code/www/controllers/ArticlesController.class.php" />
         <option value="$PROJECT_DIR$/Base Code/www/controllers/CommentsController.class.php" />
         <option value="$PROJECT_DIR$/Base Code/www/views/Articles/singleArticle.view.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/public/css/Front-css/_posts.scss" />
       </list>
     </option>
   </component>
@@ -424,6 +369,15 @@
               <item name="dontknow22" type="462c0819:PsiDirectoryNode" />
               <item name="Base Code" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="Front-css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dontknow22" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dontknow22" type="462c0819:PsiDirectoryNode" />
+              <item name="Base Code" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -501,7 +455,7 @@
       <workItem from="1556111132439" duration="212000" />
       <workItem from="1561104761888" duration="9189000" />
       <workItem from="1561129689625" duration="4000" />
-      <workItem from="1561135404565" duration="25089000" />
+      <workItem from="1561135404565" duration="25902000" />
     </task>
     <task id="LOCAL-00001" summary="ttt">
       <created>1548753671022</created>
@@ -734,17 +688,37 @@
       <option name="project" value="LOCAL" />
       <updated>1561236081570</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="commit 23/04/2019">
+      <created>1561320322287</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1561320322287</updated>
+    </task>
+    <task id="LOCAL-00035" summary="commit 23/04/2019">
+      <created>1561323742924</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1561323742924</updated>
+    </task>
+    <task id="LOCAL-00036" summary="commit 23/04/2019">
+      <created>1561323788855</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1561323788855</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="320131000" />
+    <option name="totallyTimeSpent" value="320944000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24177396" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24177396" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -757,7 +731,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49928468" weight="0.32808024" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007153" side_tool="true" weight="0.328125" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -841,16 +815,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="commit 23/04/2019" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/CustomizerController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/views/templates/errorPage.view.php" />
-    <entry file="file://$PROJECT_DIR$/Base Code/www/views/addUser.view.php" />
-    <entry file="file://$PROJECT_DIR$/Base Code/www/views/detailArticle.view.php" />
     <entry file="file://$PROJECT_DIR$/Base Code/www/views/addArticle.view.php" />
     <entry file="file://$PROJECT_DIR$/Base Code/www/views/homepage.view.php" />
     <entry file="file://$PROJECT_DIR$/Base Code/www/views/addPicture.view.php" />
@@ -1051,13 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-383">
-          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Base Code/www/views/Customizer/customizer.view.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1068,17 +1025,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/models/Articles.class.php">
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/Articles/singleArticle.view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="116" column="36" lean-forward="true" selection-start-line="116" selection-start-column="36" selection-end-line="116" selection-end-column="36" />
+        <state relative-caret-position="102">
+          <caret line="110" column="58" selection-start-line="110" selection-start-column="58" selection-end-line="110" selection-end-column="58" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#div#1;n#article#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/models/Comments.class.php">
+    <entry file="file://$PROJECT_DIR$/Base Code/www/public/css/Front-css/style.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/public/css/Front-css/_general.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="48" column="67" lean-forward="true" selection-start-line="48" selection-start-column="67" selection-end-line="48" selection-end-column="67" />
+        <state relative-caret-position="132">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/public/css/Front-css/_header.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-383">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/models/Articles.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="116" column="36" selection-start-line="116" selection-start-column="36" selection-end-line="116" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -1086,6 +1066,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/models/Comments.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="48" column="67" selection-start-line="48" selection-start-column="67" selection-end-line="48" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -1099,13 +1086,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/views/Articles/singleArticle.view.php">
+    <entry file="file://$PROJECT_DIR$/Base Code/www/public/css/Front-css/_posts.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="110" column="58" selection-start-line="110" selection-start-column="58" selection-end-line="110" selection-end-column="58" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#div#1;n#article#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
         </state>
       </provider>
     </entry>
