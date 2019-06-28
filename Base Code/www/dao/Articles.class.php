@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-
-
 namespace DontKnow\Dao;
 use DontKnow\Models\Articles as ArticleModel;
 

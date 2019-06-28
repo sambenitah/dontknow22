@@ -3,6 +3,10 @@ session_start();
 use DontKnow\Core\Routing;
 use DontKnow\Dao\Users;
 
+function resolve($name){
+    return \DontKnow\Core\Container::getObject()->getInstance($name);
+}
+
 
 spl_autoload_register(function ($class) {
     $prefix = 'DontKnow\\';

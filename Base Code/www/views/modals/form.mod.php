@@ -69,6 +69,7 @@
                 <textarea id="<?php echo $Form["id"];?>"
                           class="<?php echo $Form["class"];?>"
                           name="<?php echo $key;?>">
+                    <?php echo $Form["valueTextearea"];?>
                 </textarea>
         <?php endif;?>
     <?php endforeach;?>

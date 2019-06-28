@@ -4,7 +4,7 @@ use DontKnow\Dao\Users;
 use DontKnow\Dao\Articles;
 use DontKnow\Dao\Comments;
 use DontKnow\Dao\Pictures;
-use DontKnow\Models\Customizer;
+use DontKnow\Dao\Customizer;
 use DontKnow\Dao\Categories;
 use DontKnow\Dao\Statistics;
 use DontKnow\Dao\ErrorPage;
@@ -67,8 +67,8 @@ return [
     Comments::class => function(Container $container) {
         return new Comments($container->getInstance(QueryConstructor::class));
     },
-    Customizer::class => function() {
-        return new Customizer();
+    Customizer::class => function(Container $container) {
+        return new Customizer($container->getInstance(QueryConstructor::class));
     },
     Categories::class => function(Container $container) {
         return new Categories($container->getInstance(QueryConstructor::class));

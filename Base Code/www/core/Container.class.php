@@ -6,11 +6,13 @@ namespace DontKnow\Core;
 class Container{
 
     private $container;
+    private static $instance;
 
 
     public function __construct()
     {
         $this->init();
+        self::$instance = $this;
     }
 
     public function init(){
@@ -35,4 +37,9 @@ class Container{
 
 
     }
+
+    public static function getObject(){
+        return self::$instance;
+    }
+
 }

@@ -1,13 +1,14 @@
 <?php
 use DontKnow\Core\Routing;
+use DontKnow\Dao;
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>IDK.</title>
+    <title><?php echo resolve(Dao\Customizer::class)->selectMeta(["id"=>1]) ?></title>
     <meta charset="utf-8">
-    <meta name="description" content="Créez un blog ou un site Web haut de gamme. Assistance en direct. Commencez ! Hébergement Gratuit. Des Centaines de Designs. Live Chat & Aide Par Mail. Stats Faciles à Lire. Prêt pour le Mobile. Évolutif et Sécurisé. SEO Intégré. Aide Rapide et Conviviale.">
+    <meta name="description" content="<?php echo resolve(Dao\Customizer::class)->selectMeta(["id"=>2]) ?>">
     <link rel="stylesheet" type="text/css" href="/public/css/Front-css/style.css">
     <link rel="stylesheet" type="text/css" href="/public/css/Back-css/style.css">
     <link rel="stylesheet" type="text/css" href="/public/css/Grid/style.css">
@@ -68,7 +69,7 @@ use DontKnow\Core\Routing;
                         <div class="table">
                             <div class="table-cell">
                                 <div class="logo">
-                                    <a href="<?php echo Routing::getSlug("Articles", "default"); ?>">IDK</a>
+                                    <a href="<?php echo Routing::getSlug("Articles", "default"); ?>"><?php echo resolve(Dao\Customizer::class)->selectMeta(["id"=>1]) ?></a>
                                 </div>
                                 <div class="main-menu">
                                     <nav>

@@ -112,6 +112,12 @@
   connexion: true
   role: 3
 
+"/customMeta":
+  controller: Customizer
+  action: customMeta
+  connexion: true
+  role: 3
+
 "/logout":
   controller: Users
   action: logout

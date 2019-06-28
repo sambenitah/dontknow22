@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace DontKnow\Dao;
 use DontKnow\Models\Comments as CommentsModel;
-
-
-
 use DontKnow\Dao\BaseDAO;
 
 class Comments extends BaseDAO {

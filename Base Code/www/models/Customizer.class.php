@@ -7,4 +7,18 @@ namespace DontKnow\Models;
 class Customizer{
 
 
+    public function setId($id){
+        $this->id = $id;
+    }
+
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    }
+
+    public function setContent($content)
+    {
+        $this->content = $content;
+    }
+
 }
