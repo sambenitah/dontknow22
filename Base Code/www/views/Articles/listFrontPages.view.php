@@ -24,34 +24,4 @@
             </div>
         </article>
         <?php endforeach;?>
-
-
-
-        <div class="pagination-wrap">
-            <ul>
-                <li>
-                    <a class="prev page-numbers" href="#">
-                        <i class="fa fa-long-arrow-left"></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="page-numbers" href="#">1</a>
-                </li>
-                <li>
-                    <span class="page-numbers current">2</span>
-                </li>
-                <li>
-                    <a class="page-numbers" href="#">3</a>
-                </li>
-                <li>
-                    <a class="page-numbers" href="#">4</a>
-                </li>
-                <li>
-                    <a class="next page-numbers" href="#">
-                        <i class="fa fa-long-arrow-right"></i>
-                    </a>
-                </li>
-            </ul>
-
-        </div>
     </div>
