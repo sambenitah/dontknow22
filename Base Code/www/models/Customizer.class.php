@@ -21,4 +21,9 @@ class Customizer{
         $this->content = $content;
     }
 
+    public function setcontactMenu($contactMenu)
+    {
+        $this->contactMenu = $contactMenu;
+    }
+
 }

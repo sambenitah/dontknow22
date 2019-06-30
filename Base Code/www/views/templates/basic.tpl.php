@@ -92,9 +92,11 @@ use DontKnow\Dao;
                                             <li>
                                                 <a href="#">Blog</a>
                                             </li>
+                                            <?php if (resolve(Dao\Customizer::class)->selectContact(["id"=>1]) != "0"):?>
                                             <li>
                                                 <a href="#">Contact</a>
                                             </li>
+                                            <?php endif;?>
                                             <li>
                                                 <a href="<?php echo Routing::getSlug("Users", "register"); ?>">Sign Up</a>
                                             </li>

@@ -9,11 +9,25 @@ use DontKnow\Models\Customizer as CustomizerModel;
 
 class Customizer extends BaseDAO {
 
-    public function selectMeta($arguments){
+    public function selectMeta(array $arguments){
         $query = $this->queryConstructor->select()->from('Customizer');
         $query = $this->queryConstructor->prepare((string)$query);
         $query->execute($arguments);
         return $query->fetchColumn(1);
+    }
+
+    public function selectContact(array $arguments){
+        $query = $this->queryConstructor->select()->from('Customizer');
+        $query = $this->queryConstructor->prepare((string)$query);
+        $query->execute($arguments);
+        return $query->fetchColumn(3);
+    }
+
+    public function selectAllMeta(array $argument){
+        $query = $this->queryConstructor->select()->from('Customizer');
+        $query = $this->queryConstructor->prepare((string)$query);
+        $query->execute($argument);
+        return $query->fetch();
     }
 
     public function selectDesc($arguments){
@@ -53,6 +67,31 @@ class Customizer extends BaseDAO {
 
                 "description"=>["value"=>"Your description", "required"=>true, "id"=>"textaeraAddPage", "class"=>"","minlength"=>2,"maxlength"=>300,
                     "error"=>"Your description must be between two or three hundred  characters","type"=>"", "valueTextearea"=>$content],
+
+            ],
+
+            "select" =>[
+                "contactMenu"=>[
+                    "id"=>"selectContactMenu",
+                    "class"=>"select-css",
+                    "name"=>"contactMenu",
+                    "label"=>"Contact menu",
+                    "option"=>[
+                        [
+                            "valueOption"=>"1",
+                            "id" => "-",
+                            "value" => "Utiliser"
+                        ]
+
+                        ,
+                        [
+
+                            "valueOption"=>"0",
+                            "id" => "efhgzjk",
+                            "value" => "Ne pas utiliser"
+                        ]
+                    ],
+                ],
 
             ]
 

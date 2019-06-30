@@ -26,9 +26,9 @@
                     <div id="divLabelSelect">
                         <label id="labelSelect" class="label"><?php echo $select["label"];?></label>
                     </div>
-                    <select id="<?php echo $select["id"];?>" class="<?php echo $select["class"];?>">
+                    <select name="<?php echo $select["name"];?>" id="<?php echo $select["id"];?>" class="<?php echo $select["class"];?>">
                         <?php foreach ( $select["option"] as $key => $detailSelect ):?>
-                            <option id="<?php echo $detailSelect["id"];?>"><?php echo $detailSelect["value"];?></option>
+                            <option value="<?php echo $detailSelect["valueOption"];?>" id="<?php echo $detailSelect["id"];?>"><?php echo $detailSelect["value"];?></option>
                         <?php endforeach;?>
                     </select>
                 </div>

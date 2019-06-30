@@ -28,7 +28,7 @@ Class CustomizerController{
 
     public function customMetaAction(){
         $updateMeta = new CustomizerModel();
-        $selectMeta = $this->customizerDao->selectMeta($updateMeta,["id"=>1]);
+        $selectMeta = $this->customizerDao->selectAllMeta(["id"=>1]);
         $form = $this->customizerDao->getCustomMetaForm($selectMeta["content"],$selectMeta["title"]);
         $method = strtoupper($form["config"]["method"]);
         $data = $GLOBALS["_".$method];
@@ -43,8 +43,9 @@ Class CustomizerController{
                 $updateMeta->setId(1);
                 $updateMeta->setContent($data["description"]);
                 $updateMeta->setTitle($data["title"]);
+                $updateMeta->setcontactMenu($data["contactMenu"]);
                 $this->customizerDao->updateMeta($updateMeta);
-               // header('Location: '.Routing::getSlug("Customizer","customMeta").'');
+                header('Location: '.Routing::getSlug("Customizer","customMeta").'');
                 exit;
             }
         }
