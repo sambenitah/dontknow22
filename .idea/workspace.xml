@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16c2570d-00ce-4581-a46c-743d0df50c72" name="Default Changelist" comment="commit 23/04/2019">
+    <list default="true" id="16c2570d-00ce-4581-a46c-743d0df50c72" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base Code/db_data/dontknow/Articles.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/dontknow/Articles.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base Code/db_data/dontknow/Comments.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/dontknow/Comments.ibd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base Code/db_data/dontknow/Customizer.frm" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/dontknow/Customizer.frm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base Code/db_data/dontknow/Customizer.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/dontknow/Customizer.ibd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base Code/db_data/dontknow/Users.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/dontknow/Users.ibd" afterDir="false" />
@@ -13,11 +14,11 @@
       <change beforePath="$PROJECT_DIR$/Base Code/db_data/mysql/innodb_index_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/mysql/innodb_index_stats.ibd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base Code/db_data/mysql/innodb_table_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/db_data/mysql/innodb_table_stats.ibd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base Code/www/controllers/CustomizerController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/www/controllers/CustomizerController.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base Code/www/dao/Comments.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/www/dao/Comments.class.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base Code/www/dao/Customizer.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/www/dao/Customizer.class.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base Code/www/models/Customizer.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/www/models/Customizer.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base Code/www/routes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/www/routes.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base Code/www/views/Customizer/customizer.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/www/views/Customizer/customizer.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base Code/www/views/modals/form.mod.php" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/www/views/modals/form.mod.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base Code/www/views/templates/basic.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/Base Code/www/views/templates/basic.tpl.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -142,41 +143,41 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="php" value="149" />
+          <entry key="php" value="174" />
           <entry key="scss" value="7" />
-          <entry key="yml" value="6" />
+          <entry key="yml" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="149" />
+          <entry key="PHP" value="174" />
           <entry key="SCSS" value="7" />
-          <entry key="YAML" value="6" />
+          <entry key="YAML" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="7358" />
+          <entry key="php" value="7755" />
           <entry key="scss" value="358" />
-          <entry key="yml" value="53" />
+          <entry key="yml" value="61" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="7358" />
+          <entry key="PHP" value="7755" />
           <entry key="SCSS" value="358" />
-          <entry key="YAML" value="53" />
+          <entry key="YAML" value="61" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Base Code/www/dao/Customizer.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+            <state relative-caret-position="308">
+              <caret line="57" column="82" selection-start-line="57" selection-start-column="82" selection-end-line="57" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -184,8 +185,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/CustomizerController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="44" column="54" lean-forward="true" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="54" />
+            <state relative-caret-position="421">
+              <caret line="74" column="78" selection-start-line="74" selection-start-column="78" selection-end-line="74" selection-end-column="78" />
               <folding>
                 <element signature="e#65#93#0#PHP" expanded="true" />
               </folding>
@@ -193,23 +194,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Base Code/www/views/templates/admin.tpl.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Base Code/www/views/Articles/listFrontPages.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="199" lean-forward="true" selection-start-line="28" selection-start-column="199" selection-end-line="28" selection-end-column="199" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Base Code/www/views/templates/basic.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="64" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="64" />
-              <folding>
-                <element signature="e#6#32#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="390">
+              <caret line="26" column="10" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -217,44 +206,62 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Base Code/www/models/Customizer.class.php">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="467">
+              <caret line="32" column="39" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Base Code/www/core/Container.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Base Code/www/views/Customizer/customizerColor.view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Base Code/www/views/Articles/addArticle.view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="7" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Base Code/www/routes.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="366">
+              <caret line="115" column="24" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Base Code/www/views/Customizer/customizer.view.php">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+              <caret line="11" column="91" selection-start-line="11" selection-start-column="91" selection-end-line="11" selection-end-column="91" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Base Code/www/views/modals/form.mod.php">
+        <entry file="file://$PROJECT_DIR$/Base Code/www/views/Customizer/customMeta.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="22" column="63" lean-forward="true" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Base Code/www/dao/Articles.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="134" column="35" selection-start-line="134" selection-start-column="35" selection-end-line="134" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/StatisticsController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="65" column="31" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/UsersController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="120">
+              <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -263,7 +270,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Le fichier controller n'existe pas</find>
       <find>header('Location: '.Routing::getSlug(&quot;ErrorPage&quot;,&quot;updateErrorPage&quot;).'');</find>
       <find>json</find>
       <find>font</find>
@@ -293,6 +299,7 @@
       <find>AllUsers</find>
       <find>DetailUsers</find>
       <find>selectMeta</find>
+      <find>selectDataErrorPage</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;form&quot;</replace>
@@ -305,8 +312,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Base Code/www/controllers/PicturesController.class.php" />
-        <option value="$PROJECT_DIR$/Base Code/www/views/showArticle.view.php" />
         <option value="$PROJECT_DIR$/Base Code/www/models/Pictures.class.php" />
         <option value="$PROJECT_DIR$/Base Code/www/views/detailArticle.view.php" />
         <option value="$PROJECT_DIR$/Base Code/www/controllers/ErrorPage.class.php" />
@@ -341,8 +346,6 @@
         <option value="$PROJECT_DIR$/Base Code/www/controllers/CommentsController.class.php" />
         <option value="$PROJECT_DIR$/Base Code/www/views/Articles/singleArticle.view.php" />
         <option value="$PROJECT_DIR$/Base Code/www/public/css/Front-css/_posts.scss" />
-        <option value="$PROJECT_DIR$/Base Code/www/routes.yml" />
-        <option value="$PROJECT_DIR$/Base Code/www/dao/Comments.class.php" />
         <option value="$PROJECT_DIR$/Base Code/www/views/Customizer/customMeta.view.php" />
         <option value="$PROJECT_DIR$/Base Code/www/Config/di.global.php" />
         <option value="$PROJECT_DIR$/Base Code/www/dao/Articles.class.php" />
@@ -350,12 +353,16 @@
         <option value="$PROJECT_DIR$/Base Code/www/index.php" />
         <option value="$PROJECT_DIR$/Base Code/www/controllers/ArticlesController.class.php" />
         <option value="$PROJECT_DIR$/Base Code/www/views/Articles/listFrontPages.view.php" />
-        <option value="$PROJECT_DIR$/Base Code/www/views/Customizer/customizer.view.php" />
-        <option value="$PROJECT_DIR$/Base Code/www/models/Customizer.class.php" />
         <option value="$PROJECT_DIR$/Base Code/www/views/modals/form.mod.php" />
-        <option value="$PROJECT_DIR$/Base Code/www/controllers/CustomizerController.class.php" />
         <option value="$PROJECT_DIR$/Base Code/www/views/templates/basic.tpl.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/dao/Comments.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/dao/ErrorPage.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/views/Customizer/customizer.view.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/routes.yml" />
+        <option value="$PROJECT_DIR$/Base Code/www/views/Customizer/customizerColor.view.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/models/Customizer.class.php" />
         <option value="$PROJECT_DIR$/Base Code/www/dao/Customizer.class.php" />
+        <option value="$PROJECT_DIR$/Base Code/www/controllers/CustomizerController.class.php" />
       </list>
     </option>
   </component>
@@ -692,7 +699,7 @@
       <workItem from="1556111132439" duration="212000" />
       <workItem from="1561104761888" duration="9189000" />
       <workItem from="1561129689625" duration="4000" />
-      <workItem from="1561135404565" duration="43952000" />
+      <workItem from="1561135404565" duration="50117000" />
     </task>
     <task id="LOCAL-00001" summary="ttt">
       <created>1548753671022</created>
@@ -974,11 +981,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561885812706</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="commit 23/04/2019">
+      <created>1561911747150</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1561911747150</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="338994000" />
+    <option name="totallyTimeSpent" value="345159000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
@@ -1081,27 +1095,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="commit 23/04/2019" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/CategoriesController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/models/Statistics.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/views/Statistics/detailUserBack.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="86" selection-start-line="16" selection-start-column="86" selection-end-line="16" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Base Code/www/views/Statistics/statistics.view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-284">
@@ -1134,16 +1127,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
           <caret line="30" selection-start-line="30" selection-end-line="30" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/views/Articles/singleArticle.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="110" column="58" selection-start-line="110" selection-start-column="58" selection-end-line="110" selection-end-column="58" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#div#1;n#article#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1193,44 +1176,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/routes.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="114" column="14" lean-forward="true" selection-start-line="114" selection-start-column="14" selection-end-line="114" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/models/Articles.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="71" column="1" lean-forward="true" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/Config/global.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/views/Customizer/customMeta.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/views/Articles/addArticle.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/models/Comments.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Base Code/www/models/Categories.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1247,16 +1192,6 @@
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#32#67#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/Config/di.global.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="77" column="6" selection-start-line="77" selection-start-column="6" selection-end-line="77" selection-end-column="6" />
-          <folding>
-            <element signature="e#7#30#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1278,13 +1213,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/core/Container.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/CommentsController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1295,34 +1223,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/ArticlesController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-60">
-          <caret line="124" column="36" selection-start-line="124" selection-start-column="36" selection-end-line="124" selection-end-column="36" />
-          <folding>
-            <element signature="e#65#93#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Base Code/www/core/View.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/views/Articles/listFrontPages.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="10" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/views/Customizer/customizer.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="120" selection-start-line="15" selection-start-column="120" selection-end-line="15" selection-end-column="120" />
         </state>
       </provider>
     </entry>
@@ -1341,16 +1245,6 @@
     <entry file="file://$PROJECT_DIR$/Base Code/www/dao/Pictures.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-593" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/dao/Comments.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="25" column="37" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="37" />
-          <folding>
-            <element signature="e#57#103#0#PHP" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Base Code/www/dao/Categories.class.php">
@@ -1374,58 +1268,175 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/Articles/singleArticle.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1099">
+          <caret line="110" column="58" selection-start-line="110" selection-start-column="58" selection-end-line="110" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/dao/ErrorPage.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" selection-start-line="10" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/models/Articles.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="71" column="1" lean-forward="true" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/Config/global.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/ErrorPageController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="25" selection-start-line="25" selection-end-line="49" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Base Code/www/dao/Articles.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
+        <state relative-caret-position="2010">
           <caret line="134" column="35" selection-start-line="134" selection-start-column="35" selection-end-line="134" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/models/Customizer.class.php">
+    <entry file="file://$PROJECT_DIR$/Base Code/www/models/Comments.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/dao/Comments.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="50" column="138" selection-start-line="50" selection-start-column="138" selection-end-line="50" selection-end-column="138" />
+          <folding>
+            <element signature="e#57#103#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Base Code/www/views/modals/form.mod.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
-          <caret line="22" column="63" lean-forward="true" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/CustomizerController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="44" column="54" lean-forward="true" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="54" />
-          <folding>
-            <element signature="e#65#93#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base Code/www/views/templates/admin.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="199" lean-forward="true" selection-start-line="28" selection-start-column="199" selection-end-line="28" selection-end-column="199" />
+          <caret line="22" column="63" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Base Code/www/views/templates/basic.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="64" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="64" />
+        <state relative-caret-position="1400">
+          <caret line="94" column="116" selection-start-line="94" selection-start-column="116" selection-end-line="94" selection-end-column="116" />
           <folding>
             <element signature="e#6#32#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/templates/admin.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="40" column="90" selection-start-line="40" selection-start-column="82" selection-end-line="40" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/ArticlesController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+          <folding>
+            <element signature="e#65#93#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/routes.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="115" column="24" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/Customizer/customizer.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="91" selection-start-line="11" selection-start-column="91" selection-end-line="11" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/Customizer/customMeta.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/Config/di.global.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-329">
+          <caret line="29" column="37" lean-forward="true" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+          <folding>
+            <element signature="e#7#30#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/core/Container.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/Articles/addArticle.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/Customizer/customizerColor.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/models/Customizer.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="32" column="39" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Base Code/www/dao/Customizer.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        <state relative-caret-position="308">
+          <caret line="57" column="82" selection-start-line="57" selection-start-column="82" selection-end-line="57" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/controllers/CustomizerController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="74" column="78" selection-start-line="74" selection-start-column="78" selection-end-line="74" selection-end-column="78" />
+          <folding>
+            <element signature="e#65#93#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base Code/www/views/Articles/listFrontPages.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="10" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
         </state>
       </provider>
     </entry>

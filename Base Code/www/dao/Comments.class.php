@@ -48,7 +48,7 @@ class Comments extends BaseDAO {
                 "userId"=>["type"=>"text","placeholder"=>"", "required"=>true, "id"=>"inputHiddenContent", "value"=>"$idUser"],
 
                 "content"=>["value"=>"Your comment", "required"=>true, "id"=>"textaeraAddComment", "class"=>"","minlength"=>2,"maxlength"=>300,
-                    "error"=>"Your comment must be between two or three hundred characters","type"=>""]
+                    "error"=>"Your comment must be between two or three hundred characters","type"=>"","valueTextearea"=>"Your comment...."]
             ]
 
         ];

@@ -53,4 +53,33 @@ Class CustomizerController{
         $v->assign("Form", $form);
     }
 
+
+    public function customColorAction(){
+        $updateCustomColor = new CustomizerModel();
+        $selectCustomColor = $this->customizerDao->selectDataCustomizer();
+        $selectErrorPageForm = $this->customizerDao->getUpdateTemplate($selectCustomColor["colorFront"],$selectCustomColor["postContentColor"],$selectCustomColor["aColor"]);
+        $method = strtoupper($selectErrorPageForm["config"]["method"]);
+        $data = $GLOBALS["_".$method];
+
+        if( $_SERVER['REQUEST_METHOD']==$method && !empty($data) ) {
+
+            $validator = new Validator($selectErrorPageForm, $data);
+            $form["errors"] = $validator->errors;
+
+            if (empty($form["errors"])) {
+                $updateCustomColor->setId(1);
+                $updateCustomColor->setPostContentColor($data["postContentColor"]);
+                $updateCustomColor->setAColor($data["aColor"]);
+                $updateCustomColor->setColorFront($data["colorFront"]);
+                $this->customizerDao->updateCustomColor($updateCustomColor);
+                header('Location: '.Routing::getSlug("Customizer","customColor").'');
+                exit;
+            }
+        }
+
+        $v = new View("customizerColor", self::nameClass,"admin" );
+        $v->assign("CustomColor", $selectErrorPageForm);
+        exit;
+    }
+
 }

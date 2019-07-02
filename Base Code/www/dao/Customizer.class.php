@@ -45,6 +45,23 @@ class Customizer extends BaseDAO {
         $query->execute($arguments);
     }
 
+    public function selectDataCustomizer(){
+        $query = $this->queryConstructor->select()->from('Customizer')->where(["id"=>1]);
+        $query = $this->queryConstructor->prepare((string)$query);
+        $query->setFetchMode(\PDO::FETCH_ASSOC);
+        $query->execute(["id"=>1]);
+        return $query->fetch();
+    }
+
+    public function updateCustomColor(\DontKnow\Models\Customizer $customizer){
+        $arguments = get_object_vars($customizer);
+        $query = $this->queryConstructor->table('Customizer')->update($arguments);
+        $query = $this->queryConstructor->prepare((string)$query);
+        $query->execute($arguments);
+    }
+
+
+
     public function getCustomMetaForm($content,$title){
         return [
             "config"=>[
@@ -97,5 +114,35 @@ class Customizer extends BaseDAO {
 
         ];
     }
+
+    public function getUpdateTemplate($colorFront,$postContentColor,$aColor){
+        return [
+            "config"=>[
+                "method"=>"POST",
+                "action" => "",
+                "class"=>"",
+                "id"=>"form",
+                "submit"=>"Update",
+                "idSubmit" => "bouttonAddArticle",
+                "classSubmit" =>"bouttonConfirmForm",
+                "cancelButton"=>false,
+                "enctype"=>false
+
+            ],
+
+            "data"=>[
+
+                "colorFront"=>["type"=>"color","label"=>"Choose the color of your website", "required"=>false, "class"=>"inputAddPage", "id"=>"button_change_background_color", "minlenght"=>7,"maxlength"=>7,
+                    "error"=>"An error has occured", "value"=>$colorFront],
+
+                "postContentColor"=>["type"=>"color","label"=>"Choose your background color", "required"=>false, "class"=>"inputAddPage", "id"=>"button_change_background_color", "minlenght"=>7,"maxlength"=>7,
+                    "error"=>"An error has occured", "value"=>$postContentColor],
+
+                "aColor"=>["type"=>"color", "class"=>"inputAddPage","label"=>"Choose your text color", "id"=>"button_change_text_color", "required"=>false, "minlenght"=>7,"maxlength"=>7,
+                    "error"=>"An error has occured", "value"=>$aColor],
+            ]
+        ];
+    }
+
 
 }

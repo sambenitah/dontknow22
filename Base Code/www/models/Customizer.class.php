@@ -26,4 +26,16 @@ class Customizer{
         $this->contactMenu = $contactMenu;
     }
 
+    public function setColorFront($colorFront){
+        $this->colorFront = $colorFront;
+    }
+
+    public function setPostContentColor($postContentColor){
+        $this->postContentColor = $postContentColor;
+    }
+
+    public function setAColor($aColor){
+        $this->aColor = $aColor;
+    }
+
 }

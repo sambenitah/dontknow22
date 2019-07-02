@@ -118,6 +118,12 @@
   connexion: true
   role: 3
 
+"/customColor":
+  controller: Customizer
+  action: customColor
+  connexion: true
+  role: 3
+
 "/logout":
   controller: Users
   action: logout
