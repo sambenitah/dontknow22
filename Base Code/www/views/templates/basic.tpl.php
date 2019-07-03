@@ -21,6 +21,19 @@ use DontKnow\Dao;
     <script src="/public/js/admin.tpl.js"></script>
 </head>
 <body>
+<?php  $style = resolve(Dao\Customizer::class)->tableWithStyle();?>
+<style>
+    .front{
+        background-color: <?php echo $style["colorFront"];?> !important;
+    }
+    .post-content{
+        background-color: <?php echo $style["postContentColor"];?> !important;
+    }
+
+    a{
+        color: <?php echo $style["aColor"];?>; !important;
+    }
+</style>
 <header>
     <?php if(isset($_SESSION['auth'])): ?>
     <div class="row">
@@ -29,6 +42,7 @@ use DontKnow\Dao;
                 <ul>
                     <li><a href="<?php echo Routing::getSlug("Statistics","default");?>" id="headerPartMainSection">Dont Kn?w</a>
                         <ul>
+                            <li><a href="<?php echo Routing::getSlug("Customizer","default");?>">Customizer</a></li>
                             <li><a href="<?php echo Routing::getSlug("Articles","addArticle");?>">Add Article</a></li>
                             <li><a href="<?php echo Routing::getSlug("Articles","showArticles");?>">Your Articles</a></li>
                             <li><a href="<?php echo Routing::getSlug("Pictures","showPictures");?>">Your pictures</a></li>
@@ -43,7 +57,6 @@ use DontKnow\Dao;
             <a id="welcomePartMainSection">Welcome <?php echo $_SESSION['auth']; ?> on your website</a>
         </div>
     </div>
-
     <?php endif; ?>
 </header>
 
@@ -158,3 +171,4 @@ use DontKnow\Dao;
     </div>
 </body>
 </html>
+

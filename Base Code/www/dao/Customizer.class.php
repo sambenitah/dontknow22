@@ -60,6 +60,14 @@ class Customizer extends BaseDAO {
         $query->execute($arguments);
     }
 
+    public function tableWithStyle(){
+        $query = $this->queryConstructor->select()->from('Customizer')->where(["id"=>1]);
+        $query = $this->queryConstructor->prepare((string)$query);
+        $query->setFetchMode(\PDO::FETCH_ASSOC);
+        $query->execute(["id"=>1]);
+        return $query->fetch();
+    }
+
 
 
     public function getCustomMetaForm($content,$title){

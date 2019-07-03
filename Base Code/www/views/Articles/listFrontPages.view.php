@@ -14,8 +14,6 @@
                 </h2>
                 <div class="post-details card-subtitle">
                     <a href="#" class="post-date"><?php echo $article->date_inserted?></a>
-                    <a href="#" class="post-views">15 views</a>
-                    <a href="#" class="post-comments">03 Comments</a>
                 </div>
                 <div class="post-text card-description">
                     <?php echo substr($article->content, 0,370)?>

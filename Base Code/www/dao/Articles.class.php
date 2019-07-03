@@ -93,7 +93,7 @@ class Articles extends BaseDAO {
                 ],
 
                 "description"=>["value"=>"Your description", "required"=>true, "id"=>"textaeraAddPage", "class"=>"","minlength"=>2,"maxlength"=>310,
-                    "error"=>"Your description must be between two or three hundred ten characters","type"=>""],
+                    "error"=>"Your description must be between two or three hundred ten characters","type"=>"", "valueTextearea"=>""],
 
                 "route"=>["type"=>"text","placeholder"=>"Your url of your page", "required"=>true, "class"=>"inputAddPage", "id"=>"i2--AddPage","maxlength"=>50,
                     "error"=>"Your road exceeds one hundred characters"]

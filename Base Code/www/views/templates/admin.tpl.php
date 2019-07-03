@@ -19,7 +19,6 @@ use DontKnow\Core\Routing;
         <script src="/public/js/admin.tpl.js"></script>
     </head>
     <body>
-
     <header>
         <div class="row">
             <div id="backgroundHeader" class="col-12 col-m-12 col-l-12">
@@ -51,7 +50,6 @@ use DontKnow\Core\Routing;
                        <a class="a-adminMenu" href="<?php echo Routing::getSlug("Pictures","showPictures");?>">Your pictures</a>
                        <a class="a-adminMenu" href="<?php echo Routing::getSlug("Pictures","addPicture");?>">Add picture</a>
                        <a class="a-adminMenu" href="<?php echo Routing::getSlug("Categories","addCategory");?>">Add Category</a>
-                       <a class="a-adminMenu" href="<?php echo Routing::getSlug("Categories","showCategory");?>">Your Categories</a>
                    </div>
                 </nav>
             </div>
