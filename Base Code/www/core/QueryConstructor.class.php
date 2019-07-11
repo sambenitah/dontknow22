@@ -13,7 +13,6 @@ class QueryConstructor{
 
     public function __construct(SPDO $spdo){
         $this->instance = $spdo->getPDO();
-        $this->table = get_called_class();
         if(!$this->instance instanceof \PDO)
             throw new \Exception('Aucune connection');
     }
