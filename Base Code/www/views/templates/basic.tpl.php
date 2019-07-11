@@ -93,19 +93,7 @@ use DontKnow\Dao\Users;
                                                 <a href="<?php echo Routing::getSlug("Articles", "default"); ?>">Home</a>
                                             </li>
                                             <li>
-                                                <a href="category.html">Branding</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Design</a>
-                                            </li>
-                                            <li>
-                                                <a href="about.html">Identity</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Furniture</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Blog</a>
+                                                <a href="<?php echo Routing::getSlug("Articles", "default"); ?>">Section</a>
                                             </li>
                                             <?php if (resolve(Dao\Customizer::class)->selectContact(["id"=>1]) != "0"):?>
                                             <li>
@@ -120,21 +108,17 @@ use DontKnow\Dao\Users;
                                                     <a href="<?php echo Routing::getSlug("Users", "loginFront"); ?>">Sign Up</a>
                                                 </li>
                                             <?php endif;?>
+                                            <?php if(resolve(Users::class)->logged()):?>
+                                                <li>
+                                                    <a href="<?php echo Routing::getSlug("Users", "loginFront"); ?>">My Account</a>
+                                                </li>
+                                            <?php endif;?>
                                         </ul>
                                     </nav>
                                 </div>
                                 <div class="socials">
-                                    <a href="#" title="Behance" onclick="displayFullScreen()">
-                                        <i class="fab fa-behance"></i>
-                                    </a>
-                                    <a href="#" title="Dribbble" onclick="displayRegularScreen()">
-                                        <i class="fab fa-dribbble"></i>
-                                    </a>
                                     <a href="#" title="Facebook">
                                         <i class="fab fa-facebook"></i>
-                                    </a>
-                                    <a href="#" title="Google Plus">
-                                        <i class="fab fa-google-plus"></i>
                                     </a>
                                     <a href="#" title="Instagram">
                                         <i class="fab fa-instagram"></i>
@@ -157,11 +141,6 @@ use DontKnow\Dao\Users;
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="copyright">
-                                    <p>
-                                        IDK @ 2018. Design by ESGI
-                                    </p>
                                 </div>
                             </div>
                         </div>
