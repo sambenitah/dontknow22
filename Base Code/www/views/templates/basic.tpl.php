@@ -108,11 +108,6 @@ use DontKnow\Dao\Users;
                                                     <a href="<?php echo Routing::getSlug("Users", "loginFront"); ?>">Sign Up</a>
                                                 </li>
                                             <?php endif;?>
-                                            <?php if(resolve(Users::class)->logged()):?>
-                                                <li>
-                                                    <a href="<?php echo Routing::getSlug("Users", "loginFront"); ?>">My Account</a>
-                                                </li>
-                                            <?php endif;?>
                                         </ul>
                                     </nav>
                                 </div>

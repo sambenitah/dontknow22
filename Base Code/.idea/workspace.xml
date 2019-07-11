@@ -3,26 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cee0f292-5b2f-48df-8183-4c75a2ebcbc2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_data/dontknow/Articles.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dontknow/Articles.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_data/dontknow/Comments.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dontknow/Comments.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_data/dontknow/Customizer.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dontknow/Customizer.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_data/dontknow/ErrorPage.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dontknow/ErrorPage.ibd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db_data/dontknow/Users.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dontknow/Users.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_data/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ib_buffer_pool" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db_data/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ib_logfile0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db_data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ibdata1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_data/mysql/innodb_index_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/innodb_index_stats.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_data/mysql/innodb_table_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/innodb_table_stats.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/Config/global.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/Config/global.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/controllers/ErrorPageController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/controllers/ErrorPageController.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/controllers/UsersController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/controllers/UsersController.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/core/Email.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/core/Email.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/dao/ErrorPage.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/dao/ErrorPage.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/dao/Users.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/dao/Users.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/views/Errors/errorPage.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/Errors/errorPage.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/views/Users/loginUser.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/Users/loginUser.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/views/Users/setPassword.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/Users/setPassword.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/views/templates/basic.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/templates/basic.tpl.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -231,7 +214,7 @@
           <entry key="css" value="4" />
           <entry key="jpg" value="3" />
           <entry key="js" value="2" />
-          <entry key="php" value="652" />
+          <entry key="php" value="654" />
           <entry key="scss" value="29" />
           <entry key="sql" value="2" />
           <entry key="yml" value="26" />
@@ -242,7 +225,7 @@
           <entry key="CSS" value="4" />
           <entry key="Image" value="3" />
           <entry key="JavaScript" value="2" />
-          <entry key="PHP" value="652" />
+          <entry key="PHP" value="654" />
           <entry key="SCSS" value="29" />
           <entry key="SQL" value="2" />
           <entry key="YAML" value="26" />
@@ -251,16 +234,16 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="5" />
-          <entry key="php" value="16184" />
+          <entry key="php" value="16276" />
           <entry key="scss" value="66" />
-          <entry key="txt" value="204" />
+          <entry key="txt" value="286" />
           <entry key="yml" value="193" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="16184" />
-          <entry key="PLAIN_TEXT" value="209" />
+          <entry key="PHP" value="16276" />
+          <entry key="PLAIN_TEXT" value="291" />
           <entry key="SCSS" value="66" />
           <entry key="YAML" value="193" />
         </counts>
@@ -274,28 +257,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/dao/Users.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="226" column="66" selection-start-line="226" selection-start-column="66" selection-end-line="226" selection-end-column="66" />
-              <folding>
-                <element signature="e#32#71#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/public/js/script.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/views/templates/basic.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+            <state relative-caret-position="267">
+              <caret line="107" column="86" selection-start-line="107" selection-start-column="86" selection-end-line="107" selection-end-column="86" />
             </state>
           </provider>
         </entry>
@@ -470,14 +436,7 @@
               <item name="Base Code" type="b2602c69:ProjectViewProjectNode" />
               <item name="Base Code" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Base Code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Base Code" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Base Code" type="b2602c69:ProjectViewProjectNode" />
@@ -623,7 +582,7 @@
       <workItem from="1562838209494" duration="59000" />
       <workItem from="1562838490165" duration="696000" />
       <workItem from="1562858598271" duration="504000" />
-      <workItem from="1562862991565" duration="4496000" />
+      <workItem from="1562862991565" duration="5202000" />
     </task>
     <task id="LOCAL-00001" summary="reset project">
       <created>1548753304095</created>
@@ -842,11 +801,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562838243203</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Correction Password Forget + Ajout script JS Recherche">
+      <created>1562868624127</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1562868624127</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Nettoyage Basic tpl">
+      <created>1562869005242</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1562869005242</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="292148000" />
+    <option name="totallyTimeSpent" value="292854000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -933,7 +906,9 @@
     <MESSAGE value="New Error Page" />
     <MESSAGE value="Barre Panel Admin Front + Correction Add Articles" />
     <MESSAGE value="Envoie de mail Password Forget" />
-    <option name="LAST_COMMIT_MESSAGE" value="Envoie de mail Password Forget" />
+    <MESSAGE value="Correction Password Forget + Ajout script JS Recherche" />
+    <MESSAGE value="Nettoyage Basic tpl" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nettoyage Basic tpl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -946,32 +921,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/views/Users/loginUser.view.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/views/Users/loginUser.view.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/views/Users/loginUser.view.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/views/Users/setPassword.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/views/Users/setPassword.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/views/templates/basic.tpl.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/views/templates/basic.tpl.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1190,19 +1139,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/dao/Users.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="226" column="66" selection-start-line="226" selection-start-column="66" selection-end-line="226" selection-end-column="66" />
-          <folding>
-            <element signature="e#32#71#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/public/js/script.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/views/templates/basic.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1252,6 +1188,47 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/templates/basic.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/templates/basic.tpl.php" />
+    <entry file="file://$PROJECT_DIR$/www/public/js/script.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/dao/Users.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="226" column="66" selection-start-line="226" selection-start-column="66" selection-end-line="226" selection-end-column="66" />
+          <folding>
+            <element signature="e#32#71#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/templates/basic.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/templates/basic.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/templates/basic.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1778">
+          <caret line="143" column="38" selection-start-line="143" selection-start-column="38" selection-end-line="143" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/templates/basic.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="107" column="86" selection-start-line="107" selection-start-column="86" selection-end-line="107" selection-end-column="86" />
         </state>
       </provider>
     </entry>
