@@ -1,7 +1,10 @@
 <?php
 
+
+
 declare(strict_types=1);
 namespace DontKnow\Core;
+use DontKnow\Controllers\ErrorPageController;
 class Routing{
     public static $routeFile = "routes.yml";
     public static function getRoute($slug){
@@ -11,8 +14,7 @@ class Routing{
             $routes = yaml_parse_file(self::$routeFile);
             if(isset($routes[$slugPartOne])){
                 if(empty($routes[$slugPartOne]["controller"]) || empty($routes[$slugPartOne]["action"])){
-                    $container = new Container();
-                    $errorPage = $container->getInstance(\DontKnow\Controllers\ErrorPageController::class);
+                    $errorPage = resolve(ErrorPageController::class);
                     $message['message']="Routes doesn't exist";
                     $errorPage->showErrorPageAction($message);
                 }

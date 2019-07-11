@@ -2,10 +2,21 @@
 session_start();
 use DontKnow\Core\Routing;
 use DontKnow\Dao\Users;
+use DontKnow\Controllers\UsersController;
+use DontKnow\Core\Container;
+use DontKnow\Controllers\ErrorPageController;
+
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
 
 function resolve($name){
-    return \DontKnow\Core\Container::getObject()->getInstance($name);
+    return Container::getObject()->getInstance($name);
 }
+
+require ('core/Exception.php');
+require ('core/PHPMailer.php');
+require ('core/SMTP.php');
 
 
 spl_autoload_register(function ($class) {
@@ -26,6 +37,8 @@ spl_autoload_register(function ($class) {
         return;
     }
 
+    var_dump($file);
+
     throw new Exception("Fichier invalide");
 
 });
@@ -39,25 +52,24 @@ extract($routes);
 
 $container = new \DontKnow\Core\Container();
 
-$errorPage = $container->getInstance(\DontKnow\Controllers\ErrorPageController::class);
+$errorPage = resolve(ErrorPageController::class);
 
 if(!isset($controller)){
     $message['message']="Controller doesn't exist";
     $errorPage->showErrorPageAction($message);
 }
 
-$cObject = $container->getInstance('DontKnow\\Controllers\\' . $controller);
 
+$cObject = resolve('DontKnow\\Controllers\\' . $controller);
 if( method_exists($cObject, $action) ){
     if($connexion){
-        $user = $container->getInstance(Users::class);
-        if($user->logged()) {
-            $userRole = $user->getRole($_SESSION['auth']);
-            $_SESSION["role"] = $userRole;
-            if($userRole >= $role) {
-                $token = $user->getToken();
+        $user = resolve(UsersController::class);
+        if($user->userDao->logged()) {
+            $userRole = $user->userDao->getRole($_SESSION['auth']);
+            if($_SESSION["role"] >= $role) {
+                $token = $user->userDao->getToken();
                 if ($token == ($_SESSION['token'])) {
-                    $user->updateToken();
+                    $user->userDao->updateToken();
                     $cObject->$action($param);
                 }
                 else {
@@ -65,11 +77,13 @@ if( method_exists($cObject, $action) ){
                     $errorPage->showErrorPageAction($message);
                 }
             }
-            else
-                header('Location: '.Routing::getSlug("Users","login").'');
+            else {
+                $message['message'] = "Accès refusé";
+                $errorPage->showErrorPageAction($message);
+            }
         }
         else{
-            header('Location: '.Routing::getSlug("Users","login").'');
+            $user->loginAction($cObject,$action);
         }
     }
     else{

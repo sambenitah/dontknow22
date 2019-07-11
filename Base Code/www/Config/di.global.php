@@ -8,6 +8,7 @@ use DontKnow\Dao\Customizer;
 use DontKnow\Dao\Categories;
 use DontKnow\Dao\Statistics;
 use DontKnow\Dao\ErrorPage;
+use DontKnow\Dao\Sitemap;
 use DontKnow\Core\QueryConstructor;
 use DontKnow\Controllers\UsersController;
 use DontKnow\Controllers\ArticlesController;
@@ -17,7 +18,7 @@ use DontKnow\Controllers\CustomizerController;
 use DontKnow\Controllers\CategoriesController;
 use DontKnow\Controllers\StatisticsController;
 use DontKnow\Controllers\ErrorPageController;
-use DontKnow\Core\Container;
+use DontKnow\Controllers\SitemapController;
 use DontKnow\VO\DbDriver;
 use DontKnow\VO\DbHost;
 use DontKnow\VO\DbName;
@@ -25,90 +26,135 @@ use DontKnow\VO\DbUser;
 use DontKnow\VO\DbPwd;
 use DontKnow\Core\SPDO;
 use DontKnow\VO\Env;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
+use DontKnow\VO\MailHost;
+use DontKnow\VO\MailPassword;
+use DontKnow\VO\MailPort;
+use DontKnow\VO\MailUsername;
+use DontKnow\Core\Email;
+use DontKnow\VO\WebsiteName;
+
+
 
 return [
-    DbDriver::class => function(Container $container) {
-        return new DbDriver($container->getinstance('config.db.driver'));
+    PHPMailer::class => function() {
+        return new PHPMailer();
     },
-    Env::class => function(Container $container) {
-        return new Env($container->getinstance('config.env.environment'));
+    Exception::class => function() {
+        return new Exception();
     },
-    DbHost::class => function(Container $container) {
-        return new DbHost($container->getinstance('config.db.host'));
+    MailHost::class => function() {
+        return new MailHost(resolve('config.mail.host'));
     },
-    DbName::class => function(Container $container) {
-        return new DbName($container->getinstance('config.db.name'));
+    MailPassword::class => function() {
+        return new MailPassword(resolve('config.mail.password'));
     },
-    DbUser::class => function(Container $container) {
-        return new DbUser($container->getinstance('config.db.user'));
+    MailPort::class => function() {
+        return new MailPort(resolve('config.mail.port'));
     },
-    DbPwd::class => function(Container $container) {
-        return new DbPwd($container->getinstance('config.db.pwd'));
+    MailUsername::class => function() {
+        return new MailUsername(resolve('config.mail.username'));
     },
-    Users::class => function(Container $container) {
-        return new Users($container->getInstance(QueryConstructor::class));
+    WebsiteName::class => function() {
+        return new WebsiteName(resolve('config.website.name'));
     },
-    QueryConstructor::class => function(Container $container) {
-        return new QueryConstructor($container->getInstance(SPDO::class));
+    DbDriver::class => function() {
+        return new DbDriver(resolve('config.db.driver'));
     },
-    SPDO::class => function(Container $container) {
-        return new SPDO($container->getInstance(DbDriver::class)
-            ,$container->getInstance(DbHost::class),
-            $container->getInstance(DbName::class),
-            $container->getInstance(DbUser::class),
-            $container->getInstance(DbPwd::class));
+    Env::class => function() {
+        return new Env(resolve('config.env.environment'));
     },
-    Pictures::class => function(Container $container) {
-        return new Pictures($container->getInstance(QueryConstructor::class));
+    DbHost::class => function() {
+        return new DbHost(resolve('config.db.host'));
     },
-    Articles::class => function(Container $container) {
-        return new Articles($container->getInstance(QueryConstructor::class));
+    DbName::class => function() {
+        return new DbName(resolve('config.db.name'));
     },
-    Comments::class => function(Container $container) {
-        return new Comments($container->getInstance(QueryConstructor::class));
+    DbUser::class => function() {
+        return new DbUser(resolve('config.db.user'));
     },
-    Customizer::class => function(Container $container) {
-        return new Customizer($container->getInstance(QueryConstructor::class));
+    DbPwd::class => function() {
+        return new DbPwd(resolve('config.db.pwd'));
     },
-    Categories::class => function(Container $container) {
-        return new Categories($container->getInstance(QueryConstructor::class));
+    Users::class => function() {
+        return new Users(resolve(QueryConstructor::class));
     },
-    Statistics::class => function(Container $container) {
-        return new Statistics($container->getInstance(QueryConstructor::class));
+    QueryConstructor::class => function() {
+        return new QueryConstructor(resolve(SPDO::class));
     },
-    ErrorPage::class => function(Container $container) {
-        return new ErrorPage($container->getInstance(QueryConstructor::class));
+    Email::class => function() {
+        return new Email(resolve(MailHost::class),
+            resolve(MailPort::class),
+            resolve(MailUsername::class),
+            resolve(MailPassword::class),
+            false);
     },
-    UsersController::class => function(Container $container) {
-        $usersModel = $container->getInstance(Users::class);
-        return new UsersController($usersModel);
+    SPDO::class => function() {
+        return new SPDO(resolve(DbDriver::class)
+            ,resolve(DbHost::class),
+            resolve(DbName::class),
+            resolve(DbUser::class),
+            resolve(DbPwd::class));
     },
-    ArticlesController::class => function(Container $container) {
-        $articlesModel = $container->getInstance(Articles::class);
+    Pictures::class => function() {
+        return new Pictures(resolve(QueryConstructor::class));
+    },
+    Articles::class => function() {
+        return new Articles(resolve(QueryConstructor::class));
+    },
+    Comments::class => function() {
+        return new Comments(resolve(QueryConstructor::class));
+    },
+    Customizer::class => function() {
+        return new Customizer(resolve(QueryConstructor::class));
+    },
+    Categories::class => function() {
+        return new Categories(resolve(QueryConstructor::class));
+    },
+    Statistics::class => function() {
+        return new Statistics(resolve(QueryConstructor::class));
+    },
+    ErrorPage::class => function() {
+        return new ErrorPage(resolve(QueryConstructor::class));
+    },
+    Sitemap::class => function() {
+        return new Sitemap(resolve(QueryConstructor::class));
+    },
+    SitemapController::class => function() {
+        $sitemapModel = resolve(Sitemap::class);
+        return new SitemapController($sitemapModel);
+    },
+    UsersController::class => function() {
+        $usersDAO = resolve(Users::class);
+        return new UsersController($usersDAO);
+    },
+    ArticlesController::class => function() {
+        $articlesModel = resolve(Articles::class);
         return new ArticlesController($articlesModel);
     },
-    PicturesController::class => function(Container $container) {
-        $usersModel = $container->getInstance(Pictures::class);
+    PicturesController::class => function() {
+        $usersModel = resolve(Pictures::class);
         return new PicturesController($usersModel);
     },
-    CommentsController::class => function(Container $container) {
-        $usersModel = $container->getInstance(Comments::class);
+    CommentsController::class => function() {
+        $usersModel = resolve(Comments::class);
         return new CommentsController($usersModel);
     },
-    CustomizerController::class => function(Container $container) {
-        $usersModel = $container->getInstance(Customizer::class);
+    CustomizerController::class => function() {
+        $usersModel = resolve(Customizer::class);
         return new CustomizerController($usersModel);
     },
-    CategoriesController::class => function(Container $container) {
-        $usersModel = $container->getInstance(Categories::class);
+    CategoriesController::class => function() {
+        $usersModel = resolve(Categories::class);
         return new CategoriesController($usersModel);
     },
-    StatisticsController::class => function(Container $container) {
-        $usersModel = $container->getInstance(Statistics::class);
+    StatisticsController::class => function() {
+        $usersModel = resolve(Statistics::class);
         return new StatisticsController($usersModel);
     },
-    ErrorPageController::class => function(Container $container) {
-        $usersModel = $container->getInstance(ErrorPage::class);
+    ErrorPageController::class => function() {
+        $usersModel = resolve(ErrorPage::class);
         return new ErrorPageController($usersModel);
     },
 ];

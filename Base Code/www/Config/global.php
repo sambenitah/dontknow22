@@ -10,5 +10,14 @@ return [
     ],
     'env' =>[
         'environment'=>'dev'
+    ],
+    'mail' =>[
+        'host'=>'ssl0.ovh.net',
+        'username'=>'spacecowboy@dontknow.fr',
+        'password'=>'samSLBSAM2282SAM',
+        'port'=>'587',
+    ],
+    'website' =>[
+        'name' => 'DontKno'
     ]
 ];

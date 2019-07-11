@@ -1,14 +1,32 @@
 "/":
   controller: Users
   action: default
-  connexion : false
-  role : 0
+  connexion: false
+  role: 0
 
 "/register":
   controller: Users
   action: register
-  connexion : false
-  role : 0
+  connexion: false
+  role: 0
+
+"/forgetPassword":
+  controller: Users
+  action: forgetPassword
+  connexion: false
+  role: 0
+
+"/setPassword":
+  controller: Users
+  action: setPassword
+  connexion: false
+  role: 0
+
+"/sitemap":
+  controller: Sitemap
+  action: default
+  connexion: false
+  role: 0
 
 "/connection":
   controller: Users

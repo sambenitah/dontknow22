@@ -1,6 +1,7 @@
 <?php
 use DontKnow\Core\Routing;
 use DontKnow\Dao;
+use DontKnow\Dao\Users;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -110,14 +111,14 @@ use DontKnow\Dao;
                                                 <a href="#">Contact</a>
                                             </li>
                                             <?php endif;?>
-                                            <li>
-                                                <a href="<?php echo Routing::getSlug("Users", "register"); ?>">Sign Up</a>
-                                            </li>
-                                            <li>
-                                                <a href="<?php
-                                                echo isset($_SESSION['auth']) ? '#' :  Routing::getSlug("Users", "loginFront");
-                                                ?>"><?php   echo isset($_SESSION['authFront']) ? 'My Profile' :  'Sign In'; ?></a>
-                                            </li>
+                                            <?php if (!resolve(Users::class)->logged()):?>
+                                                <li>
+                                                    <a href="<?php echo Routing::getSlug("Users", "register"); ?>">Sign In</a>
+                                                </li>
+                                                <li>
+                                                    <a href="<?php echo Routing::getSlug("Users", "loginFront"); ?>">Sign Up</a>
+                                                </li>
+                                            <?php endif;?>
                                         </ul>
                                     </nav>
                                 </div>

@@ -40,6 +40,10 @@ class Users{
     public function setToken($token){
         $this->token = $token;
     }
+
+    public function setTokenPassword($tokenPassword){
+        $this->tokenPassword = password_hash((string)$tokenPassword, PASSWORD_DEFAULT);;
+    }
     public function setRole($role){
         $this->role = $role;
     }

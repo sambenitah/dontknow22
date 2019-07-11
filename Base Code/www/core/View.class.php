@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace DontKnow\Core;
 
+use DontKnow\Controllers\ErrorPageController;
+
 class View{
 
     private $v;
@@ -22,8 +24,7 @@ class View{
         if( file_exists($viewPath)){
             $this->v=$viewPath;
         }else{
-            $container = new Container();
-            $errorPage = $container->getInstance(\DontKnow\Controllers\ErrorPageController::class);
+            $errorPage = resolve(ErrorPageController::class);
             $message['message']="View doesn't exist";
             $errorPage->showErrorPageAction($message);
         }
@@ -34,8 +35,7 @@ class View{
         if( file_exists($templatePath)){
             $this->t=$templatePath;
         }else{
-            $container = new Container();
-            $errorPage = $container->getInstance(\DontKnow\Controllers\ErrorPageController::class);
+            $errorPage = resolve(ErrorPageController::class);
             $message['message']="Templates doesn't exist";
             $errorPage->showErrorPageAction($message);
         }
@@ -48,8 +48,7 @@ class View{
         if( file_exists($modalPath)){
             include $modalPath;
         }else{
-            $container = new Container();
-            $errorPage = $container->getInstance(\DontKnow\Controllers\ErrorPageController::class);
+            $errorPage = resolve(ErrorPageController::class);
             $message['message']="Modal doesn't exist";
             $errorPage->showErrorPageAction($message);
         }

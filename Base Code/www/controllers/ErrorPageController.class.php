@@ -51,8 +51,7 @@ Class ErrorPageController{
     }
 
     public function showErrorPageAction(?array $message){
-        $container = new Container();
-        $env = $container->getInstance(Env::class);
+        $env = resolve(Env::class);
 
         if(!isset($message) || $env->getEnv() =="production")
             $message['message'] = '';

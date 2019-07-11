@@ -1,7 +1,19 @@
+<?php
+use DontKnow\Core\Routing;
+use DontKnow\Dao\Users;
+
+$user = resolve(Users::class);
+
+if($user->logged()){
+    header('Location: '.Routing::getSlug("Statistics","default").'');
+}
+
+?>
+
 <main>
     <section id="SectionOneLogUser">
         <h1 id="TitleAddLogUser">Log In</h1>
-        <p id="t1--AddLogUser">Or <a id="a1--AddLogUser" href="#">Create account</a></p>
+        <p id="t1--AddLogUser"><a id="a1--AddLogUser" href="<?=Routing::getSlug("Users","forgetPassword") ?>">Forget Password  </a>Or <a id="a1--AddLogUser"  href="#">Create account</a></p>
             <?php $this->addModal("form", $form);?>
     </section>
 </main>

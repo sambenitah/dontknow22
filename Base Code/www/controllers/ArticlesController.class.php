@@ -70,8 +70,7 @@ class ArticlesController{
         $formArticle = $this->articleDao->getDetailArticleForm();
         $detail = $this->articleDao->selectSingleArticle(["route"=>$param]);
         if (empty($detail)) {
-            $container = new Container();
-            $errorPage = $container->getInstance(\DontKnow\Controllers\ErrorPageController::class);
+            $errorPage =resolve(ErrorPageController::class);
             $message['message']="Articles doesn't exist";
             $errorPage->showErrorPageAction($message);
         }else {
@@ -120,12 +119,11 @@ class ArticlesController{
 
 
     public function singleArticleAction($param){
-        $container = new Container();
         $commentModel = new CommentsModel();
-        $commentDao = $container->getInstance(CommentsDao::class);
+        $commentDao =resolve(CommentsDao::class);
         $selectDetailArticle = $this->articleDao->selectSingleArticle(["route"=>$param]);
         $idArticle =  $selectDetailArticle[0]->id;
-        $idUser = $_SESSION["auth"];
+        $idUser = isset($_SESSION["auth"]) ? $_SESSION["auth"] : null ;
         $formComment = $commentDao->getAddCommentForm($idArticle, $idUser);
         $method = strtoupper($formComment["config"]["method"]);
         $data = $GLOBALS["_".$method];
@@ -145,8 +143,7 @@ class ArticlesController{
         }
 
         if (empty($selectDetailArticle)) {
-            $container = new Container();
-            $errorPage = $container->getInstance(\DontKnow\Controllers\ErrorPageController::class);
+            $errorPage =resolve(ErrorPageController::class);
             $message['message']="Article empty";
             $errorPage->showErrorPageAction($message);
         }else{
