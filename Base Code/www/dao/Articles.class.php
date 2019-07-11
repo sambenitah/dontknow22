@@ -5,7 +5,8 @@ declare(strict_types=1);
 namespace DontKnow\Dao;
 use DontKnow\Models\Articles as ArticleModel;
 
-class Articles extends BaseDAO {
+
+class Articles extends BaseDAO{
 
     public function addArticle(ArticleModel $articles){
         $arguments = get_object_vars($articles);

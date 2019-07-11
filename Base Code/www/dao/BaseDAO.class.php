@@ -4,6 +4,8 @@ namespace DontKnow\Dao;
 
 use DontKnow\Core\QueryConstructor;
 use DontKnow\Core\Container;
+use DontKnow\Interfaces\PdoInterface;
+
 
 
 
@@ -16,5 +18,6 @@ class BaseDAO
     {
         $this->queryConstructor = $queryConstructor;
     }
+
 
 }

@@ -24,67 +24,72 @@ class QueryConstructor{
         return $this->instance->prepare($query);
     }
 
-    public function select(array ...$select):self //principe fluente  retourne une instance de la class
+    public function select(array ...$select) //principe fluente  retourne une instance de la class
     {
         $this->requestType = self::SELECT;
         $this->select = $select;
         return $this;
     }
 
-    public function insert(array $insert):self
+    public function insert(array $insert)
     {
         $this->requestType = self::INSERT;
         $this->insert = $insert;
         return $this;
     }
-    public function update(array $update):self{
+    public function update(array $update)
+    {
         $this->requestType = self::UPDATE;
         $this->update = $update;
         return $this;
     }
 
-    public function delete(string $delete):self{
+    public function delete(string $delete)
+    {
         $this->requestType = self::DELETE;
         $this->delete = $delete;
         return $this;
     }
 
-    public function table(string $table):self
+    public function table(string $table)
     {
         $this->table =$table;
         return $this;
     }
 
-    public function from(string $from):self
+    public function from(string $from)
     {
         $this->from = "FROM ".$from;
         return $this;
     }
 
-    public function where(array $where):self
+    public function where(array $where)
     {
         $this->where = $where;
         return $this;
     }
 
-    public function innerJoin(string $innerJoin):self
+    public function innerJoin(string $innerJoin)
     {
         $this->innerJoin = $innerJoin;
         return $this;
     }
 
-    public function value(string $value):self{
+    public function value(string $value)
+    {
         $this->value = $value;
         return $this;
     }
 
-    public function count(string $count, string $alias):self{
+    public function count(string $count, string $alias)
+    {
         $this->count = $count;
         $this->alias = $alias;
         return $this;
     }
 
-    public function anotheParam(string $param):self {
+    public function anotheParam(string $param)
+    {
         $this->anotherParam = $param;
         return $this;
     }
@@ -167,8 +172,6 @@ class QueryConstructor{
                 $parts[] = $this->whereArgs($this->where);
 
             $query = implode(' ', $parts);
-
-
         }
 
         if ($this->requestType === QueryConstructor::UPDATE){

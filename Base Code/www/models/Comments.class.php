@@ -16,7 +16,7 @@ class Comments{
 
     public function setContent($content)
     {
-        $this->content = $content;
+        $this->content = htmlspecialchars($content);
     }
 
     public function setUserId($userId)
