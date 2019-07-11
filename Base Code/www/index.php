@@ -36,12 +36,13 @@ spl_autoload_register(function ($class) {
         require $file;
         return;
     }
-
     var_dump($file);
 
     throw new Exception("Fichier invalide");
 
 });
+
+$container = new Container();
 
 
 $slug = $_SERVER["REQUEST_URI"];
@@ -50,14 +51,10 @@ $slug = $slugExploded[0];
 $routes = Routing::getRoute($slug);
 extract($routes);
 
-$container = new \DontKnow\Core\Container();
-
 $errorPage = resolve(ErrorPageController::class);
 
-if(!isset($controller)){
-    $message['message']="Controller doesn't exist";
-    $errorPage->showErrorPageAction($message);
-}
+if(!isset($controller))
+    $errorPage->showErrorPageAction("Controller doesn't exist");
 
 
 $cObject = resolve('DontKnow\\Controllers\\' . $controller);
@@ -73,13 +70,11 @@ if( method_exists($cObject, $action) ){
                     $cObject->$action($param);
                 }
                 else {
-                    $message['message']="Wrong Token";
-                    $errorPage->showErrorPageAction($message);
+                    $errorPage->showErrorPageAction("Wrong Token");
                 }
             }
             else {
-                $message['message'] = "Accès refusé";
-                $errorPage->showErrorPageAction($message);
+                $errorPage->showErrorPageAction("Accès refusé");
             }
         }
         else{
@@ -91,8 +86,7 @@ if( method_exists($cObject, $action) ){
     }
 
 }else{
-    $message['message']="Method doesn't exist";
-    $errorPage->showErrorPageAction($message);
+    $errorPage->showErrorPageAction("Method doesn't exist");
 }
 
 

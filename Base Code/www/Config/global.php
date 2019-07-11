@@ -9,7 +9,7 @@ return [
         'pwd' => 'password',
     ],
     'env' =>[
-        'environment'=>'dev'
+        'environment'=>'production'
     ],
     'mail' =>[
         'host'=>'ssl0.ovh.net',

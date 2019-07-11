@@ -29,7 +29,7 @@ class ErrorPage extends BaseDAO {
         $query = $this->queryConstructor->prepare((string)$query);
         $query->setFetchMode(\PDO::FETCH_CLASS, ErrorPageModel::class);
         $query->execute($where);
-        return $query->fetchAll();
+        return $query->fetch();
     }
 
 

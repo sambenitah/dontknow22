@@ -20,6 +20,7 @@ use DontKnow\Dao\Users;
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
     <script src="/public/js/addPages.js"></script>
     <script src="/public/js/admin.tpl.js"></script>
+    <script src="/public/js/script.js"></script>
 </head>
 <body>
 <?php  $style = resolve(Dao\Customizer::class)->tableWithStyle();?>

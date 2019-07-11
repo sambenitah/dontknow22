@@ -232,6 +232,11 @@ class Users extends BaseDAO
         return isset($_SESSION['auth']);
     }
 
+    public  function loggedRedirection(){
+        if(isset($_SESSION['auth']))
+            header('Location: '.Routing::getSlug("Statistics","default").'');
+    }
+
     public function getRole(string $email){
         $user = $this->selectSingleUser(["email" => $email]);
         return $user->role;

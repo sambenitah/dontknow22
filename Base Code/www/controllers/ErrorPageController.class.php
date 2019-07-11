@@ -50,17 +50,14 @@ Class ErrorPageController{
         exit;
     }
 
-    public function showErrorPageAction(?array $message){
+    public function showErrorPageAction(?string $message){
         $env = resolve(Env::class);
-
         if(!isset($message) || $env->getEnv() =="production")
-            $message['message'] = '';
-
+            $message = '';
         $errorPage = $this->errorPageDao->showErrorPage(["id"=>1]);
-        $error = array_merge($errorPage,$message);
-
         $v = new View("errorPage", self::nameClass,  "basic");
-        $v->assign("ErrorPage", $error);
+        $v->assign("error", $errorPage);
+        $v->assign("message",$message);
         exit;
     }
 }

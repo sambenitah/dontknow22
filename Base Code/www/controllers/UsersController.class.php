@@ -74,7 +74,6 @@ class UsersController{
             if(empty($form["errors"] )){
                 if($user->loginVerify($user,$data)) {
 
-
                     $reflection = new \ReflectionClass($object);
                     $reflection = $reflection->getShortName();
                     $reflection = explode("Controller",$reflection);
@@ -136,47 +135,52 @@ class UsersController{
             $userDao = $this->userDao;
             $token = $userDao->generateTokenPassword();
             $user = $userDao->selectSingleUser(["email" => $data["email"]]);
-            $user[0]->setIDBIS($user[0]->id);
-            $user[0]->setTokenPassword($token);
-            $userDao->updateUser($user[0]);
-            //$mail->sendForgotPasswordMail($data["email"], $token);
-
-            header('Location: '.Routing::getSlug("Users","setPassword").'/?email='.$data["email"]);
+            $user->setIDBIS($user->id);
+            $user->setTokenPassword($token);
+            $userDao->updateUser($user);
+            $mail->sendForgotPasswordMail($data["email"], $token);
         }
 
         $v = new View("forgotPassword",self::nameClass, "basic");
         $v->assign("form", $form);
     }
 
-    public function verifyPasswordAction(){
-        $user = $this->userDao;
-        $form = $user->getForgotPasswordForm();
-        $method = strtoupper($form["config"]["method"]);
-        $data = $GLOBALS["_".$method];
-
-        if( $_SERVER['REQUEST_METHOD']==$method && !empty($data) ) {
-            header('Location: '.Routing::getSlug("Users","setPassword").'/?email='.$data["email"]);
-        }
-
-        $v = new View("forgotPassword",self::nameClass, "basic");
-        $v->assign("form", $form);
-
-    }
 
     public function setPasswordAction(){
-        $email = isset($_GET['email']) ? $_GET['email'] : null ;
         $user = $this->userDao;
+        $user->loggedRedirection();
         $form = $user->getNewPasswordForm();
         $method = strtoupper($form["config"]["method"]);
         $data = $GLOBALS["_".$method];
 
         if( $_SERVER['REQUEST_METHOD']==$method && !empty($data) ) {
-            echo $_SESSION['email'];
+
+            $validator = new Validator($form,$data);
+            $form["errors"] = $validator->errors;
+
+            if(empty($form["errors"])) {
+
+                $userModel = $user->selectSingleUser(["email" => $_SESSION["emailPass"]]);
+                $userModel->setIDBIS($userModel->id);
+                $userModel->setPwd($data['pwd']);
+                $user->updateUser($userModel);
+            }
+        }
+
+        else{
+
+            $email = $_GET['email'];
+            $_SESSION["emailPass"] = $email;
+            $currentToken = $_GET['hash'];
+            $currentUser = $user->selectSingleUser(["email" => $email]);
+            if(!password_verify($currentToken, $currentUser->tokenPassword))
+                die('ERROR');
+
         }
 
         $v = new View("setPassword",self::nameClass, "basic");
         $v->assign("form", $form);
-        $v->assign("email",$email);
+
     }
 
 

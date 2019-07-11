@@ -53,7 +53,7 @@ class Email extends PHPMailer
 
         $this->Subject = 'Password Request From '.$this->websiteName->getName();
 
-        $this->Body= 'Hi '.$name[0].' here is your code to change your password: '.$token;
+        $this->Body= 'Hi '.$name[0].' please click here to change you password: '.$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].'/setPassword/?email=sambenitah@gmail.com&hash='.$token;
 
         $this->send();
     }

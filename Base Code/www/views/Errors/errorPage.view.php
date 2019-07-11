@@ -9,10 +9,10 @@ use DontKnow\Core\Routing;
             </div>
             <div class="post-content" style="background-color: <?php echo $ErrorPage[0]->background_color;?>;">
                 <div class="the-content">
-                    <?php if($ErrorPage['message'] != '') :?>
-                    <h2 style="color: black"> <?php echo $ErrorPage['message'] ?></h2>
+                    <?php if($message!= '') :?>
+                    <h2 style="color: black"> <?php echo $message?></h2>
                     <?php endif; ?>
-                    <h2 class="title" style="color:<?php echo $ErrorPage[0]->text_color;?>;"><?php echo $ErrorPage[0]->content?></h2>
+                    <h2 class="title" style="color:<?php echo $error->text_color;?>;"><?php echo $error->content?></h2>
                     <div class="post_404_not_found">
                         <div class="go-to-home">
                             <a style="color:<?php echo $ErrorPage[0]->text_color;?>;"
