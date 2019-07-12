@@ -93,31 +93,6 @@ class Customizer extends BaseDAO {
 
             ],
 
-            "select" =>[
-                "contactMenu"=>[
-                    "id"=>"selectContactMenu",
-                    "class"=>"select-css",
-                    "name"=>"contactMenu",
-                    "label"=>"Contact menu",
-                    "option"=>[
-                        [
-                            "valueOption"=>"1",
-                            "id" => "-",
-                            "value" => "Utiliser"
-                        ]
-
-                        ,
-                        [
-
-                            "valueOption"=>"0",
-                            "id" => "efhgzjk",
-                            "value" => "Ne pas utiliser"
-                        ]
-                    ],
-                ],
-
-            ]
-
         ];
     }
 

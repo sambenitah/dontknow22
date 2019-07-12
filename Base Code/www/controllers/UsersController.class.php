@@ -38,15 +38,21 @@ class UsersController{
             $form["errors"] = $validator->errors;
 
             if(empty($form["errors"])){
-                $user->setFirstname($data["firstname"]);
-                $user->setLastname($data["lastname"]);
-                $user->setEmail($data["email"]);
-                $user->setPwd($data["pwd"]);
-                $this->userDao->addUser();
-                $email = resolve(Email::class);
-                $email->sendRegisterMail($data["email"]);
-                header('Location: '.Routing::getSlug("Articles","default").'');
-                exit;
+                $currentUser = $this->userDao->selectSingleUser(["email" => $data["email"]]);
+                if(!$currentUser) {
+                    $user->setFirstname($data["firstname"]);
+                    $user->setLastname($data["lastname"]);
+                    $user->setEmail($data["email"]);
+                    $user->setPwd($data["pwd"]);
+                    $this->userDao->addUser($user);
+                    $email = resolve(Email::class);
+                    $email->sendRegisterMail($data["email"]);
+                    header('Location: ' . Routing::getSlug("Articles", "default") . '');
+                    exit;
+                }
+                else{
+                    $form["errors"][] = "Email already exist";
+                }
             }
         }
         $v = new View("addUser",self::nameClass, "basic");
@@ -83,12 +89,12 @@ class UsersController{
                     die();
 
                 }else{
-                        echo"error";
+                    $form["errors"][] = "Login or Password not valid please try again";
                 }
             }
 
         }
-        $v = new View("loginUser",self::nameClass, "login");
+        $v = new View("loginUser",self::nameClass, "basic");
         $v->assign("form", $form);
 
     }
@@ -96,31 +102,6 @@ class UsersController{
     public function logoutAction(){
         session_unset();
         $this->loginAction();
-    }
-
-
-    public function loginFrontAction(){
-
-        $user = $this->userDao;
-        $form = $user->getLoginForm();
-        $method = strtoupper($form["config"]["method"]);
-        $data = $GLOBALS["_".$method];
-        if( $_SERVER['REQUEST_METHOD']==$method && !empty($data) ){
-
-            $validator = new Validator($form,$data);
-            $form["errors"] = $validator->errors;
-
-            if(empty($form["errors"] )){
-                if($user->loginVerify($user,$data))
-                    header('Location: '.Routing::getSlug("Articles","default").'');
-                else
-                    echo "toto";
-            }
-        }
-
-        $v = new View("loginUser",self::nameClass, "basic");
-        $v->assign("form", $form);
-
     }
 
 

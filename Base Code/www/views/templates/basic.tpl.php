@@ -2,6 +2,10 @@
 use DontKnow\Core\Routing;
 use DontKnow\Dao;
 use DontKnow\Dao\Users;
+
+
+$categories = resolve(\DontKnow\Controllers\CategoriesController::class);
+$categories = $categories->listAllCategoriesAction();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +41,7 @@ use DontKnow\Dao\Users;
     }
 </style>
 <header>
-    <?php if(isset($_SESSION['auth'])): ?>
+    <?php if(isset($_SESSION['auth']) && ($_SESSION["role"] == 3)): ?>
     <div class="row">
         <div id="backgroundHeader" class="col-12 col-m-12 col-l-12">
             <div id="menu">
@@ -72,7 +76,7 @@ use DontKnow\Dao\Users;
                     <span class="item item-3"></span>
                 </div>
                 <div class="logo">
-                    <a href="<?php echo Routing::getSlug("Articles", "default"); ?>">IDK</a>
+                    <a href="<?php echo Routing::getSlug("Articles", "default"); ?>"><?php echo resolve(Dao\Customizer::class)->selectMeta(["id"=>1]) ?></a>
                 </div>
             </div>
         </div>
@@ -92,9 +96,11 @@ use DontKnow\Dao\Users;
                                             <li class="active">
                                                 <a href="<?php echo Routing::getSlug("Articles", "default"); ?>">Home</a>
                                             </li>
-                                            <li>
-                                                <a href="<?php echo Routing::getSlug("Articles", "default"); ?>">Section</a>
-                                            </li>
+                                            <?php foreach ($categories as $key => $category):?>
+                                                <li>
+                                                    <a href=""><?= $category->name ?></a>
+                                                </li>
+                                            <?php endforeach;?>
                                             <?php if (resolve(Dao\Customizer::class)->selectContact(["id"=>1]) != "0"):?>
                                             <li>
                                                 <a href="#">Contact</a>
@@ -105,7 +111,12 @@ use DontKnow\Dao\Users;
                                                     <a href="<?php echo Routing::getSlug("Users", "register"); ?>">Sign In</a>
                                                 </li>
                                                 <li>
-                                                    <a href="<?php echo Routing::getSlug("Users", "loginFront"); ?>">Sign Up</a>
+                                                    <a href="<?php echo Routing::getSlug("Users", "login"); ?>">Sign Up</a>
+                                                </li>
+                                            <?php endif;?>
+                                            <?php if (resolve(Users::class)->logged()):?>
+                                                <li>
+                                                    <a href="<?php echo Routing::getSlug("Users", "logout"); ?>">Logout</a>
                                                 </li>
                                             <?php endif;?>
                                         </ul>

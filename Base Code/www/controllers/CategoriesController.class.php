@@ -43,6 +43,11 @@ Class CategoriesController{
         $v->assign("ListForm", $form);
     }
 
+    public function listAllCategoriesAction(){
+        $selectCategory = $this->categoriesDao->selectCategory();
+        return $selectCategory;
+    }
+
     public function showCategoryAction(){
         $selectCategory = $this->categoriesDao->selectCategory();
         echo json_encode($selectCategory);

@@ -43,7 +43,6 @@ Class CustomizerController{
                 $updateMeta->setId(1);
                 $updateMeta->setContent($data["description"]);
                 $updateMeta->setTitle($data["title"]);
-                $updateMeta->setcontactMenu($data["contactMenu"]);
                 $this->customizerDao->updateMeta($updateMeta);
                 header('Location: '.Routing::getSlug("Customizer","customMeta").'');
                 exit;

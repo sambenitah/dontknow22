@@ -9,9 +9,9 @@ class Users extends BaseDAO
 {
 
 
-    public function addUser(){
+    public function addUser(UserModel $users){
         $addUser = $this->queryConstructor;
-        $arguments = get_object_vars($this);
+        $arguments = get_object_vars($users);
         $query = $addUser->table("Users")->insert($arguments);
         $query = $addUser->instance->prepare((string)$query);
         $query->execute($arguments);
@@ -207,15 +207,17 @@ class Users extends BaseDAO
     public function loginVerify(Users $user, array $data)
     {
         $user = $user->selectSingleUser(["email" => $data["email"]]);
-        if ($user->id != null && password_verify($data["pwd"],$user->pwd)) {
-            $token = $this->generateToken();
-            $user->setIDBIS($user->id);
-            $user->setToken($token);
-            $this->updateUser($user);
-            $_SESSION['auth'] = $data["email"];
-            $_SESSION['token'] = $token;
-            $_SESSION['role'] = $this->getRole($data["email"]);
-            return true;
+        if($user) {
+            if ($user->id != null && password_verify($data["pwd"], $user->pwd)) {
+                $token = $this->generateToken();
+                $user->setIDBIS($user->id);
+                $user->setToken($token);
+                $this->updateUser($user);
+                $_SESSION['auth'] = $data["email"];
+                $_SESSION['token'] = $token;
+                $_SESSION['role'] = $this->getRole($data["email"]);
+                return true;
+            }
         }
 
         return false;

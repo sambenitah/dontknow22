@@ -44,19 +44,19 @@
   controller: Articles
   action: addArticle
   connexion: true
-  role: 3
+  role: 2
 
 "/showArticles":
   controller: Articles
   action: showArticles
   connexion: true
-  role: 3
+  role: 2
 
 "/back_office":
   controller: Statistics
   action: default
   connexion: true
-  role: 3
+  role: 2
 
 "/front":
   controller: Articles
@@ -68,43 +68,43 @@
   controller: Articles
   action: singleArticle
   connexion: true
-  role: 3
+  role: 2
 
 "/listPages":
   controller: Articles
   action: listFrontPages
   connexion: true
-  role: 3
+  role: 2
 
 "/showPictures":
   controller: Pictures
   action: showPictures
   connexion: true
-  role: 3
+  role: 2
 
 "/addPictures":
   controller: Pictures
   action: addPicture
   connexion: true
-  role: 3
+  role: 2
 
 "/customizer":
   controller: Customizer
   action: default
   connexion: true
-  role: 3
+  role: 2
 
 "/addCategory":
   controller: Categories
   action: addCategory
   connexion: true
-  role: 3
+  role: 2
 
 "/customizeErrorPage":
   controller: ErrorPage
   action: updateErrorPage
   connexion: true
-  role: 3
+  role: 2
 
 "/error":
   controller: ErrorPage
@@ -116,31 +116,31 @@
   controller: Statistics
   action: default
   connexion: true
-  role: 3
+  role: 2
 
 "/managementUsers":
   controller: Statistics
   action: managementUsers
   connexion: true
-  role: 3
+  role: 2
 
 "/detailUser":
   controller: Statistics
   action: detailManagementUsers
   connexion: true
-  role: 3
+  role: 2
 
 "/customMeta":
   controller: Customizer
   action: customMeta
   connexion: true
-  role: 3
+  role: 2
 
 "/customColor":
   controller: Customizer
   action: customColor
   connexion: true
-  role: 3
+  role: 2
 
 "/logout":
   controller: Users

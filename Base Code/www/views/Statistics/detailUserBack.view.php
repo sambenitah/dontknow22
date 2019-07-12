@@ -13,16 +13,9 @@
                     <p class="textDetailUser">Role</p>
                     <div class="divSelectUserDetail">
                         <?php if ($_SESSION["role"] == "3"): ?>
-                            <select name="role" class="selectUserDetail" <?php echo $DetailUsers["role"] == 3 ? "" : "disabled = 'true'" ?>>
+                            <select name="role" class="selectUserDetail" <?php echo $DetailUsers["role"] != 3 ? "" : "disabled = 'true'" ?>>
                                 <option value="1" <?php echo $DetailUsers["role"] == 1 ? "selected = select" : "" ?>>Simple user</option>
                                 <option value="2" <?php echo $DetailUsers["role"] == 2 ? "selected = select" : "" ?>>Admin</option>
-                                <option value="3" <?php echo $DetailUsers["role"] == 3 ? "selected = select" : "" ?>>Super admin</option>
-                            </select>
-                        <?php else:;?>
-                            <select name="role" class="selectUserDetail" <?php echo $DetailUsers["role"] == 3 ? "disabled = 'true'" : "" ?>>
-                                <option value="1" <?php echo $DetailUsers["role"] == 1 ? "selected = select" : "" ?>>Simple user</option>
-                                <option value="2" <?php echo $DetailUsers["role"] == 2 ? "selected = select" : "" ?>>Admin</option>
-                                <option value="3" <?php echo $DetailUsers["role"] == 3 ? "selected = select" : "" ?>>Super admin</option>
                             </select>
                         <?php endif;?>
                     </div>

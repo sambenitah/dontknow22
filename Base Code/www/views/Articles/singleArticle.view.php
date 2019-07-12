@@ -18,26 +18,6 @@
 
                     <div class="post-footer">
 
-                        <div class="post-share-wrap">
-                            <div class="post-share">
-                                <a href="#">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-google-plus"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-pinterest"></i>
-                                </a>
-                            </div>
-                        </div>
-
                         <div class="cat">
                             <strong>Category:</strong><a href="#" rel="category tag"><?php echo $detail->category?></a>
                         </div>
