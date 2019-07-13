@@ -18,6 +18,6 @@ return [
         'port'=>'587',
     ],
     'website' =>[
-        'name' => 'DontKno'
+        'name' => 'DontKnow'
     ]
 ];
