@@ -3,19 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="cee0f292-5b2f-48df-8183-4c75a2ebcbc2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_data/dontknow/Users.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dontknow/Users.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dontknow/Articles.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dontknow/Articles.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dontknow/Categories.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dontknow/Categories.ibd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db_data/dontknow/Users.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dontknow/Users.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ib_buffer_pool" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db_data/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ib_logfile0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db_data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ibdata1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db_data/ibtmp1" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ibtmp1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_data/mysql/innodb_index_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/innodb_index_stats.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_data/mysql/innodb_table_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/innodb_table_stats.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/Config/global.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/Config/global.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/controllers/UsersController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/controllers/UsersController.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/core/Email.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/core/Email.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/core/SPDO.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/core/SPDO.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/routes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/www/routes.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/views/Statistics/userBack.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/Statistics/userBack.view.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -224,7 +218,7 @@
           <entry key="htaccess" value="1" />
           <entry key="jpg" value="4" />
           <entry key="js" value="7" />
-          <entry key="php" value="729" />
+          <entry key="php" value="730" />
           <entry key="scss" value="29" />
           <entry key="sql" value="2" />
           <entry key="yml" value="29" />
@@ -235,7 +229,7 @@
           <entry key="CSS" value="4" />
           <entry key="Image" value="4" />
           <entry key="JavaScript" value="7" />
-          <entry key="PHP" value="729" />
+          <entry key="PHP" value="730" />
           <entry key="SCSS" value="29" />
           <entry key="SQL" value="2" />
           <entry key="YAML" value="29" />
@@ -246,7 +240,7 @@
         <counts>
           <entry key="dummy" value="5" />
           <entry key="js" value="296" />
-          <entry key="php" value="18172" />
+          <entry key="php" value="18195" />
           <entry key="scss" value="66" />
           <entry key="txt" value="342" />
           <entry key="yml" value="244" />
@@ -255,7 +249,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JavaScript" value="296" />
-          <entry key="PHP" value="18172" />
+          <entry key="PHP" value="18195" />
           <entry key="PLAIN_TEXT" value="347" />
           <entry key="SCSS" value="66" />
           <entry key="YAML" value="244" />
@@ -270,20 +264,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/Config/global.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/core/SPDO.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+            <state relative-caret-position="240">
+              <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -398,8 +383,8 @@
         <option value="$PROJECT_DIR$/www/core/Email.class.php" />
         <option value="$PROJECT_DIR$/www/routes.yml" />
         <option value="$PROJECT_DIR$/www/views/Statistics/userBack.view.php" />
-        <option value="$PROJECT_DIR$/www/Config/global.php" />
         <option value="$PROJECT_DIR$/www/core/SPDO.class.php" />
+        <option value="$PROJECT_DIR$/www/Config/global.php" />
       </list>
     </option>
   </component>
@@ -460,18 +445,6 @@
               <item name="Base Code" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
               <item name="Config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Base Code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Base Code" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Base Code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Base Code" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -605,7 +578,7 @@
       <workItem from="1563006625784" duration="3183000" />
       <workItem from="1563029496283" duration="652000" />
       <workItem from="1563030961615" duration="465000" />
-      <workItem from="1563042526127" duration="1827000" />
+      <workItem from="1563042526127" duration="4081000" />
     </task>
     <task id="LOCAL-00001" summary="reset project">
       <created>1548753304095</created>
@@ -859,11 +832,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563007813897</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Verif Delete Image + Category">
+      <created>1563049176942</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1563049176942</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="309776000" />
+    <option name="totallyTimeSpent" value="312030000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1086,17 +1066,17 @@
     <entry file="file://$PROJECT_DIR$/www/views/Statistics/detailUserBack.view.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/Config/global.php">
+    <entry file="file://$PROJECT_DIR$/www/core/SPDO.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="300">
+          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/core/SPDO.class.php">
+    <entry file="file://$PROJECT_DIR$/www/Config/global.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        <state relative-caret-position="240">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
         </state>
       </provider>
     </entry>
