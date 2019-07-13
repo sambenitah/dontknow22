@@ -98,7 +98,7 @@ $categories = $categories->listAllCategoriesAction();
                                             </li>
                                             <?php foreach ($categories as $key => $category):?>
                                                 <li>
-                                                    <a href=""><?= $category->name ?></a>
+                                                    <a href="/Articles/showArticleWithCategory?category=<?php echo $category->name; ?>"><?php echo $category->name; ?></a>
                                                 </li>
                                             <?php endforeach;?>
                                             <?php if (resolve(Dao\Customizer::class)->selectContact(["id"=>1]) != "0"):?>
@@ -137,13 +137,14 @@ $categories = $categories->listAllCategoriesAction();
                                     <div class="table">
                                         <div class="table-cell">
                                             <div class="container">
-                                                <form class="search-form" action="#" method="get">
-                                                    <input type="search" name="s" class="search-field"
-                                                           placeholder="Type &amp; hit enter" value=""
-                                                           title="Search">
-                                                    <div class="kd-close">
-                                                    </div>
-                                                </form>
+
+                                                    <form method="post" action="/Articles/showArticleWithContent">
+                                                        <input style="margin-bottom: 20px" class="search-field" type="text" name="like" placeholder="Search content">
+
+                                                        <button class="bouttonConfirmForm" type="submit">Search</button>
+                                                    </form>
+                                                <div class="kd-close">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

@@ -33,6 +33,25 @@ class Articles extends BaseDAO{
         return $query->fetchAll();
     }
 
+    public function selectArticleWithCategory(array $argument){
+
+        $query = $this->queryConstructor->select()->from('Articles')->where(["status"=>1,"category"=>$argument]);
+        $query = $this->queryConstructor->prepare((string)$query);
+        $query->setFetchMode(\PDO::FETCH_CLASS, ArticleModel::class);
+        $query->execute(["status"=>1,"category"=>$argument["category"]]);
+        return $query->fetchAll();
+
+    }
+
+    public function selectArticleWithWord(array $argument){
+        $query = $this->queryConstructor->prepare("SELECT * FROM Articles WHERE content LIKE :content ");
+        $query->setFetchMode(\PDO::FETCH_CLASS, ArticleModel::class);
+        $query->bindValue(':content', '%'.$argument["content"].'%', \PDO::PARAM_STR);
+        $query->execute();
+        return $query->fetchAll();
+
+    }
+
     public function selectSingleArticle(array $where){
         $query = $this->queryConstructor->select()->from('Articles')->where($where);
         $query = $this->queryConstructor->prepare((string)$query);

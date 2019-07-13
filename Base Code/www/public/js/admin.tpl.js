@@ -39,10 +39,14 @@ $( document ).ready(function() {
                                     window.location.reload(true);
                                 }
                                 else{
-                                  $.dialog({
-                                      title: false,
-                                      content: "<p>You can't delete this picture because you use it</p>"
-                                  })
+                                    $.confirm({
+                                        title: false,
+                                        boxWidth: '500px',
+                                        useBootstrap: false,
+                                        content: '<p class="textAlert">You can\'t delete this picture because you use it</p>',
+                                        type: 'dark',
+                                        typeAnimated: true,
+                                    })
                                 }
                             }
                         });

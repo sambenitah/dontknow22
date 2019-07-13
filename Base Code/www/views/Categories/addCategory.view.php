@@ -54,10 +54,16 @@
                                                     window.location.reload(true);
                                                 }
                                                 else{
-                                                    $.dialog({
+
+                                                    $.confirm({
                                                         title: false,
-                                                        content: "<p>You can't delete this category because you use it</p>"
+                                                        boxWidth: '500px',
+                                                        useBootstrap: false,
+                                                        content: '<p class="textAlert">You can\'t delete this category because you use it</p>',
+                                                        type: 'dark',
+                                                        typeAnimated: true,
                                                     })
+
                                                 }
                                             }
                                         });

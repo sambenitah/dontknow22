@@ -65,6 +65,20 @@ class ArticlesController{
         exit;
     }
 
+    public function showArticleWithCategoryAction(){
+        $data = $GLOBALS["_GET"];
+        $selectArticles =$this->articleDao->selectArticleWithCategory(["category"=>$data["category"]]);
+        $v = new View("listFrontPages",self::nameClass, "basic");
+        $v->assign("ListPage", $selectArticles);
+    }
+
+    public function showArticleWithContentAction(){
+        $data = $GLOBALS["_POST"];
+        $selectArticles =$this->articleDao->selectArticleWithWord(["content"=>$data["like"]]);
+        $v = new View("listFrontPages",self::nameClass, "basic");
+        $v->assign("ListPage", $selectArticles);
+    }
+
 
     public function detailArticlesAction($param){ //ok
         $formArticle = $this->articleDao->getDetailArticleForm();

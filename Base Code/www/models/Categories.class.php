@@ -9,6 +9,6 @@ class Categories{
 
     public function setName($name)
     {
-        $this->name = $name ;
+        $this->name = ucfirst(strtolower($name)) ;
     }
 }

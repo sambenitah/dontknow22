@@ -6,8 +6,10 @@ $(document).ready(function () {
         var $boxSearch = $('.box-search');
 
         $search.on('click', function () {
+
             $boxSearch.addClass('active');
             $('.search-field').focus();
+
         });
 
         $('.kd-close').on('click', function () {
@@ -42,6 +44,9 @@ $(document).ready(function () {
         $header.removeClass('active');
         $hideMenu.removeClass('active');
     });
+
+
+
 
 
 });
