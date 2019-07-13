@@ -10,15 +10,15 @@
         <form action="/Statistics/updateUserDetail" method="post">
             <div class="FormDetailUser row">
                 <div class="col-2  col-m-2  col-l-2">
+                    <?php if ($_SESSION["role"] == "3"): ?>
                     <p class="textDetailUser">Role</p>
                     <div class="divSelectUserDetail">
-                        <?php if ($_SESSION["role"] == "3"): ?>
-                            <select name="role" class="selectUserDetail" <?php echo $DetailUsers["role"] != 3 ? "" : "disabled = 'true'" ?>>
-                                <option value="1" <?php echo $DetailUsers["role"] == 1 ? "selected = select" : "" ?>>Simple user</option>
-                                <option value="2" <?php echo $DetailUsers["role"] == 2 ? "selected = select" : "" ?>>Admin</option>
-                            </select>
-                        <?php endif;?>
+                        <select name="role" class="selectUserDetail" <?php echo $DetailUsers["role"] != 3 ? "" : "disabled = 'true'" ?>>
+                            <option value="1" <?php echo $DetailUsers["role"] == 1 ? "selected = select" : "" ?>>Simple user</option>
+                            <option value="2" <?php echo $DetailUsers["role"] == 2 ? "selected = select" : "" ?>>Admin</option>
+                        </select>
                     </div>
+                    <?php endif;?>
                 </div>
                 <div class="col-2  col-m-2  col-l-2">
                     <p class="textDetailUser">Status</p>

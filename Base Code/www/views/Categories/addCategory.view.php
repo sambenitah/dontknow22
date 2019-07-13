@@ -36,7 +36,7 @@
                             title: false,
                             boxWidth: '500px',
                             useBootstrap: false,
-                            content: '<p class="titleAlert">Are you sur ?</p><br><p class="textAlert">Do you want to delete this picture ?</p>',
+                            content: '<p class="titleAlert">Are you sur ?</p><br><p class="textAlert">Do you want to delete this category ?</p>',
                             type: 'dark',
                             typeAnimated: true,
                             buttons: {
@@ -49,13 +49,22 @@
                                             data: {id: id},
                                             type: 'POST',
                                             dataType: "json",
-                                            success: function (data) {
-                                                window.location.reload(true);
+                                            success : function(data){
+                                                if(data == "Delete") {
+                                                    window.location.reload(true);
+                                                }
+                                                else{
+                                                    $.dialog({
+                                                        title: false,
+                                                        content: "<p>You can't delete this category because you use it</p>"
+                                                    })
+                                                }
                                             }
                                         });
                                     }
                                 },
-                                close: function () {
+                                close:{
+
                                 }
                             }
                         });

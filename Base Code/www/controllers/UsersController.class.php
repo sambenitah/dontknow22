@@ -89,7 +89,7 @@ class UsersController{
                     die();
 
                 }else{
-                    $form["errors"][] = "Login or Password not valid please try again";
+                    $form["errors"][] = "Login or Password not valid or activate your account by click on the email";
                 }
             }
 

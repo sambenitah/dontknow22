@@ -35,7 +35,15 @@ $( document ).ready(function() {
                             type : 'POST',
                             dataType: "json",
                             success : function(data){
-                                window.location.reload(true);
+                                if(data == "Delete") {
+                                    window.location.reload(true);
+                                }
+                                else{
+                                  $.dialog({
+                                      title: false,
+                                      content: "<p>You can't delete this picture because you use it</p>"
+                                  })
+                                }
                             }
                         });
                     }

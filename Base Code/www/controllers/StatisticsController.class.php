@@ -70,7 +70,7 @@ class StatisticsController{
         $queryBuilder = $this->statistics;
         $data = $GLOBALS["_POST"];
         $queryBuilder->updateDetailUser($data);
-        $this->detailManagementUsersAction($data["id"]);
+        header('Location: '.Routing::getSlug("Statistics","managementUsers").'');
 
     }
 

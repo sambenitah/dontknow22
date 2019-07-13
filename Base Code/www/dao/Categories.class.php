@@ -30,6 +30,22 @@ class Categories extends BaseDAO {
         return $query->fetch();
     }
 
+    public function SelectCountArticles(array $where){
+        $query = $this->queryConstructor->select()->count('id', "Article")->from('Articles')->where($where);
+        $query = $this->queryConstructor->instance->prepare((string)$query);
+        $query->setFetchMode(\PDO::FETCH_ASSOC);
+        $query->execute($where);
+        return $query->fetch();
+    }
+
+    public function selectSingleCategory(array $where){
+        $query = $this->queryConstructor->select()->from('Categories')->where($where);
+        $query = $this->queryConstructor->prepare((string)$query);
+        $query->setFetchMode(\PDO::FETCH_CLASS, CategoriesModel::class);
+        $query->execute($where);
+        return $query->fetch();
+    }
+
 
     public function getAddCategoryForm()
     {

@@ -16,6 +16,7 @@ use DontKnow\Core\Routing;
                 <td class="td"></td>
             </tr>
             <?php foreach ($AllUsers as $key => $detail):?>
+            <?php if($detail->email == $_SESSION['auth'] )exit;?>
                 <tr>
                     <td class="td"><?php echo $detail->id;?></td>
                     <td class="td"><?php echo $detail->firstname; ?></td>
@@ -26,7 +27,7 @@ use DontKnow\Core\Routing;
                     <td class="td"><?php echo $detail->date_updated; ?></td>
                     <td class="td"><?php echo $detail->role; ?></td>
                     <td class="td">
-                        <?php if ($_SESSION["role"] == "3"): ?>
+                        <?php if ($_SESSION["role"] >= "2"): ?>
                         <a href="Statistics/detailManagementUsers/<?php echo $detail->id;?>">Update</a>
                         <?php endif; ?>
                     </td>

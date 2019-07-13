@@ -63,12 +63,17 @@ Class PicturesController{
     }
 
     public  function deletePictureAction(){
-
         $data = $GLOBALS["_POST"];
+        $pictureName = explode("../public/imagesUpload/",$data['url']);
+        $count = $this->picturesDao->SelectCountArticles(["main_picture" => $pictureName[1]]);
         $id = $data["id"];
-        $this->picturesDao->deletePicture(["id"=>$id]);
-        unlink(substr($data["url"],1));
-        echo json_encode("Delete");
+        if($count['Article'] == 0) {
+            $this->picturesDao->deletePicture(["id"=>$id]);
+            unlink(substr($data["url"],1));
+            echo json_encode("Delete");
+        }
+        else
+            echo json_encode("Impossible");
         exit;
     }
 

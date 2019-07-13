@@ -208,7 +208,7 @@ class Users extends BaseDAO
     {
         $user = $user->selectSingleUser(["email" => $data["email"]]);
         if($user) {
-            if ($user->id != null && password_verify($data["pwd"], $user->pwd)) {
+            if ($user->id != null && password_verify($data["pwd"], $user->pwd) && $user->status) {
                 $token = $this->generateToken();
                 $user->setIDBIS($user->id);
                 $user->setToken($token);
@@ -219,7 +219,6 @@ class Users extends BaseDAO
                 return true;
             }
         }
-
         return false;
     }
 

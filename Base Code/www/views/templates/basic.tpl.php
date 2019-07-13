@@ -41,7 +41,7 @@ $categories = $categories->listAllCategoriesAction();
     }
 </style>
 <header>
-    <?php if(isset($_SESSION['auth']) && ($_SESSION["role"] == 3)): ?>
+    <?php if(isset($_SESSION['auth']) && ($_SESSION["role"] >= 2)): ?>
     <div class="row">
         <div id="backgroundHeader" class="col-12 col-m-12 col-l-12">
             <div id="menu">

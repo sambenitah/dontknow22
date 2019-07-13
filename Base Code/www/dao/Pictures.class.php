@@ -42,6 +42,14 @@ class Pictures extends BaseDAO {
         move_uploaded_file($param["name"]['tmp_name'], $param["pathFile"].$pictures->name_id.".".$extension_upload);
     }
 
+    public function SelectCountArticles(array $where){
+        $query = $this->queryConstructor->select()->count('id', "Article")->from('Articles')->where($where);
+        $query = $this->queryConstructor->instance->prepare((string)$query);
+        $query->setFetchMode(\PDO::FETCH_ASSOC);
+        $query->execute($where);
+        return $query->fetch();
+    }
+
 
 
 

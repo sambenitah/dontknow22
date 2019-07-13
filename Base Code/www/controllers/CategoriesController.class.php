@@ -57,8 +57,15 @@ Class CategoriesController{
     public function deleteCategoryAction(){
         $data = $GLOBALS["_POST"];
         $id = $data["id"];
-        $this->categoriesDao->deleteCategory(["id"=>$id]);
-        echo json_encode("Delete");
+        $category = $this->categoriesDao->selectSingleCategory(["id"=>$id]);
+        $count = $this->categoriesDao->SelectCountArticles(["category" => $category->name]);
+        if($count['Article']  == 0) {
+            $this->categoriesDao->deleteCategory(["id"=>$id]);
+            unlink(substr($data["url"],1));
+            echo json_encode("Delete");
+        }
+        else
+            echo json_encode("Impossible");
         exit;
     }
 
