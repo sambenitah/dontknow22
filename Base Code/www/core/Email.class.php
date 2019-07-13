@@ -38,7 +38,7 @@ class Email extends PHPMailer
 
         $this->Subject = 'Weclome To '.$this->websiteName->getName();
 
-        $this->Body= 'Hi '.$name[0].' welcome to '.$this->websiteName->getName();
+        $this->Body= 'Hi '.$name[0].' welcome to '.$this->websiteName->getName().' please click here to activate your account '.$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].'/activeAccount/?email='.$email;
 
         $this->send();
     }
@@ -53,7 +53,7 @@ class Email extends PHPMailer
 
         $this->Subject = 'Password Request From '.$this->websiteName->getName();
 
-        $this->Body= 'Hi '.$name[0].' please click here to change you password: '.$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].'/setPassword/?email=sambenitah@gmail.com&hash='.$token;
+        $this->Body= 'Hi '.$name[0].' please click here to change you password: '.$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].'/setPassword/?email='.$email.'&hash='.$token;
 
         $this->send();
     }

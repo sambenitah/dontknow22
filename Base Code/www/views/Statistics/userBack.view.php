@@ -16,7 +16,7 @@ use DontKnow\Core\Routing;
                 <td class="td"></td>
             </tr>
             <?php foreach ($AllUsers as $key => $detail):?>
-            <?php if($detail->email == $_SESSION['auth'] )exit;?>
+            <?php if($detail->email == $_SESSION['auth'] ) continue;?>
                 <tr>
                     <td class="td"><?php echo $detail->id;?></td>
                     <td class="td"><?php echo $detail->firstname; ?></td>

@@ -165,5 +165,15 @@ class UsersController{
     }
 
 
+    public function activateAccountAction(){
+        $user = $this->userDao;
+        $userModel = $user->selectSingleUser(["email" => $_GET['email']]);
+        $userModel->setIDBIS($userModel->id);
+        $userModel->setStatus(1);
+        $user->updateUser($userModel);
+        echo 'account validated';
+    }
+
+
 
 }
