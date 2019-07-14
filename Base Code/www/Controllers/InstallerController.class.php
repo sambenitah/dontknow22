@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace DontKnow\Controllers;
 use DontKnow\Core\View;
 use DontKnow\Core\Routing;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
 
 
 class InstallerController{
@@ -12,7 +14,7 @@ class InstallerController{
     const nameClass = "Installer";
 
 
-    public function installerAction(){
+    public function installerDatabaseAction(){
         $form = $this->getInstallerForm();
         $method = strtoupper($form["config"]["method"]);
         $data = $GLOBALS["_".$method];
@@ -27,34 +29,8 @@ class InstallerController{
                    $req=str_replace("\n","",$req);
                    $req=str_replace("\r","",$req);
                    $pdo->exec($req);
-                   $configFile = fopen("Config/global.php",'w+');
-                   $configContent = "
-                   
-<?php
-
-    return [
-    'db' => [
-        'driver' => '".$data['Driver']."',
-        'host' => '".$data['host']."',
-        'name' => '".$data['DatabaseName']."',
-        'user' => '".$data['Login']."',
-        'pwd' => '".$data['password']."',
-    ],
-    'env' =>[
-        'environment'=>'production'
-    ],
-    'mail' =>[
-        'host'=>'ssl0.ovh.net',
-        'username'=>'spacecowboy@dontknow.fr',
-        'password'=>'samSLBSAM2282SAM',
-        'port'=>'587',
-    ],
-    'website' =>[
-        'name' => 'DontKnow'
-    ]
-];";
-                   fwrite($configFile,$configContent);
-                   header('Location: ' . Routing::getSlug("Users", "register") . '');
+                   $_SESSION['database'] = $data;
+                   header('Location: ' . Routing::getSlug("Installer", "installerEmail") . '');
                }
                else{
                    $form["errors"][] = "Your database contains table please empty it and try again ";
@@ -66,8 +42,76 @@ class InstallerController{
 
         $v = new View("installer",self::nameClass, "login");
         $v->assign("form", $form);
+        $v->assign("type","database");
     }
 
+
+
+    public function  installerEmailAction(){
+        $form = $this->getInstallerEmailForm();
+        $method = strtoupper($form["config"]["method"]);
+        $data = $GLOBALS["_".$method];
+
+        if( $_SERVER['REQUEST_METHOD']==$method && !empty($data) ) {
+            try{
+                $email  = new  PHPMailer(true);
+                $email->Host = $data['Host'];
+                $email->Username = $data['Login'];
+                $email->Password = $data['password'];
+                $email->Port = $data['Port'];
+                $email->SMTPAuth = TRUE;
+                $email->SMTPSecure ='tls';
+                $email->isSMTP();
+                $email->setFrom($data['Login']);
+                $email->addAddress('sambenitah@gmail.com');
+                $email->Subject= 'New Installation';
+                $email->Body= 'New Installation today';
+                $email->send();
+                $_SESSION['email'] = $data;
+                $this->generateConfigFile();
+            }
+            catch (Exception $exception){
+                $form["errors"][] = "Information Incorrect Please Try Again.";
+            }
+
+
+        }
+
+        $v = new View("installer",self::nameClass, "login");
+        $v->assign("form", $form);
+        $v->assign("type","email");
+    }
+
+
+    public function generateConfigFile(){
+        $configFile = fopen("Config/global.php",'w+');
+        $configContent = "
+                   
+<?php
+
+    return [
+    'db' => [
+        'driver' => '".$_SESSION["database"]["Driver"]."',
+        'host' => '".$_SESSION["database"]["host"]."',
+        'name' => '".$_SESSION["database"]["DatabaseName"]."',
+        'user' => '".$_SESSION["database"]['Login']."',
+        'pwd' => '".$_SESSION["database"]['password']."',
+    ],
+    'env' =>[
+        'environment'=>'production'
+    ],
+    'mail' =>[
+        'host'=>'".$_SESSION["email"]["Host"]."',
+        'username'=>'".$_SESSION["email"]["Login"]."',
+        'password'=>'".$_SESSION["email"]["password"]."',
+        'port'=>'".$_SESSION["email"]["Port"]."',
+    ],
+    'website' =>[
+        'name' => '".$_SESSION["email"]["Website_Name"]."'
+    ]
+];";
+        fwrite($configFile,$configContent);
+    }
 
 
     public function getInstallerForm(){
@@ -112,6 +156,48 @@ class InstallerController{
 
                 "host"=>["type"=>"text","placeholder"=>"Host", "required"=>true, "class"=>"inputAddLogUser", "id"=>"i4--AddLogUser",
                     "error"=>"Host Incorrect"],
+            ]
+
+        ];
+    }
+
+
+    public function getInstallerEmailForm(){
+        return [
+            "config"=>[
+                "method"=>"POST",
+                "action"=>Routing::getSlug("Users", "installer"),
+                "class"=>"",
+                "id"=>"form",
+                "submit"=>"Connexion",
+                "idSubmit" => "Connexion",
+                "classSubmit" =>"bouttonConfirmForm",
+                "cancelButton"=>false,
+                "enctype"=>false
+            ],
+
+            "data"=>[
+
+                "Host"=>[
+                    "type"=>"text",
+                    "placeholder"=>"Host",
+                    "required"=>true,
+                    "class"=>"inputAddLogUser",
+                    "id"=>"i1--AddLogUser",
+                    "error"=>"Nom incorrect"
+                ],
+
+                "Login"=>["type"=>"text","placeholder"=>"Login", "required"=>true, "class"=>"inputAddLogUser", "id"=>"i2--AddLogUser",
+                    "error"=>"Login Incorrect"],
+
+                "password"=>["type"=>"password","placeholder"=>"Password", "required"=>true, "class"=>"inputAddLogUser", "id"=>"i3--AddLogUser",
+                    "error"=>"Password Incorrect"],
+
+                "Port"=>["type"=>"text","placeholder"=>"Port", "required"=>true, "class"=>"inputAddLogUser", "id"=>"i4--AddLogUser",
+                    "error"=>"Port Incorrect"],
+
+                "Website Name"=>["type"=>"text","placeholder"=>"Website Name", "required"=>true, "class"=>"inputAddLogUser", "id"=>"i4--AddLogUser",
+                    "error"=>"Website Name Incorrect"],
             ]
 
         ];

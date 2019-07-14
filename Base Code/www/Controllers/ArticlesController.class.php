@@ -80,7 +80,7 @@ class ArticlesController{
     }
 
 
-    public function detailArticlesAction($param){ //ok
+    public function detailArticlesAction($param){
         $formArticle = $this->articleDao->getDetailArticleForm();
         $detail = $this->articleDao->selectSingleArticle(["route"=>$param]);
         if (empty($detail)) {

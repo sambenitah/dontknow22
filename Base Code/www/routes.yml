@@ -7,7 +7,13 @@
 
 "/installer":
   controller: Installer
-  action: installer
+  action: installerDatabase
+  connexion: false
+  role: 0
+
+"/installerEmail":
+  controller: Installer
+  action: installerEmail
   connexion: false
   role: 0
 

@@ -151,6 +151,7 @@ class Articles extends BaseDAO{
             "select" =>[
                 "main_picture"=>[
                     "id"=>"selectPicture",
+                    "name"=>"selectPicture",
                     "class"=>"select-css",
                     "label"=>"Select your picture",
                     "option"=>[
@@ -158,18 +159,14 @@ class Articles extends BaseDAO{
                             "class" => "-",
                             "value" => "-"
                         ]
-
-                        /*,
-                        [
-                            "class" => "efhgzjk",
-                            "value" => "test"
-                        ]*/
                     ],
                 ],
 
                 "category"=>[
                     "id"=>"selectCategory",
+                    "name"=>"selectCategory",
                     "class"=>"select-css",
+                    "value"=>"",
                     "label"=>"Select your category",
                     "option"=>[
 
@@ -182,7 +179,9 @@ class Articles extends BaseDAO{
 
                 "status"=>[
                     "id"=>"selectStatus",
+                    "name"=>"selectStatus",
                     "class"=>"select-css",
+                    "value"=>"",
                     "label"=>"Is Activate",
                     "option"=>[
 

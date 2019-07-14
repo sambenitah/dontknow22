@@ -1,3 +1,5 @@
+
+                   
 <?php
 
     return [
@@ -13,8 +15,8 @@
     ],
     'mail' =>[
         'host'=>'ssl0.ovh.net',
-        'username'=>'spacecowboy@dontknow.fr',
-        'password'=>'samSLBSAM2282SAM',
+        'username'=>'contact@dontknow.fr',
+        'password'=>'contactPassword',
         'port'=>'587',
     ],
     'website' =>[

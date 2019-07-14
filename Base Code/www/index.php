@@ -1,12 +1,5 @@
 <?php
 session_start();
-
-set_error_handler(function($errorNumber,$errorMessage,$errorFile){
-    echo $errorFile;
-    throw new Exception($errorMessage);
-},E_ALL);
-
-
 use DontKnow\Core\Routing;
 use DontKnow\Controllers\UsersController;
 use DontKnow\Core\Container;
@@ -20,6 +13,7 @@ function resolve($name)
 
 require('Core/PHPMailer.php');
 require('Core/SMTP.php');
+require('Core/Exception.php');
 
 
 spl_autoload_register(function ($class) {
@@ -53,12 +47,12 @@ try{
     extract($routes);
 
 
-    if ($container->isInstall() && $slug != '/installer') {
-        header('Location: ' . Routing::getSlug("Installer", "installer") . '');
+    if ($container->isInstall() && $slug != '/installer' && $slug != '/installerEmail') {
+        header('Location: ' . Routing::getSlug("Installer", "installerDatabase") . '');
         exit;
     }
 
-    if (!isset($controller) && $slug !='/installer') {
+    if (!isset($controller) && $slug !='/installer' && $slug != '/installerEmail') {
         $errorPage = resolve(ErrorPageController::class);
         $errorPage->showErrorPageAction("Controller doesn't exist");
     }
