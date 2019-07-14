@@ -34,6 +34,7 @@ use DontKnow\VO\MailPort;
 use DontKnow\VO\MailUsername;
 use DontKnow\Core\Email;
 use DontKnow\VO\WebsiteName;
+use DontKnow\Controllers\InstallerController;
 
 
 
@@ -136,6 +137,9 @@ return [
     PicturesController::class => function() {
         $usersModel = resolve(Pictures::class);
         return new PicturesController($usersModel);
+    },
+    InstallerController::class => function() {
+        return new InstallerController();
     },
     CommentsController::class => function() {
         $usersModel = resolve(Comments::class);

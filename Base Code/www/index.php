@@ -1,22 +1,25 @@
 <?php
 session_start();
+
+set_error_handler(function($errorNumber,$errorMessage,$errorFile){
+    echo $errorFile;
+    throw new Exception($errorMessage);
+},E_ALL);
+
+
 use DontKnow\Core\Routing;
-use DontKnow\Dao\Users;
 use DontKnow\Controllers\UsersController;
 use DontKnow\Core\Container;
 use DontKnow\Controllers\ErrorPageController;
 
-use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
 
-function resolve($name){
+function resolve($name)
+{
     return Container::getObject()->getInstance($name);
 }
 
-require ('core/Exception.php');
-require ('core/PHPMailer.php');
-require ('core/SMTP.php');
+require('Core/PHPMailer.php');
+require('Core/SMTP.php');
 
 
 spl_autoload_register(function ($class) {
@@ -36,57 +39,60 @@ spl_autoload_register(function ($class) {
         require $file;
         return;
     }
-    var_dump($file);
 
-    throw new Exception("Fichier invalide");
+    throw new \Exception("Fichier invalide");
 
 });
 
-$container = new Container();
+try{
+    $container = new Container();
+    $slug = $_SERVER["REQUEST_URI"];
+    $slugExploded = explode("?", $slug);
+    $slug = $slugExploded[0];
+    $routes = Routing::getRoute($slug);
+    extract($routes);
 
 
-$slug = $_SERVER["REQUEST_URI"];
-$slugExploded = explode("?", $slug);
-$slug = $slugExploded[0];
-$routes = Routing::getRoute($slug);
-extract($routes);
-
-$errorPage = resolve(ErrorPageController::class);
-
-if(!isset($controller))
-    $errorPage->showErrorPageAction("Controller doesn't exist");
-
-
-$cObject = resolve('DontKnow\\Controllers\\' . $controller);
-if( method_exists($cObject, $action) ){
-    if($connexion){
-        $user = resolve(UsersController::class);
-        if($user->userDao->logged()) {
-            $userRole = $user->userDao->getRole($_SESSION['auth']);
-            if($_SESSION["role"] >= $role) {
-                $token = $user->userDao->getToken();
-                if ($token == ($_SESSION['token'])) {
-                    $user->userDao->updateToken();
-                    $cObject->$action($param);
-                }
-                else {
-                    $errorPage->showErrorPageAction("Wrong Token");
-                }
-            }
-            else {
-                $errorPage->showErrorPageAction("Accès refusé");
-            }
-        }
-        else{
-            $user->loginAction($cObject,$action);
-        }
-    }
-    else{
-        $cObject->$action($param);
+    if ($container->isInstall() && $slug != '/installer') {
+        header('Location: ' . Routing::getSlug("Installer", "installer") . '');
+        exit;
     }
 
-}else{
-    $errorPage->showErrorPageAction("Method doesn't exist");
+    if (!isset($controller) && $slug !='/installer') {
+        $errorPage = resolve(ErrorPageController::class);
+        $errorPage->showErrorPageAction("Controller doesn't exist");
+    }
+
+    $cObject = resolve('DontKnow\\Controllers\\' . $controller);
+    if (method_exists($cObject, $action)) {
+        if ($connexion) {
+            $user = resolve(UsersController::class);
+            if ($user->userDao->logged()) {
+                $userRole = $user->userDao->getRole($_SESSION['auth']);
+                if ($_SESSION["role"] >= $role) {
+                    $token = $user->userDao->getToken();
+                    if ($token == ($_SESSION['token'])) {
+                        $user->userDao->updateToken();
+                        $cObject->$action($param);
+                    } else {
+                        $errorPage->showErrorPageAction("Wrong Token");
+                    }
+                } else {
+                    $errorPage->showErrorPageAction("Accès refusé");
+                }
+            } else {
+                $user->loginAction($cObject, $action);
+            }
+        } else {
+            $cObject->$action($param);
+        }
+
+    } else {
+        $errorPage->showErrorPageAction("Method doesn't exist");
+    }
+} catch (Exception $e){
+    var_dump($e->getMessage());
+    require '404.html';
 }
 
 

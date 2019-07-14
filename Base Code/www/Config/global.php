@@ -1,15 +1,17 @@
+
+                   
 <?php
 
-return [
+    return [
     'db' => [
         'driver' => 'mysql',
-        'host' => '51.83.41.142',
-        'name' => 'dontknow',
-        'user' => 'remotesam',
-        'pwd' => 'sam2282SAM',
+        'host' => 'database',
+        'name' => 'dontknow22',
+        'user' => 'root',
+        'pwd' => 'password',
     ],
     'env' =>[
-        'environment'=>'dev'
+        'environment'=>'production'
     ],
     'mail' =>[
         'host'=>'ssl0.ovh.net',

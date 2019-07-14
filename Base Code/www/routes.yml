@@ -1,6 +1,13 @@
 "/":
-  controller: Users
+  controller: Articles
   action: default
+  connexion: false
+  role: 0
+
+
+"/installer":
+  controller: Installer
+  action: installer
   connexion: false
   role: 0
 
@@ -40,11 +47,6 @@
   connexion: false
   role: 0
 
-"/connexionFront":
-  controller: Users
-  action: loginFront
-  connexion: false
-  role: 0
 
 "/addArticle":
   controller: Articles
