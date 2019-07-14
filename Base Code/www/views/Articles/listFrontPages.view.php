@@ -1,6 +1,6 @@
 <div class="col-l-9">
     <div class="projects">
-        <?php if (count($ListPage) ===  0):?>
+        <?php if (count($ListPage) ===  0 && isset($_GET["category"])):?>
             <p style="font-family: 'Roboto', sans-serif; color: #ababab; font-weight: bold; font-size: 25px;">OOPS ... No result for your search</p>
             <p style="font-family: 'Roboto', sans-serif; color: #ababab; font-weight: bold; font-size: 25px;">Please try again</p>
         <?php endif ?>
