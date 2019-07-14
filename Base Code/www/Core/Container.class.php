@@ -28,16 +28,16 @@ class Container{
 
         $instance = explode('.',$instance);
 
-        $temp = $this->container;
+        $array = array_reduce($instance,function($carry,string $element){
+            return $carry[$element];
+        },$this->container);
 
-        foreach ($instance as $item){
-            $temp[$item];
-        }
+        if($array instanceof \Closure)
+            return $array($this);
 
-        if($temp instanceof \Closure)
-            return $temp($this);
+        return $array;
 
-        return $temp;
+
 
 
     }
