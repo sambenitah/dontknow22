@@ -31,8 +31,9 @@ class SPDO {
     {
         if(is_null(self::$instance))
         {
-            self::$instance = new \PDO($this->driver->getDriver().':host='.$this->host->getHost().';dbname='.
-                $this->name->getName(),$this->user->getUser(), $this->pwd->getPwd());
+            self::$instance = new \PDO($this->driver->getDriver().':dbname='.$this->name->getName().';host='.$this->host->getHost()
+            ,$this->user->getUser(),$this->pwd->getPwd());
+
         }
         return self::$instance;
     }

@@ -22,6 +22,12 @@
   connexion: false
   role: 0
 
+"/activeAccount":
+  controller: Users
+  action: activateAccount
+  connexion: false
+  role: 0
+
 "/sitemap":
   controller: Sitemap
   action: default

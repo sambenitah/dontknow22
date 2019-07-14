@@ -3,13 +3,13 @@
 return [
     'db' => [
         'driver' => 'mysql',
-        'host' => 'database',
+        'host' => '51.83.41.142',
         'name' => 'dontknow',
-        'user' => 'root',
-        'pwd' => 'password',
+        'user' => 'remotesam',
+        'pwd' => 'sam2282SAM',
     ],
     'env' =>[
-        'environment'=>'production'
+        'environment'=>'dev'
     ],
     'mail' =>[
         'host'=>'ssl0.ovh.net',
@@ -18,6 +18,6 @@ return [
         'port'=>'587',
     ],
     'website' =>[
-        'name' => 'DontKno'
+        'name' => 'DontKnow'
     ]
 ];
