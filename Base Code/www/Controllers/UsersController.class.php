@@ -26,66 +26,6 @@ class UsersController{
 
     }
 
-    public function installerAction(){
-        $form = $this->getInstallerForm();
-        $method = strtoupper($form["config"]["method"]);
-        $data = $GLOBALS["_".$method];
-
-        if( $_SERVER['REQUEST_METHOD']==$method && !empty($data) ) {
-            try {
-                $pdo = new \PDO($data['Driver'].':host='.$data['host'].';dbname='.$data['DatabaseName'],$data['Login'], $data['password']);
-               $query = $pdo->query("show tables");
-               $result = $query->fetch();
-               if(!$result){
-                   $req=file_get_contents(__DIR__.'/../dontknow.sql');
-                   $req=str_replace("\n","",$req);
-                   $req=str_replace("\r","",$req);
-                   //$pdo->exec($req);
-                   $file =  file_get_contents('config.php');
-                   var_dump($file);
-                   die;
-                   $configFile = fopen("Config/global.php",'w+');
-                   $configContent = "
-                   
-<?php
-
-    return [
-    'db' => [
-        'driver' => '".$data['Driver']."',
-        'host' => '".$data['host']."',
-        'name' => '".$data['DatabaseName']."',
-        'user' => '".$data['Login']."',
-        'pwd' => '".$data['password']."',
-    ],
-    'env' =>[
-        'environment'=>'production'
-    ],
-    'mail' =>[
-        'host'=>'ssl0.ovh.net',
-        'username'=>'spacecowboy@dontknow.fr',
-        'password'=>'samSLBSAM2282SAM',
-        'port'=>'587',
-    ],
-    'website' =>[
-        'name' => 'DontKnow'
-    ]
-];";
-                   fwrite($configFile,$configContent);
-                   die;
-                   //header('Location: ' . Routing::getSlug("Users", "register") . '');
-               }
-               else{
-                   $form["errors"][] = "Your database contains table please empty it and try again ";
-               }
-            } catch (\PDOException $e) {
-                $form["errors"][] = "Information Incorrect Please Try Again. If you use a VPS please be sure that your ip is allowed";
-            }
-        }
-
-        $v = new View("installer",self::nameClass, "login");
-        $v->assign("form", $form);
-    }
-
 
     public function registerAction(){
         $user = new UserModel();
@@ -111,14 +51,13 @@ class UsersController{
                         $user->setStatus(1);
                         $user->setRole(3);
                         $this->userDao->addUser($user);
-                        die('created');
-                        //Header('Location: ' . Routing::getSlug("Articles", "default") . '');
-                        //exit();
+                        Header('Location: ' . Routing::getSlug("Articles", "default") . '');
+                        exit();
                     }
 
                     $this->userDao->addUser($user);
                     $email = resolve(Email::class);
-                    //$email->sendRegisterMail($data["email"]);
+                    $email->sendRegisterMail($data["email"]);
                     header('Location: ' . Routing::getSlug("Articles", "default") . '');
                     exit;
                 }
@@ -136,7 +75,7 @@ class UsersController{
     public function loginAction($object = null,$action = null){
 
         if($object == null && $action == null){
-            $object = resolve(StatisticsController::class);
+            $object = resolve(ArticlesController::class);
             $action = 'defaultAction';
         }
 
@@ -158,7 +97,6 @@ class UsersController{
                     $action = explode("Action",$action);
                     echo Routing::getSlug($reflection[0],$action[0]);
                     header('Location: '.Routing::getSlug($reflection[0],$action[0]));
-                    die();
 
                 }else{
                     $form["errors"][] = "Login or Password not valid or activate your account by click on the email";
@@ -182,6 +120,7 @@ class UsersController{
         $form = $user->getForgotPasswordForm();
         $method = strtoupper($form["config"]["method"]);
         $data = $GLOBALS["_".$method];
+        $message ="";
 
         if( $_SERVER['REQUEST_METHOD']==$method && !empty($data) ) {
             $mail = resolve(Email::class);
@@ -192,10 +131,12 @@ class UsersController{
             $user->setTokenPassword($token);
             $userDao->updateUser($user);
             $mail->sendForgotPasswordMail($data["email"], $token);
+            $message = "we send you an email";
         }
 
         $v = new View("forgotPassword",self::nameClass, "basic");
         $v->assign("form", $form);
+        $v->assign("message",$message);
     }
 
 
@@ -205,6 +146,7 @@ class UsersController{
         $form = $user->getNewPasswordForm();
         $method = strtoupper($form["config"]["method"]);
         $data = $GLOBALS["_".$method];
+        $errorPage = resolve(ErrorPageController::class);
 
         if( $_SERVER['REQUEST_METHOD']==$method && !empty($data) ) {
 
@@ -217,17 +159,23 @@ class UsersController{
                 $userModel->setIDBIS($userModel->id);
                 $userModel->setPwd($data['pwd']);
                 $user->updateUser($userModel);
+                header('Location: ' . Routing::getSlug("Users", "login") . '');
             }
         }
 
         else{
 
+            if(!isset($_GET['email']) || !isset($_GET['hash']))
+                $errorPage->showErrorPageAction();
+
             $email = $_GET['email'];
             $_SESSION["emailPass"] = $email;
             $currentToken = $_GET['hash'];
             $currentUser = $user->selectSingleUser(["email" => $email]);
-            if(!password_verify($currentToken, $currentUser->tokenPassword))
-                die('ERROR');
+
+            if(!password_verify($currentToken, $currentUser->tokenPassword)){
+                $errorPage->showErrorPageAction();
+            }
 
         }
 
@@ -238,12 +186,15 @@ class UsersController{
 
 
     public function activateAccountAction(){
+        $errorPage = resolve(ErrorPageController::class);
+        if(!isset($_GET['email']))
+            $errorPage->showErrorPageAction();
         $user = $this->userDao;
         $userModel = $user->selectSingleUser(["email" => $_GET['email']]);
         $userModel->setIDBIS($userModel->id);
         $userModel->setStatus(1);
         $user->updateUser($userModel);
-        echo 'account validated';
+        header('Location: ' . Routing::getSlug("Users", "login") . '');
     }
 
     public function getInstallerForm(){

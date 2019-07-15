@@ -35,7 +35,7 @@ Class CategoriesController{
             if(empty($form["errors"])){
                 $addCategory->setName($data["name"]);
                 $this->categoriesDao->insertCategory($addCategory);
-                header('Location: '.Routing::getSlug("Customizer","default").'');
+                header('Location: '.Routing::getSlug("Categories","addCategory").'');
                 exit;
             }
         }

@@ -13,6 +13,7 @@ if($user->logged()){
 <main>
     <section id="SectionOneLogUser">
         <h1 id="TitleAddLogUser">Password Request</h1>
+        <p><?=$message?></p>
             <?php $this->addModal("form", $form);?>
     </section>
 </main>

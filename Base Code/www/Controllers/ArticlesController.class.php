@@ -85,8 +85,7 @@ class ArticlesController{
         $detail = $this->articleDao->selectSingleArticle(["route"=>$param]);
         if (empty($detail)) {
             $errorPage =resolve(ErrorPageController::class);
-            $message['message']="Articles doesn't exist";
-            $errorPage->showErrorPageAction($message);
+            $errorPage->showErrorPageAction("Articles doesn't exist");
         }else {
            $v = new View("detailArticle", self::nameClass, "admin");
            $v->assign("DetailArticle", $detail);
@@ -158,8 +157,7 @@ class ArticlesController{
 
         if (empty($selectDetailArticle)) {
             $errorPage =resolve(ErrorPageController::class);
-            $message['message']="Article empty";
-            $errorPage->showErrorPageAction($message);
+            $errorPage->showErrorPageAction("Article empty");
         }else{
 
             $messages = $this->articleDao->selectCommentArticle(["idArticle"=>$idArticle]);

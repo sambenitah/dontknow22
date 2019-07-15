@@ -52,8 +52,11 @@ try{
         exit;
     }
 
-    if (!isset($controller) && $slug !='/installer' && $slug != '/installerEmail') {
+    if($slug !='/installer' && $slug != '/installerEmail'){
         $errorPage = resolve(ErrorPageController::class);
+    }
+
+    if (!isset($controller) && $slug !='/installer' && $slug != '/installerEmail') {
         $errorPage->showErrorPageAction("Controller doesn't exist");
     }
 
@@ -69,7 +72,8 @@ try{
                         $user->userDao->updateToken();
                         $cObject->$action($param);
                     } else {
-                        $errorPage->showErrorPageAction("Wrong Token");
+                        session_unset();
+                        $user->logoutAction();
                     }
                 } else {
                     $errorPage->showErrorPageAction("Accès refusé");

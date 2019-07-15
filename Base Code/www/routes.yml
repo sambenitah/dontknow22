@@ -4,10 +4,21 @@
   connexion: false
   role: 0
 
-
 "/installer":
   controller: Installer
   action: installerDatabase
+  connexion: false
+  role: 0
+
+"/commercial":
+  controller: Users
+  action: default
+  connexion: false
+  role: 0
+
+"/download":
+  controller: Installer
+  action: download
   connexion: false
   role: 0
 
@@ -52,7 +63,6 @@
   action: login
   connexion: false
   role: 0
-
 
 "/addArticle":
   controller: Articles

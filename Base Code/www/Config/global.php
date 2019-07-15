@@ -1,25 +1,23 @@
-
-                   
 <?php
 
-    return [
+return [
     'db' => [
-        'driver' => 'mysql',
-        'host' => 'database',
-        'name' => 'dontknow22',
-        'user' => 'root',
-        'pwd' => 'password',
+        'driver' => '',
+        'host' => '',
+        'name' => '',
+        'user' => '',
+        'pwd' => '',
     ],
     'env' =>[
-        'environment'=>'production'
+        'environment'=>''
     ],
     'mail' =>[
-        'host'=>'ssl0.ovh.net',
-        'username'=>'contact@dontknow.fr',
-        'password'=>'contactPassword',
-        'port'=>'587',
+        'host'=>'',
+        'username'=>'',
+        'password'=>'',
+        'port'=>'',
     ],
     'website' =>[
-        'name' => 'DontKnow'
+        'name' => ''
     ]
 ];

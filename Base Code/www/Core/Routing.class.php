@@ -12,8 +12,7 @@ class Routing{
             if(isset($routes[$slugPartOne])){
                 if(empty($routes[$slugPartOne]["controller"]) || empty($routes[$slugPartOne]["action"])){
                     $errorPage = resolve(ErrorPageController::class);
-                    $message['message']="Routes doesn't exist";
-                    $errorPage->showErrorPageAction($message);
+                    $errorPage->showErrorPageAction("Routes doesn't exist");
                 }
                 $controller = ucfirst($routes[$slugPartOne]["controller"])."Controller";
                 $action = $routes[$slugPartOne]["action"]."Action";

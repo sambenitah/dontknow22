@@ -21,11 +21,17 @@ CREATE TABLE `Articles` (
   `status` int(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+INSERT INTO `Articles` (`id`, `title`, `description`, `route`, `date_inserted`, `content`, `main_picture`, `category`, `status`) VALUES
+(1, 'VALLEY SUNSET', 'Memo', 'Valley+Sunset', '2019-07-15 00:06:06', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dui nulla, sollicitudin eu enim eget, eleifend pulvinar nisi. Vivamus a iaculis sem. Aliquam ultricies diam et porta pulvinar. Integer molestie, eros eget dignissim vulputate, lectus orci dictum augue, at dignissim quam sapien sed risus. Nunc vestibulum sollicitudin eros, eu accumsan nunc faucibus at. Integer ut arcu ut erat mollis ullamcorper ac et augue. Aenean id urna erat. Cras sollicitudin, orci sit amet ornare iaculis,</p>', 'valley+sunset2019-07-15+00-3A05-3A31.jpg', 'Art', 1);
+
 CREATE TABLE `Categories` (
   `id` int(11) NOT NULL,
   `name` varchar(30) NOT NULL,
   `date_inserted` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `Categories` (`id`, `name`, `date_inserted`) VALUES
+(1, 'Art', '2019-07-15 00:05:41');
 
 CREATE TABLE `Comments` (
   `id` int(11) NOT NULL,
@@ -46,6 +52,9 @@ CREATE TABLE `Customizer` (
   `aColor` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+INSERT INTO `Customizer` (`id`, `title`, `content`, `contactMenu`, `colorFront`, `postContentColor`, `aColor`) VALUES
+(1, 'IDK', 'Créez un blog ou un site Web haut de gamme. Assistance en direct. Commencez ! Hébergement Gratuit. Des Centaines de Designs. Live Chat & Aide Par Mail. Stats Faciles à Lire. Prêt pour le Mobile. Évolutif et Sécurisé. SEO Intégré. Aide Rapide et Conviviale.', 0, '', '', '');
+
 CREATE TABLE `ErrorPage` (
   `id` int(11) NOT NULL,
   `content` varchar(100) NOT NULL DEFAULT 'Sorry an error has occured',
@@ -54,12 +63,18 @@ CREATE TABLE `ErrorPage` (
   `text_color` varchar(7) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+INSERT INTO `ErrorPage` (`id`, `content`, `date_update`, `background_color`, `text_color`) VALUES
+(1, 'Sorry an error has occured', '2019-07-15 00:05:03', '', '');
+
 CREATE TABLE `Pictures` (
   `id` int(11) NOT NULL,
   `name_id` varchar(250) NOT NULL,
   `name` varchar(250) NOT NULL,
   `date_inserted` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `Pictures` (`id`, `name_id`, `name`, `date_inserted`) VALUES
+(1, 'valley+sunset2019-07-15+00-3A05-3A31.jpg', 'valley sunset', '2019-07-15 00:05:31');
 
 CREATE TABLE `Users` (
   `id` int(11) NOT NULL,
@@ -99,25 +114,25 @@ ALTER TABLE `Users`
 
 
 ALTER TABLE `Articles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 ALTER TABLE `Categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 ALTER TABLE `Comments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `Customizer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 ALTER TABLE `ErrorPage`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 ALTER TABLE `Pictures`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 ALTER TABLE `Users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

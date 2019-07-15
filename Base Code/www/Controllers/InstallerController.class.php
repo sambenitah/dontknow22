@@ -46,6 +46,11 @@ class InstallerController{
     }
 
 
+    public function downloadAction(){
+        $v = new View("download",self::nameClass, "empty");
+    }
+
+
 
     public function  installerEmailAction(){
         $form = $this->getInstallerEmailForm();
@@ -63,12 +68,13 @@ class InstallerController{
                 $email->SMTPSecure ='tls';
                 $email->isSMTP();
                 $email->setFrom($data['Login']);
-                $email->addAddress('sambenitah@gmail.com');
+                $email->addAddress($data['Login']);
                 $email->Subject= 'New Installation';
                 $email->Body= 'New Installation today';
                 $email->send();
                 $_SESSION['email'] = $data;
                 $this->generateConfigFile();
+                header('Location: ' . Routing::getSlug("Users", "register") . '');
             }
             catch (Exception $exception){
                 $form["errors"][] = "Information Incorrect Please Try Again.";

@@ -8,7 +8,7 @@ use DontKnow\Core\Routing;
       <title>IDK.</title>
       <meta charset="utf-8">
       <meta name="description" content="Créez un blog ou un site Web haut de gamme. Assistance en direct. Commencez ! Hébergement Gratuit. Des Centaines de Designs. Live Chat & Aide Par Mail. Stats Faciles à Lire. Prêt pour le Mobile. Évolutif et Sécurisé. SEO Intégré. Aide Rapide et Conviviale.">
-      <link rel="stylesheet" type="text/css" href="../public/css/Commercial-css/commercial.css">
+      <link rel="stylesheet" type="text/css" href="../../Public/css/Commercial-css/commercial.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   </head>
@@ -23,8 +23,7 @@ use DontKnow\Core\Routing;
                     <a class="m-link" href="#">OUR CUSTOMERS</a>
                 </div>
                 <div class="m-right">
-<!--                    <a class="m-link" href="--><?php //echo Routing::getSlug("Users","login");?><!--">SIGN IN</a></li>-->
-                    <a class="m-link" href="<?php echo Routing::getSlug("Users","register");?>">CREATE A SITE</a></li>
+                    <a class="m-link" href="<?php echo Routing::getSlug("Installer","download");?>">CREATE A SITE</a></li>
                 </div>
 
         <!-- If Display < 950px -->

@@ -50,7 +50,7 @@ Class ErrorPageController{
         exit;
     }
 
-    public function showErrorPageAction(?string $message){
+    public function showErrorPageAction(string $message =""){
         $env = resolve(Env::class);
         if(!isset($message) || $env->getEnv() =="production")
             $message = '';

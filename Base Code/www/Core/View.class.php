@@ -25,8 +25,7 @@ class View{
             $this->v=$viewPath;
         }else{
             $errorPage = resolve(ErrorPageController::class);
-            $message['message']="View doesn't exist";
-            $errorPage->showErrorPageAction($message);
+            $errorPage->showErrorPageAction("View doesn't exist");
         }
     }
 
@@ -36,21 +35,19 @@ class View{
             $this->t=$templatePath;
         }else{
             $errorPage = resolve(ErrorPageController::class);
-            $message['message']="Templates doesn't exist";
-            $errorPage->showErrorPageAction($message);
+            $errorPage->showErrorPageAction("Templates doesn't exist");
         }
 
     }
 
 
     public function addModal($modal, $config){
-        $modalPath = "Views/Modals/".$modal.".mod.php";
+        $modalPath = __DIR__."/../Views/Modals/".$modal.".mod.php";
         if( file_exists($modalPath)){
             include $modalPath;
         }else{
             $errorPage = resolve(ErrorPageController::class);
-            $message['message']="Modal doesn't exist";
-            $errorPage->showErrorPageAction($message);
+            $errorPage->showErrorPageAction("Modal doesn't exist");
         }
     }
 

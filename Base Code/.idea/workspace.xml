@@ -10,6 +10,7 @@
       <change beforePath="$PROJECT_DIR$/db_data/dontknow22/errorpage.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dontknow22/errorpage.ibd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db_data/dontknow22/pictures.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dontknow22/pictures.ibd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db_data/dontknow22/users.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dontknow22/users.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ib_buffer_pool" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db_data/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ib_logfile0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db_data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ibdata1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db_data/ibtmp1" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ibtmp1" afterDir="false" />
@@ -17,11 +18,20 @@
       <change beforePath="$PROJECT_DIR$/db_data/mysql/innodb_table_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/innodb_table_stats.ibd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/Config/global.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/Config/global.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/Controllers/ArticlesController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/Controllers/ArticlesController.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/Controllers/CategoriesController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/Controllers/CategoriesController.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/Controllers/ErrorPageController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/Controllers/ErrorPageController.class.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/Controllers/InstallerController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/Controllers/InstallerController.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/Dao/Articles.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/Dao/Articles.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/Controllers/SitemapController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/Controllers/SitemapController.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/Controllers/UsersController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/Controllers/UsersController.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/Core/Routing.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/Core/Routing.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/Core/View.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/Core/View.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/dontknow.sql" beforeDir="false" afterPath="$PROJECT_DIR$/www/dontknow.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/routes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/www/routes.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/views/Installer/installer.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/Installer/installer.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/views/templates/admin.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/templates/admin.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/views/templates/basic.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/templates/basic.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/views/templates/commercial.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/templates/commercial.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/views/templates/login.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/templates/login.tpl.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -212,30 +222,30 @@
     <session id="-883219297">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="44" />
+          <entry key="project.closed" value="50" />
           <entry key="project.open.time.0" value="8" />
-          <entry key="project.open.time.1" value="4" />
-          <entry key="project.open.time.2" value="12" />
+          <entry key="project.open.time.1" value="7" />
+          <entry key="project.open.time.2" value="14" />
           <entry key="project.open.time.3" value="9" />
           <entry key="project.open.time.4" value="5" />
           <entry key="project.open.time.5" value="4" />
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="45" />
+          <entry key="project.opened" value="50" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Dockerfile" value="1" />
           <entry key="css" value="5" />
-          <entry key="htaccess" value="2" />
+          <entry key="htaccess" value="3" />
           <entry key="html" value="1" />
           <entry key="jpg" value="4" />
           <entry key="js" value="7" />
-          <entry key="php" value="884" />
+          <entry key="php" value="950" />
           <entry key="scss" value="29" />
-          <entry key="sql" value="8" />
-          <entry key="yml" value="36" />
+          <entry key="sql" value="9" />
+          <entry key="yml" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -245,11 +255,11 @@
           <entry key="HTML" value="1" />
           <entry key="Image" value="4" />
           <entry key="JavaScript" value="7" />
-          <entry key="PHP" value="884" />
+          <entry key="PHP" value="950" />
           <entry key="SCSS" value="29" />
-          <entry key="SQL" value="8" />
-          <entry key="YAML" value="36" />
-          <entry key="htaccess" value="2" />
+          <entry key="SQL" value="9" />
+          <entry key="YAML" value="40" />
+          <entry key="htaccess" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -257,20 +267,20 @@
           <entry key="dummy" value="7" />
           <entry key="html" value="23" />
           <entry key="js" value="296" />
-          <entry key="php" value="21958" />
+          <entry key="php" value="22725" />
           <entry key="scss" value="66" />
           <entry key="txt" value="418" />
-          <entry key="yml" value="306" />
+          <entry key="yml" value="384" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="23" />
           <entry key="JavaScript" value="296" />
-          <entry key="PHP" value="21958" />
+          <entry key="PHP" value="22725" />
           <entry key="PLAIN_TEXT" value="425" />
           <entry key="SCSS" value="66" />
-          <entry key="YAML" value="306" />
+          <entry key="YAML" value="384" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -281,17 +291,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -303,23 +303,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>exception</find>
-      <find>could not ins</find>
-      <find>Env</find>
-      <find>getEnv</find>
-      <find>$Sender</find>
-      <find>sender</find>
-      <find>host</find>
-      <find>$host</find>
-      <find>construct</find>
-      <find>create a site</find>
-      <find>querycon</find>
       <find>spdo</find>
       <find>back</find>
       <find>header</find>
       <find>locat</find>
       <find>showErrorPage</find>
-      <find>showErrorPageAction</find>
       <find>$errorPage</find>
       <find>ErrorPageController::showErrorPageAction</find>
       <find>3</find>
@@ -331,8 +319,20 @@
       <find>var/www</find>
       <find>www</find>
       <find>idsubmit</find>
-      <find>get</find>
       <find>ErrorPage</find>
+      <find>get</find>
+      <find>create a site</find>
+      <find>create a si</find>
+      <find>showErrorPageAction</find>
+      <find>modal doe</find>
+      <find>modal do</find>
+      <find>Public</find>
+      <find>addca</find>
+      <find>account va</find>
+      <find>login</find>
+      <find>echo er</find>
+      <find>$_GET</find>
+      <find>samben</find>
     </findStrings>
     <replaceStrings>
       <replace>singleArticle</replace>
@@ -342,9 +342,9 @@
       <replace>2</replace>
     </replaceStrings>
     <dirStrings>
-      <dir>$PROJECT_DIR$/www</dir>
       <dir>$PROJECT_DIR$/www/controllers</dir>
       <dir>$PROJECT_DIR$/www/views/templates</dir>
+      <dir>$PROJECT_DIR$/www</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -353,20 +353,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/www/models/Users.class.php" />
-        <option value="$PROJECT_DIR$/www/views/Users/ForgotPassword.view.php" />
-        <option value="$PROJECT_DIR$/www/views/Users/forgotPassword.view.php" />
-        <option value="$PROJECT_DIR$/www/controllers/ArticlesController.class.php" />
-        <option value="$PROJECT_DIR$/www/dao/BaseDAO.class.php" />
-        <option value="$PROJECT_DIR$/www/VO/DbDriver.class.php" />
-        <option value="$PROJECT_DIR$/www/views/Users/setPassword.view.php" />
-        <option value="$PROJECT_DIR$/www/views/Errors/errorPage.view.php" />
-        <option value="$PROJECT_DIR$/www/dao/ErrorPage.class.php" />
-        <option value="$PROJECT_DIR$/www/controllers/ErrorPageController.class.php" />
-        <option value="$PROJECT_DIR$/www/views/Articles/singleArticle.view.php" />
-        <option value="$PROJECT_DIR$/www/views/modals/form.mod.php" />
-        <option value="$PROJECT_DIR$/www/core/Validator.class.php" />
-        <option value="$PROJECT_DIR$/www/dao/Customizer.class.php" />
         <option value="$PROJECT_DIR$/www/controllers/CustomizerController.class.php" />
         <option value="$PROJECT_DIR$/www/views/Users/loginUser.view.php" />
         <option value="$PROJECT_DIR$/www/views/Statistics/detailUserBack.view.php" />
@@ -383,27 +369,41 @@
         <option value="$PROJECT_DIR$/www/core/Email.class.php" />
         <option value="$PROJECT_DIR$/www/views/Statistics/userBack.view.php" />
         <option value="$PROJECT_DIR$/www/core/SPDO.class.php" />
-        <option value="$PROJECT_DIR$/www/Core/Routing.class.php" />
         <option value="$PROJECT_DIR$/www/Controllers/StatisticsController.class.php" />
         <option value="$PROJECT_DIR$/www/Views/Users/installer.view.php" />
-        <option value="$PROJECT_DIR$/www/dontknow.sql" />
         <option value="$PROJECT_DIR$/www/config.php" />
         <option value="$PROJECT_DIR$/www/404.html" />
-        <option value="$PROJECT_DIR$/www/Controllers/UsersController.class.php" />
         <option value="$PROJECT_DIR$/www/Config/di.global.php" />
         <option value="$PROJECT_DIR$/www/Dao/Users.class.php" />
         <option value="$PROJECT_DIR$/www/Models/Users.class.php" />
         <option value="$PROJECT_DIR$/www/Core/Container.class.php" />
-        <option value="$PROJECT_DIR$/www/routes.yml" />
-        <option value="$PROJECT_DIR$/www/Config/global-sample.php" />
         <option value="$PROJECT_DIR$/www/Views/Installer/installer.view.php" />
-        <option value="$PROJECT_DIR$/www/Config/global.php" />
-        <option value="$PROJECT_DIR$/www/Controllers/InstallerController.class.php" />
-        <option value="$PROJECT_DIR$/www/Controllers/ArticlesController.class.php" />
         <option value="$PROJECT_DIR$/www/Config/error.php" />
         <option value="$PROJECT_DIR$/www/Dao/Articles.class.php" />
         <option value="$PROJECT_DIR$/www/Views/Errors/errorPage.view.php" />
+        <option value="$PROJECT_DIR$/www/Controllers/SitemapController.class.php" />
+        <option value="$PROJECT_DIR$/www/Views/Installer/download.view.php" />
+        <option value="$PROJECT_DIR$/www/Views/templates/empty.tpl.php" />
         <option value="$PROJECT_DIR$/www/index.php" />
+        <option value="$PROJECT_DIR$/www/Core/Routing.class.php" />
+        <option value="$PROJECT_DIR$/www/Controllers/ArticlesController.class.php" />
+        <option value="$PROJECT_DIR$/dontknow/Controllers/ArticlesController.class.php" />
+        <option value="$PROJECT_DIR$/dontknow/Core/Routing.class.php" />
+        <option value="$PROJECT_DIR$/dontknow/Core/View.class.php" />
+        <option value="$PROJECT_DIR$/www/Core/View.class.php" />
+        <option value="$PROJECT_DIR$/www/Views/templates/admin.tpl.php" />
+        <option value="$PROJECT_DIR$/www/Views/templates/basic.tpl.php" />
+        <option value="$PROJECT_DIR$/www/Views/templates/login.tpl.php" />
+        <option value="$PROJECT_DIR$/www/Views/templates/commercial.tpl.php" />
+        <option value="$PROJECT_DIR$/www/dontknow.sql" />
+        <option value="$PROJECT_DIR$/www/routes.yml" />
+        <option value="$PROJECT_DIR$/www/Controllers/CategoriesController.class.php" />
+        <option value="$PROJECT_DIR$/www/Views/Users/forgotPassword.view.php" />
+        <option value="$PROJECT_DIR$/www/Controllers/ErrorPageController.class.php" />
+        <option value="$PROJECT_DIR$/www/Controllers/UsersController.class.php" />
+        <option value="$PROJECT_DIR$/www/Config/global-sample.php" />
+        <option value="$PROJECT_DIR$/www/Controllers/InstallerController.class.php" />
+        <option value="$PROJECT_DIR$/www/Config/global.php" />
       </list>
     </option>
   </component>
@@ -417,8 +417,8 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="203" />
-    <option name="width" value="1380" />
+    <option name="y" value="23" />
+    <option name="width" value="1386" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -466,37 +466,6 @@
               <item name="www" type="462c0819:PsiDirectoryNode" />
               <item name="Config" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Base Code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Base Code" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Base Code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Base Code" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Base Code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Base Code" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="Dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Base Code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Base Code" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="Views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Base Code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Base Code" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="Views" type="462c0819:PsiDirectoryNode" />
-              <item name="Errors" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -523,11 +492,11 @@
       <recent name="$PROJECT_DIR$/www/views/Customizer" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/www/Config" />
+      <recent name="$PROJECT_DIR$/www/Views/templates" />
       <recent name="$PROJECT_DIR$/www/Views/Installer" />
+      <recent name="$PROJECT_DIR$/www/Config" />
       <recent name="$PROJECT_DIR$/www/Controllers" />
       <recent name="$PROJECT_DIR$/www" />
-      <recent name="$PROJECT_DIR$/www/Views/Users" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -638,7 +607,12 @@
       <workItem from="1563069155143" duration="58000" />
       <workItem from="1563069512470" duration="340000" />
       <workItem from="1563092899112" duration="11430000" />
-      <workItem from="1563113081183" duration="9994000" />
+      <workItem from="1563113081183" duration="14262000" />
+      <workItem from="1563145525424" duration="200000" />
+      <workItem from="1563145889898" duration="572000" />
+      <workItem from="1563146578582" duration="181000" />
+      <workItem from="1563147236303" duration="130000" />
+      <workItem from="1563147550417" duration="3307000" />
     </task>
     <task id="LOCAL-00001" summary="reset project">
       <created>1548753304095</created>
@@ -920,11 +894,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563120032917</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Reparation  Apres Merge">
+      <created>1563129403145</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1563129403145</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="340858000" />
+    <option name="totallyTimeSpent" value="349516000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -936,10 +917,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1380" height="877" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1386" height="877" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26307923" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2827381" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1038,322 +1018,250 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/Views/Pictures/showPictures.view.php">
+    <entry file="file://$PROJECT_DIR$/dontknow/Core/View.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="430">
+          <caret line="49" column="45" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/Dao/Categories.class.php">
+    <entry file="file://$PROJECT_DIR$/www/Core/View.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="45" column="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+        <state relative-caret-position="476">
+          <caret line="50" column="9" lean-forward="true" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/login.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/empty.tpl.php" />
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/commercial.tpl.php" />
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/basic.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/admin.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="70" lean-forward="true" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/admin.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/admin.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/admin.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/basic.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/basic.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/basic.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/commercial.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/commercial.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/commercial.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/login.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/login.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/login.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/login.tpl.php" />
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/commercial.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/commercial.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/commercial.tpl.php" />
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/basic.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/basic.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/basic.tpl.php" />
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/admin.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/admin.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/admin.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/admin.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/admin.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/admin.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/commercial.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/commercial.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/commercial.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/commercial.tpl.php" />
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/admin.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/admin.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/templates/admin.tpl.php" />
+    <entry file="file://$PROJECT_DIR$/www/.htaccess">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/dontknow.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/Controllers/CategoriesController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="62" column="46" lean-forward="true" selection-start-line="62" selection-start-column="46" selection-end-line="62" selection-end-column="46" />
+        <state relative-caret-position="225">
+          <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/Views/Categories/addCategory.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Public/js/admin.tpl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="41" column="23" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Views/Statistics/userBack.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Views/Statistics/detailUserBack.view.php">
+    <entry file="file://$PROJECT_DIR$/www/Config/di.global.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/.htaccess">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Public/css/Back-css/style.css" />
-    <entry file="file://$PROJECT_DIR$/site/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="57" lean-forward="true" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Views/templates/basic.tpl.php" />
-    <entry file="file://$PROJECT_DIR$/www/Core/Exception.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Views/Users/installer.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/dontknow.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="94" column="25" lean-forward="true" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Controllers/StatisticsController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Dao/Statistics.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="40" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/config.php" />
-    <entry file="file://$PROJECT_DIR$/www/Controllers/ErrorPageController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="59" column="39" lean-forward="true" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Dao/BaseDAO.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="48" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Core/SPDO.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Views/modals/form.mod.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-852" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Views/modals/form.mod.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Views/modals/form.mod.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Views/modals/form.mod.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1315">
-          <caret line="91" column="57" selection-start-line="91" selection-start-column="41" selection-end-line="91" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Dao/Comments.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Core/Routing.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="44" column="52" lean-forward="true" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Views/modals/form.mod.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1315">
-          <caret line="91" column="57" selection-start-line="91" selection-start-column="41" selection-end-line="91" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Views/modals/form.mod.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1315">
-          <caret line="91" column="57" selection-start-line="91" selection-start-column="41" selection-end-line="91" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Views/modals/form.mod.php" />
-    <entry file="file://$PROJECT_DIR$/www/Models/Users.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Dao/Users.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="189" column="47" lean-forward="true" selection-start-line="189" selection-start-column="47" selection-end-line="189" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Controllers/UsersController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-846">
-          <caret line="103" column="35" lean-forward="true" selection-start-line="103" selection-start-column="35" selection-end-line="103" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Core/QueryConstructor.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="32" column="41" lean-forward="true" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/VO/DbHost.class.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Core/Container.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="37" column="22" lean-forward="true" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Controllers/PicturesController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="69" column="11" lean-forward="true" selection-start-line="69" selection-start-column="11" selection-end-line="69" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Views/Installer/installer.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/routes.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Core/Email.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Config/global-sample.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="9" selection-end-line="22" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Views/Articles/detailArticle.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="221">
+          <caret line="61" column="19" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/Controllers/ArticlesController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="82" column="49" lean-forward="true" selection-start-line="82" selection-start-column="49" selection-end-line="82" selection-end-column="49" />
+        <state relative-caret-position="2250">
+          <caret line="158" column="60" selection-start-line="158" selection-start-column="60" selection-end-line="158" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Views/Users/forgotPassword.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Controllers/ErrorPageController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Controllers/UsersController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="177" column="13" lean-forward="true" selection-start-line="177" selection-start-column="13" selection-end-line="177" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/Controllers/InstallerController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="112" column="43" lean-forward="true" selection-start-line="112" selection-start-column="7" selection-end-line="112" selection-end-column="43" />
-          <folding>
-            <element signature="e#65#88#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Config/di.global.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="69" column="47" selection-start-line="69" selection-start-column="47" selection-end-line="69" selection-end-column="47" />
-          <folding>
-            <element signature="e#7#30#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="283">
+          <caret line="70" column="51" lean-forward="true" selection-start-line="70" selection-start-column="51" selection-end-line="70" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/Config/global.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        <state relative-caret-position="60">
+          <caret line="4" column="23" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="4" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/Config/error.php">
+    <entry file="file://$PROJECT_DIR$/www/Config/global-sample.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="31" lean-forward="true" selection-start-column="31" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Views/Errors/errorPage.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="10" selection-end-line="28" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#article#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#article#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#1;n#div#0;n#div#1;n#article#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#article#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Dao/Articles.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="156" column="31" lean-forward="true" selection-start-line="156" selection-start-column="31" selection-end-line="156" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="225">
+          <caret line="15" column="23" selection-end-line="22" selection-end-column="2" />
         </state>
       </provider>
     </entry>
